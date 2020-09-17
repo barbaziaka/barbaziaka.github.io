@@ -16,7 +16,7 @@
 .promo {
     width: 100%;
     min-height: 768px;
-    background: url(../img/front-part.jpg) #e3e4e6 center center/auto no-repeat
+    background: url(img/front-part.jpg) #e3e4e6 center center/auto no-repeat
 }
 
 .promo__header-pseudo {
