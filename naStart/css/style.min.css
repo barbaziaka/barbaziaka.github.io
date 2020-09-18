@@ -102,12 +102,53 @@
     line-height: 21px
 }
 
+.button:hover {
+    transform: scale(.9, .9)
+}
+
 .button_promo {
     margin-top: 107px
 }
 
 .button_connect {
     background: #d70040
+}
+
+.button_white {
+    background: #fff;
+    color: #d70040
+}
+
+.button_orange {
+    color: #ec930d
+}
+
+.button_lime {
+    color: #a3cf25
+}
+
+.button_blue {
+    color: #0ec4ec
+}
+
+.button_violet {
+    color: #8a0dec
+}
+
+.button_internet-tv {
+    background: #ec930d
+}
+
+.button_internet-tv-movie {
+    background: #a3cf25
+}
+
+.button_tv {
+    background: #0ec4ec
+}
+
+.button_video-monitoring {
+    background: #8a0dec
 }
 
 .advantages {
@@ -174,38 +215,67 @@
 }
 
 .tariffs-tab {
-    flex-grow: 1;
     text-decoration: none;
-    padding: 30px 0 30px
+    padding: 20px 0 20px;
+    width: 384px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px
+}
+
+.tariffs-tab:hover {
+    opacity: .7
 }
 
 .tariffs-tab_internet {
-    background-color: #d70040;
-    opacity: .5
+    background-color: #d70040
 }
 
 .tariffs-tab_internet-tv {
-    background-color: #ec930d;
-    opacity: .5
+    background-color: #ec930d
 }
 
 .tariffs-tab_internet-tv-movie {
-    background-color: #a3cf25;
-    opacity: .5
+    background-color: #a3cf25
 }
 
 .tariffs-tab_tv {
-    background-color: #0ec4ec;
-    opacity: .5
+    background-color: #0ec4ec
 }
 
 .tariffs-tab_video-monitoring {
-    background-color: #8a0dec;
-    opacity: .5
+    background-color: #8a0dec
 }
 
 .tariffs-item__bcg {
+    margin: 0 auto;
+    max-width: 1366px;
+    background-color: #d70040
+}
+
+.tariffs-item__bcg_internet-tv {
+    background-color: #ec930d
+}
+
+.tariffs-item__bcg_internet-tv-movie {
+    background-color: #a3cf25
+}
+
+.tariffs-item__bcg_tv {
+    background-color: #0ec4ec
+}
+
+.tariffs-item__bcg_video-monitoring {
+    background-color: #8a0dec
+}
+
+.tariffs-item__block {
     padding: 50px 0
+}
+
+.tariffs-item__block_inverse {
+    color: #fff
 }
 
 .tariffs-item__wrapper {
@@ -249,6 +319,47 @@
     font-size: 18px
 }
 
+.tariffs-item-descr__profit_white {
+    color: #d70040;
+    background: #fff
+}
+
+.tariffs-item-descr__profit_orange {
+    color: #ec930d;
+    background: #fff
+}
+
+.tariffs-item-descr__profit_lime {
+    color: #a3cf25;
+    background: #fff
+}
+
+.tariffs-item-descr__profit_blue {
+    color: #0ec4ec;
+    background: #fff
+}
+
+.tariffs-item-descr__profit_violet {
+    color: #8a0dec;
+    background: #fff
+}
+
+.tariffs-item-descr__profit_internet-tv {
+    background-color: #ec930d
+}
+
+.tariffs-item-descr__profit_internet-tv-movie {
+    background-color: #a3cf25
+}
+
+.tariffs-item-descr__profit_tv {
+    background-color: #0ec4ec
+}
+
+.tariffs-item-descr__profit_video-monitoring {
+    background-color: #8a0dec
+}
+
 .tariffs-item-descr__wrapper {
     display: flex;
     justify-content: space-between;
@@ -257,6 +368,26 @@
 
 .tariffs-item-descr__header {
     color: #d70040
+}
+
+.tariffs-item-descr__header_white {
+    color: #fff
+}
+
+.tariffs-item-descr__header_internet-tv {
+    color: #ec930d
+}
+
+.tariffs-item-descr__header_internet-tv-movie {
+    color: #a3cf25
+}
+
+.tariffs-item-descr__header_tv {
+    color: #0ec4ec
+}
+
+.tariffs-item-descr__header_video-monitoring {
+    color: #8a0dec
 }
 
 .tariffs-item-descr__cost {
@@ -269,12 +400,81 @@
     padding: 10px 20px 20px 30px
 }
 
-.tariffs-item-descr__content_border {
+.tariffs-item-descr__content_border-red {
     border: 1px solid #d70040
+}
+
+.tariffs-item-descr__content_border-white {
+    border: 1px solid #fff
+}
+
+.tariffs-item-descr__content_border-internet-tv {
+    border: 1px solid #ec930d
+}
+
+.tariffs-item-descr__content_border-internet-tv-movie {
+    border: 1px solid #a3cf25
+}
+
+.tariffs-item-descr__content_border-tv {
+    border: 1px solid #0ec4ec
+}
+
+.tariffs-item-descr__content_border-video-monitoring {
+    border: 1px solid #8a0dec
 }
 
 .tariffs-item-descr__content_down {
     margin-top: 28px
+}
+
+.rocket {
+    display: flex;
+    align-items: center;
+    margin-left: 40%
+}
+
+.vector {
+    display: block;
+    height: 2px;
+    margin-right: 2px;
+    background-color: #d70040
+}
+
+.vector_start {
+    width: 50px
+}
+
+.vector_first-step {
+    width: 180px
+}
+
+.vector_second-step {
+    width: 340px
+}
+
+.vector_finish {
+    width: 520px
+}
+
+.vector_white {
+    background-color: #fff
+}
+
+.vector_internet-tv {
+    background-color: #ec930d
+}
+
+.vector_internet-tv-movie {
+    background-color: #a3cf25
+}
+
+.vector_tv {
+    background-color: #0ec4ec
+}
+
+.vector_video-monitoring {
+    background-color: #8a0dec
 }
 
 .contacts__wrapper {
@@ -284,7 +484,9 @@
 
 .contacts__title {
     margin-top: 40px;
-    margin-bottom: 75px
+    margin-bottom: 75px;
+    font-size: 18px;
+    font-weight: 300
 }
 
 .contacts__info {
