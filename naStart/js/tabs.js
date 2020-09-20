@@ -17,3 +17,18 @@ document.querySelectorAll(".tariffs-tab").forEach((item) =>
 );
 
 document.querySelector(".tariffs-tab").click();
+
+
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+        document.getElementById("up").style.padding = "20px 0 0 0";
+        document.getElementById("up").style.height = "80px";
+        document.getElementById("logo").style.width = "180px";
+    } else {
+        document.getElementById("up").style.padding = "70px 0 0 0";
+        document.getElementById("up").style.height = "145px";
+        document.getElementById("logo").style.width = "239px";
+    }
+}
