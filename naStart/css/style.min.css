@@ -92,19 +92,18 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    font-size: 12px
+    font-size: 15px
 }
 
 .header-menu__item:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120px;
-    height: 25px;
-    padding: 3px;
+    width: 159px;
+    height: 41px;
+    padding: 10px;
     margin-left: 5%;
-    border: 2px solid #d60136;
-    border-radius: 5px
+    border: 1px solid #000
 }
 
 .header-menu__link {
@@ -114,8 +113,8 @@
 
 .header-menu__account-icon {
     display: block;
-    width: 10px;
-    height: 12px
+    width: 15px;
+    height: 17px
 }
 
 .button {
@@ -219,7 +218,7 @@
 
 .advantages__subtitle {
     color: #d60136;
-    font-size: 15px
+    font-size: 18px
 }
 
 .advantages__text {
@@ -249,7 +248,7 @@
     height: 60px;
     text-align: center;
     color: #fff;
-    font-size: 15px
+    font-size: 18px
 }
 
 .tariffs-tab:hover {
@@ -321,7 +320,7 @@
 }
 
 .tariffs-item__name {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
     margin-bottom: 75px
 }
@@ -584,7 +583,7 @@
 .footer__address-wrapper address {
     line-height: 140%;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 15px
 }
 

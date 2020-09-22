@@ -26,9 +26,11 @@ function scrollFunction() {
         document.getElementById("up").style.padding = "20px 0 0 0";
         document.getElementById("up").style.height = "80px";
         document.getElementById("logo").style.width = "180px";
+        document.getElementById("up").style.boxShadow = "0 0.5rem 1rem rgba(0, 0, 0, 0.15)";
     } else {
         document.getElementById("up").style.padding = "70px 0 0 0";
         document.getElementById("up").style.height = "145px";
         document.getElementById("logo").style.width = "239px";
+        document.getElementById("up").style.boxShadow = "none";
     }
 }
