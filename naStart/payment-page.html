@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Страница оплаты</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="shortcut icon" href="#" type="image/png">
+</head>
+
+<body>
+    <section class="payment">
+        <header class="header header_payment">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-logo" id="logo">
+                        <a class="header-logo__link" href="index.html">
+                            <img src="icons/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header-text">страница оплаты</div>
+                </div>
+            </div>
+
+        </header>
+        <div class="container">
+            <div class="payment-main">
+                <div class="pscb-payform-container">
+                    <form class="pscb-payform" action="Адрес запроса" method="post">
+                        <h1>Оплата онлайн</h1>
+
+                        <!-- Обязательные параметры -->
+                        <input name="marketPlace" type="hidden" value="ID Магазина">
+                        <label for="amount">Сумма платежа</label><input id="amount" name="amount" type="text" placeholder="" value="" required><br>
+                        <label for="customerAccount">ФИО плательщика</label><input id="customerAccount" name="customerAccount" placeholder="" value="" required><br>
+                        <!-- /Обязательные параметры -->
+                    </form>
+                </div>
+                <button class="button">продолжить</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
