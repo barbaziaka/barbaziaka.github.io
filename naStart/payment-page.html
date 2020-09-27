@@ -8,6 +8,7 @@
     <title>Страница оплаты</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="shortcut icon" href="#" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,24 +24,67 @@
                     <div class="header-text">страница оплаты</div>
                 </div>
             </div>
-
         </header>
-        <div class="container">
-            <div class="payment-main">
-                <div class="pscb-payform-container">
-                    <form class="pscb-payform" action="Адрес запроса" method="post">
-                        <h1>Оплата онлайн</h1>
 
-                        <!-- Обязательные параметры -->
-                        <input name="marketPlace" type="hidden" value="ID Магазина">
-                        <label for="amount">Сумма платежа</label><input id="amount" name="amount" type="text" placeholder="" value="" required><br>
-                        <label for="customerAccount">ФИО плательщика</label><input id="customerAccount" name="customerAccount" placeholder="" value="" required><br>
-                        <!-- /Обязательные параметры -->
-                    </form>
+        <div class="container">
+
+            <div class="payment-main">
+                <div class="payment-main__wrapper">
+                    <div class="pscb-payform-container">
+                        <form class="pscb-payform" action="Адрес запроса" method="post">
+                            <!-- Обязательные параметры -->
+                            <input name="marketPlace" type="hidden" value="ID Магазина"><br>
+                            <div class="pscb-payform-customer-account__wrapper"><label for="customerAccount">Номер договора</label>
+                                <input id="customerAccount" name="customerAccount" placeholder="" value="" required></div><br>
+                            <div class="pscb-payform-amount__wrapper">
+                                <label for="amount">Сумма пополнения</label>
+                                <input id="amount" name="amount" type="text" placeholder="" value="" required></div><br>
+                            <!-- /Обязательные параметры -->
+                            <div class="pscb-payform-offer-agreement">
+                                <input type="checkbox" name="agree" checked="">
+                                <div class="pscb-payform-offer-agreement__item">Условия <a class="pscb-payform-offer-agreement__link" href="#offer-agreement">договора-оферты</a> принимаю</div>
+                            </div>
+                            <input name="button" class="button pscb-button" type="submit" value="продолжить">
+                        </form>
+                    </div>
+                    <div class="payment-icons">
+                        <div class="payment-icons__item">
+                            <div class="payment-icons__logo"><img src="icons/visa-icon.svg" alt="visa-icon">
+                            </div>
+                            <div class="payment-icons__logo"><img src="icons/mastercard-icon.svg" alt="mastercard-icon"></div>
+                            <div class="payment-icons__logo"><img src="icons/maestro-icon.svg" alt="maestro-icon"></div>
+                            <div class="payment-icons__logo"><img src="icons/world-icon.svg" alt="world-icon">
+                            </div>
+                        </div>
+                        <div class="payment-icons__item">
+                            <div class="payment-icons__logo"><img src="icons/qiwi-purse-icon.svg" alt="qiwi-purse-icon"></div>
+                            <div class="payment-icons__logo"><img src="icons/yandex-money-icon.svg" alt="yandex-money-icon"></div>
+                            <div class="payment-icons__logo"><img src="icons/web-money-icon.svg" alt="web-money-icon"></div>
+                        </div>
+                    </div>
+
                 </div>
-                <button class="button">продолжить</button>
+            </div>
+
+
+            <div class="payment-info">
+                <div class="payment-info__header">Порядок оплаты</div><br><br><br> Оплата заказов на сайте производится с использованием сервиса «ПСКБ Онлайн», который позволяет совершать платежи следующими способами:<br><br>- банковские карты (VISA, MasterCard, Maestro, НПС «МИР»)<br>-
+                электронные кошельки (QIWI Кошелёк, Яндекс Деньги, WebMoney, Web-кошелёк «ПСКБ»)<br>- интернет-банк «Альфа-клик» - терминалы самообслуживания (ссылка на карту)<br>- мобильные платежи<br><br>Для оплаты заказа банковской картой необходимо
+                ввести данные на защищенной странице процессингового центра АО Банк «ПСКБ». После ввода реквизитов банковской карты нажмите на кнопку «Продолжить». Для дополнительной идентификации держателя карты может использоваться технология 3D Secure.
+                В случае использования 3D Secure произойдет перенаправление на страницу банка-эмитента для ввода дополнительного одноразового пароля.<br><br>К оплате принимаются банковские карты, выпущенные банками стран СНГ. Все платежи обрабатывает
+                процессинговый центр АО Банк «ПСКБ».
+                <br><br><br>
+                <div class="payment-info__header">Безопасность платежей
+                </div><br><br><br>Платежный сервис «ПСКБ Онлайн» производит обработку данных банковских карт в соответствии с требованиями международного стандарта безопасности PCI DSS 3.0. Передача информации происходит с применением технологии шифрования
+                SSL.
+                <br><br>Наша компания не осуществляет сбор, обработку и хранение данных банковских карт. Конфиденциальность информации гарантирует АО Банк «ПСКБ».
             </div>
         </div>
+
+
+
+
+
     </section>
 </body>
 
