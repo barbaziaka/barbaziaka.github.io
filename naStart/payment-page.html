@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 
 <head>
     <meta charset="UTF-8">
@@ -21,28 +21,10 @@
                             <img src="icons/logo.svg" alt="logo">
                         </a>
                     </div>
-                    <nav class="header-menu">
-                        <ul class="header-menu__list">
-                            <li class="header-menu__item">
-                                <a href="#" class="header-menu__link">тарифы</a>
-                            </li>
-                            <li class="header-menu__item">
-                                <a href="payment-page.html" class="header-menu__link">оплата</a>
-                            </li>
-                            <li class="header-menu__item">
-                                <a href="for-business.html" class="header-menu__link">для бизнеса</a>
-                            </li>
-                            <li class="header-menu__item">
-                                <a href="#" class="header-menu__link">контакты</a>
-                            </li>
-                            <li class="header-menu__item phone">
-                                <a class="phone__link phone__link_top" href="tel:+7(812)4163111">+7 (812) 416-31-11</a>
-                            </li>
-                            <li class="header-menu__item"><img class="header-menu__account-icon" src="icons/account_logo.svg" alt="account-icon">
-                                <a href="#" class="header-menu__link">личный кабинет</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="back">
+                        <a href="index.html" class="back__link">
+                            <img class="back__image" src="icons/back-arrow.svg" alt="arrow">назад</a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -56,18 +38,20 @@
                             <!-- Обязательные параметры -->
                             <input name="marketPlace" type="hidden" value="ID Магазина"><br>
                             <div class="pscb-payform-customer-account__wrapper"><label for="customerAccount">Номер договора</label>
-                                <input id="customerAccount" name="customerAccount" placeholder="" value="" required></div><br>
+                                <input class="pscb-payform-customer-account__input" id="customerAccount" name="customerAccount" placeholder="" value="" required></div><br>
                             <div class="pscb-payform-amount__wrapper">
                                 <label for="amount">Сумма пополнения</label>
-                                <input id="amount" name="amount" type="text" placeholder="" value="" required></div><br>
+                                <input class="pscb-payform-amount__input" id="amount" name="amount" type="text" placeholder="" value="" required></div><br>
                             <!-- /Обязательные параметры -->
                             <div class="pscb-payform-offer-agreement">
-                                <input type="checkbox" name="agree" checked="">
-                                <div class="pscb-payform-offer-agreement__item">Условия <a class="pscb-payform-offer-agreement__link" href="#offer-agreement">договора-оферты</a> принимаю</div>
+                                <label class="pscb-payform-check"><input type="checkbox" class="pscb-payform-check__input" id="checkbox"><span class="pscb-payform-check__box"></span></label>
+                                <div class="pscb-payform-offer-agreement__item">Условия <a class="pscb-payform-offer-agreement__link" href="#offer-agreement">договора-оферты</a> принимаю
+                                </div>
                             </div>
-                            <input name="button" class="button pscb-button" type="submit" value="продолжить">
+                            <input name="button" class="button pscb-button" type="submit" value="продолжить" id="payment" disabled="disabled">
                         </form>
                     </div>
+
                     <div class="payment-icons">
                         <div class="payment-icons__item">
                             <div class="payment-icons__logo"><img src="icons/visa-icon.svg" alt="visa-icon">
@@ -103,6 +87,12 @@
         </div>
     </section>
 
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/checkbox.js"></script>
 </body>
 
 </html>
