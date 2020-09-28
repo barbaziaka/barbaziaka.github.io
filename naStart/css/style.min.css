@@ -551,7 +551,8 @@
 .payment {
     width: 100%;
     min-height: 100vh;
-    background-color: #e3e4e6
+    background-color: #e3e4e6;
+    padding-bottom: 20px
 }
 
 .payment-main__wrapper {
@@ -625,6 +626,10 @@
     font-size: 14px;
     margin-top: 30px;
     margin-bottom: 68px
+}
+
+.txt_white {
+    color: #fff
 }
 
 .footer__bcg_black {
