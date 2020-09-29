@@ -7,12 +7,6 @@
     padding: 0
 }
 
-body,
-html {
-    width: 100%;
-    height: 100%
-}
-
 .container {
     width: 1070px;
     height: auto;
@@ -571,7 +565,7 @@ html {
 
 .payment-info {
     margin-top: 36px;
-    font-size: 9px
+    font-size: 10px
 }
 
 .payment-info__header {
@@ -629,7 +623,6 @@ html {
 .pscb-payform-offer-agreement__item {
     margin-left: 10%;
     height: 20px;
-    font-size: 12px;
     line-height: 20px
 }
 
@@ -646,19 +639,14 @@ html {
 .pscb-payform-amount__input,
 .pscb-payform-customer-account__input {
     border: none;
-    height: 20px
-}
-
-.pscb-payform-amount__input:focus,
-.pscb-payform-customer-account__input:focus {
-    border-bottom: 1px solid #000
+    height: 20px;
+    outline: 0;
+    padding-left: 5px
 }
 
 .business {
     width: 100%;
-    height: 100%;
-    min-height: 768px;
-    background: url(../img/for-business.jpg) #e3e4e6 center center/cover no-repeat
+    height: auto
 }
 
 .business-content {
@@ -675,6 +663,12 @@ html {
     font-size: 14px;
     margin-top: 30px;
     margin-bottom: 68px
+}
+
+.bcg {
+    width: 100%;
+    height: 100%;
+    background: url(../img/for-business_1920.jpg) center center/auto no-repeat
 }
 
 .footer__bcg_black {
@@ -708,6 +702,57 @@ html {
     font-size: 13px
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .56);
+    z-index: 10
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 100%;
+    height: 700px;
+    max-height: 100%;
+    background-color: #f2f2f2;
+    z-index: 11
+}
+
+.modal__close {
+    position: absolute;
+    right: -40px;
+    font-size: 41px;
+    line-height: 21px;
+    color: #fff;
+    cursor: pointer
+}
+
+.modal__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 30px
+}
+
+.modal__header {
+    margin-bottom: 30px
+}
+
+#offer-agreement {
+    display: none
+}
+
 .back {
     display: flex
 }
@@ -715,7 +760,7 @@ html {
 .back__link {
     display: flex;
     justify-content: space-between;
-    width: 60px;
+    width: 62px;
     height: 16px;
     text-decoration: none;
     color: #000;
@@ -723,12 +768,15 @@ html {
     line-height: 14px
 }
 
+.back__image {
+    width: 24px
+}
+
 .pageup {
     display: none;
     position: fixed;
     bottom: 40px;
-    right: 40px;
-    transform: rotate(-90deg)
+    right: 40px
 }
 
 .pageup img {

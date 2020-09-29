@@ -35,6 +35,21 @@ function scrollFunction() {
     }
 }
 
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function(event) {
+        event.preventDefault();
+        const blockID = anchor.getAttribute('href');
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+}
+
+
+
 
 $(document).ready(function() {
 
@@ -48,17 +63,5 @@ $(document).ready(function() {
         }
     });
 
-
-    $(function() {
-        $("a[href=#top]").click(function() {
-            const _href = $(this).attr("href");
-            $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-            return false;
-        });
-    });
-
-
-
-    new WOW().init();
 
 });
