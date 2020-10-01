@@ -20,7 +20,7 @@ label {
 .promo {
     width: 100%;
     min-height: 768px;
-    background: url(../img/front-part.jpg) #e3e4e6 center center/auto no-repeat
+    background: url(../../img/front-part.jpg) #e3e4e6 center center/auto no-repeat
 }
 
 .promo-content__pseudo {
@@ -67,6 +67,11 @@ label {
     position: static;
     z-index: 0;
     background: 0 0
+}
+
+.header_connect {
+    padding-top: 30px;
+    height: 100px
 }
 
 .header-text {
@@ -599,19 +604,13 @@ label {
     margin-bottom: 25px
 }
 
-.connect {
-    width: 100%;
-    height: 768px;
-    background: url(../img/connect.jpg) center center/cover no-repeat
-}
-
 .connect__wrapper {
     margin-top: 58px
 }
 
 .connect__banner {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 210px;
     justify-content: space-between;
     align-items: center
@@ -646,7 +645,7 @@ label {
 }
 
 .pscb-payform-check__input:checked+.pscb-payform-check__box {
-    background-image: url(../icons/checkbox-checked.svg)
+    background-image: url(../../icons/checkbox-checked.svg)
 }
 
 .pscb-payform-check__box {
@@ -691,7 +690,7 @@ label {
 .business {
     width: 100%;
     height: 768px;
-    background: url(../img/for-business_1920.jpg) center center/cover no-repeat
+    background: url(../../img/for-business_1920.jpg) center center/cover no-repeat
 }
 
 .business-content {
@@ -741,6 +740,7 @@ label {
     font-size: 13px
 }
 
+.modal-internet__wrapper,
 .overlay {
     display: none;
     position: fixed;
@@ -750,6 +750,15 @@ label {
     left: 0;
     background-color: rgba(0, 0, 0, .56);
     z-index: 10
+}
+
+.modal-internet__wrapper {
+    background: url(../../img/connect.jpg) center center/cover no-repeat
+}
+
+#tariff-1-1,
+.modal-internet__wrapper {
+    overflow: hidden
 }
 
 .modal {
@@ -788,7 +797,8 @@ label {
     margin-bottom: 30px
 }
 
-#offer-agreement {
+#offer-agreement,
+#tariff-1-1 {
     display: none
 }
 
@@ -805,7 +815,9 @@ label {
 .form__select {
     outline: 0;
     border: none;
-    height: 20px
+    height: 20px;
+    padding: 2px;
+    width: 210px
 }
 
 .form__address,
@@ -816,6 +828,30 @@ label {
 .form__tariff {
     display: flex;
     justify-content: space-between
+}
+
+.form__mail_connect input,
+.form__name_connect input {
+    width: 210px
+}
+
+.form__apartment-number {
+    margin-left: 39.5%;
+    width: 200px
+}
+
+.form__apartment-number input {
+    width: 70px
+}
+
+.form__phone input {
+    width: 160px
+}
+
+.form__phone span {
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 5%
 }
 
 .form__item {
@@ -844,7 +880,7 @@ label {
 }
 
 .form-check__input:checked+.form-check__box {
-    background-image: url(../icons/checkbox-checked.svg)
+    background-image: url(../../icons/checkbox-checked.svg)
 }
 
 .form-check__box {

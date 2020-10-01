@@ -65,3 +65,23 @@ $(document).ready(function() {
 
 
 });
+
+
+$('.tariff-1-1').on('click', function() {
+    $('.modal-internet__wrapper, #tariff-1').fadeIn('slow');
+});
+$('.tariff-1-2').on('click', function() {
+    $('.modal-internet__wrapper, #tariff-1').fadeIn('slow');
+    $('#tariff option:nth-child(2)').prop('selected', true);
+});
+$('.tariff-1-3').on('click', function() {
+    $('.modal-internet__wrapper, #tariff-1').fadeIn('slow');
+    $('#tariff option:nth-child(3)').prop('selected', true);
+});
+$('.tariff-1-4').on('click', function() {
+    $('.modal-internet__wrapper, #tariff-1').fadeIn('slow');
+    $('#tariff option:last-child').prop('selected', true);
+});
+$('.modal__close').on('click', function() {
+    $('.modal-internet__wrapper, #tariff-1').fadeOut('slow');
+});

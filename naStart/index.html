@@ -119,7 +119,10 @@
                         <div class="tariffs-item__wrapper">
                             <div class="tariffs-item__title">
                                 <div class="tariffs-item__name">Легкий старт<br>50 мбит/с</div>
-                                <div class="tariffs-item-connect__wrapper"><a href="connect.html"><button class="button button_connect">подключиться</button></a>
+                                <div class="tariffs-item-connect__wrapper">
+                                    <a class="tariff-1-1" href="#tariff-1">
+                                        <button class="button button_connect">подключиться</button>
+                                    </a>
 
                                     <div class="tariffs-item__cost">400 р.</div>
                                 </div>
@@ -161,7 +164,8 @@
                                 <div class="tariffs-item__title">
                                     <div class="tariffs-item__name">Быстрый старт<br>100 мбит/с</div>
                                     <div class="tariffs-item-connect__wrapper">
-                                        <button class="button button_white">подключиться</button>
+                                        <a class="tariff-1-2" href="#tariff-1"><button class="button button_white">подключиться</button>
+                                        </a>
                                         <div class="tariffs-item__cost">555 р.</div>
                                     </div>
                                 </div>
@@ -202,7 +206,9 @@
                             <div class="tariffs-item__title">
                                 <div class="tariffs-item__name">Форсаж<br>200 мбит/с</div>
                                 <div class="tariffs-item-connect__wrapper">
-                                    <button class="button button_connect">подключиться</button>
+                                    <a class="tariff-1-3" href="#tariff-1">
+                                        <button class="button button_connect">подключиться</button>
+                                    </a>
                                     <div class="tariffs-item__cost">888 р.</div>
                                 </div>
                             </div>
@@ -243,7 +249,8 @@
                                 <div class="tariffs-item__title">
                                     <div class="tariffs-item__name">Ракета<br>300 мбит/с</div>
                                     <div class="tariffs-item-connect__wrapper">
-                                        <button class="button button_white">подключиться</button>
+                                        <a class="tariff-1-4" href="#tariff-1"> <button class="button button_white">подключиться</button>
+                                        </a>
                                         <div class="tariffs-item__cost">1111 р.</div>
                                     </div>
                                 </div>
@@ -1016,11 +1023,87 @@
         <img src="icons/pageup.svg" alt="pageup">
     </a>
 
+    <div class="modal-internet__wrapper" id="tariff-1">
+        <header class="header header_connect">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-logo" id="logo">
+                        <a class="header-logo__link" href="index.html">
+                            <img src="icons/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="back">
+                        <a href="index.html" class="back__link">
+                            <img class="back__image" src="icons/back-arrow.svg" alt="arrow">назад</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="connect__banner">
+                <div class="connect__descr">интернет</div>
+                <div class="connect__icons"><img src="img/connect__internet-icon.svg" alt="wifi-icon"></div>
+            </div>
+            <div class="connect__wrapper">
+                <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                    <div class="form__wrapper form__wrapper_connect">
+                        <div class="form__item">
+                            <div class="form__tariff">
+                                <label for="tariff">Я выбираю</label>
+                                <select class="form__select" name="tariff" id="tariff">
+                                    <option value="easy-start">Легкий старт / 50 Мбит</option>
+                                    <option value="quick-start">Быстрый старт / 100 Мбит/с</option>
+                                    <option value="afterburner">Форсаж / 200 Мбит/с</option>
+                                    <option value="rocket">Ракета / 300 Мбит/с</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="form__name form__name_connect"><label for="name">Меня зовут</label><input autocomplete="off" class="form__input" placeholder="" name="name" type="text" id="name">
+                            </div>
+                            <br>
+                            <div class="form__address"><label for="address">Адрес подключения</label><input autocomplete="off" class="form__input" placeholder="" name="address" type="text" id="address">
+                            </div>
+                            <br>
+                            <div class="form__apartment-number"><label for="apartment-number">Номер квартиры</label><input autocomplete="off" class="form__input" placeholder="" name="apartment-number" type="text" id="apartment-number">
+                            </div>
+                            <br>
+                            <div class="form__phone"><label for="phone">Номер телефона</label> <span>+7</span><input autocomplete="off" class="form__input" placeholder="911 222 33 44" name="phone" type="text" id="phone">
+                            </div>
+                            <br>
+                            <div class="form__mail form__mail_connect"><label for="mail">Почта</label><input autocomplete="off" class="form__input" placeholder="" name="email" type="text" id="mail">
+                            </div>
+                            <br>
+                        </div>
+
+                        <div class="form__checkboxes">
+                            <div class="form-check__item">
+                                <label class="form-check__label">
+                                <input type="checkbox" class="form-check__input" id="checkbox"><span class="form-check__box"></span><div class="form-check__text">Мне нужен Wi-Fi роутер</div></label>
+                            </div><br>
+                            <div class="form-check__item">
+                                <label class="form-check__label">
+                                <input type="checkbox" class="form-check__input" id="checkbox"><span class="form-check__box"></span><div class="form-check__text">Мне нужна ТВ приставка</div></label>
+                            </div><br>
+                            <div class="form-check__item">
+                                <label class="form-check__label">
+                                <input type="checkbox" class="form-check__input" id="checkbox"><span class="form-check__box"></span><div class="form-check__text">Мне нужен выделенный IP адрес</div></label>
+                            </div><br>
+                        </div>
+                        <br><br><br>
+                    </div>
+                    <input value="подключиться" class="button button_connect" type="submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/post.js"></script>
     <script src="js/tabs.js"></script>
 
 </body>
