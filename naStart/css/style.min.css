@@ -20,7 +20,7 @@ label {
 .promo {
     width: 100%;
     min-height: 768px;
-    background: url(../../img/front-part.jpg) #e3e4e6 center center/auto no-repeat
+    background: url(../img/front-part.jpg) #e3e4e6 center center/auto no-repeat
 }
 
 .promo-content__pseudo {
@@ -645,7 +645,7 @@ label {
 }
 
 .pscb-payform-check__input:checked+.pscb-payform-check__box {
-    background-image: url(../../icons/checkbox-checked.svg)
+    background-image: url(../icons/checkbox-checked.svg)
 }
 
 .pscb-payform-check__box {
@@ -690,7 +690,7 @@ label {
 .business {
     width: 100%;
     height: 768px;
-    background: url(../../img/for-business_1920.jpg) center center/cover no-repeat
+    background: url(../img/for-business_1920.jpg) center center/cover no-repeat
 }
 
 .business-content {
@@ -753,7 +753,7 @@ label {
 }
 
 .modal-internet__wrapper {
-    background: url(../../img/connect.jpg) center center/cover no-repeat
+    background: url(../img/connect.jpg) center center/cover no-repeat
 }
 
 #tariff-1-1,
@@ -880,7 +880,7 @@ label {
 }
 
 .form-check__input:checked+.form-check__box {
-    background-image: url(../../icons/checkbox-checked.svg)
+    background-image: url(../icons/checkbox-checked.svg)
 }
 
 .form-check__box {
