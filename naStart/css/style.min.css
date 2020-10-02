@@ -616,14 +616,45 @@ label {
     align-items: center
 }
 
+.connect__banner_internet-tv {
+    width: 400px
+}
+
+.connect__banner_tv {
+    width: 500px
+}
+
 .connect__descr {
     width: 155px;
-    height: 35px;
+    height: 47px;
     background-color: #d70041;
     color: #fff;
     font-size: 18px;
     text-align: center;
-    padding: 5px 0
+    padding: 6% 0
+}
+
+.connect__descr_internet-tv {
+    width: 290px;
+    background-color: #ec930d;
+    padding: 3% 0
+}
+
+.connect__descr_tv {
+    width: 330px;
+    background-color: #a3cf25;
+    padding: 2.5% 0
+}
+
+.connect__icons_internet-tv,
+.connect__icons_tv {
+    display: flex;
+    justify-content: space-between;
+    width: 100px
+}
+
+.connect__icons_tv {
+    width: 150px
 }
 
 .connect__icons img {
@@ -753,6 +784,7 @@ label {
 }
 
 .modal-internet__wrapper {
+    background-color: none;
     background: url(../img/connect.jpg) center center/cover no-repeat
 }
 
