@@ -69,7 +69,7 @@ let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv">
 
 let $replaceBtn = ['<input value="подключиться" class="button button_internet-tv" type="submit">', '<input value="подключиться" class="button button_internet-tv-movie" type="submit">'];
 
-let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ +Кино</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ +Кино</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ +Кино</option><option value="rocket">Ракета / 300 Мбит/с + ТВ +Кино</option></select>'];
+let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ +Кино</option><option value="rocket">Ракета / 300 Мбит/с + ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
 
