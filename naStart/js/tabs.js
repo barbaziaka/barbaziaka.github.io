@@ -1,36 +1,33 @@
-document.querySelectorAll(".tariffs-tab").forEach((item) =>
-    item.addEventListener("click", function(e) {
-        e.preventDefault();
-        const id = e.target.getAttribute("href").replace("#", "");
+// document.querySelectorAll(".tariffs-tab").forEach((item) =>
+//     item.addEventListener("click", function(e) {
+//         e.preventDefault();
+//         const id = e.target.getAttribute("href").replace("#", "");
 
-        document.querySelectorAll(".tariffs-tab").forEach(
-            (child) => child.classList.remove("tariffs-tab_active")
-        );
-        document.querySelectorAll(".tariffs__content").forEach(
-            (child) => child.classList.remove("tariffs__content_active")
-        );
+//         document.querySelectorAll(".tariffs-tab").forEach(
+//             (child) => child.classList.remove("tariffs-tab_active")
+//         );
+//         document.querySelectorAll(".tariffs__content").forEach(
+//             (child) => child.classList.remove("tariffs__content_active")
+//         );
 
-        item.classList.add("tariffs-tab_active");
-        document.getElementById(id).classList.add("tariffs__content_active");
+//         item.classList.add("tariffs-tab_active");
+//         document.getElementById(id).classList.add("tariffs__content_active");
 
-    })
-);
+//     })
+// );
 
-document.querySelector(".tariffs-tab").click();
+// document.querySelector(".tariffs-tab").click();
 
 
-window.onscroll = function() { scrollFunction() };
+
+
+
+window.onscroll = function() { scrollFunction(); };
 
 function scrollFunction() {
     if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-        document.getElementById("up").style.padding = "20px 0 0 0";
-        document.getElementById("up").style.height = "80px";
-        document.getElementById("logo").style.width = "180px";
-        document.getElementById("up").style.boxShadow = "0 0.5rem 1rem rgba(0, 0, 0, 0.15)";
+        document.getElementById("up").style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.15)";
     } else {
-        document.getElementById("up").style.padding = "70px 0 0 0";
-        document.getElementById("up").style.height = "145px";
-        document.getElementById("logo").style.width = "239px";
         document.getElementById("up").style.boxShadow = "none";
     }
 }
@@ -62,6 +59,7 @@ $(document).ready(function() {
             $('.pageup').fadeOut();
         }
     });
+
 });
 
 
@@ -69,7 +67,7 @@ let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv">
 
 let $replaceBtn = ['<input value="подключиться" class="button button_internet-tv" type="submit">', '<input value="подключиться" class="button button_internet-tv-movie" type="submit">'];
 
-let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ +Кино</option><option value="rocket">Ракета / 300 Мбит/с + ТВ + Кино</option></select>'];
+let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket">Ракета / 300 Мбит/с + ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
 
@@ -168,5 +166,40 @@ $(document).ready(function() {
         $('#tariff-select').replaceWith($replaceSelect[1]);
         $('#tariff-select option:last-child').prop('selected', true);
         return false;
+    });
+});
+
+$(document).ready(function() {
+    $('.tariffs-tab').click(function(e) {
+        e.preventDefault();
+
+        $('.tariffs-tab').removeClass('tariffs-tab_active');
+        $('.tariffs__content').removeClass('tariffs__content_active');
+
+        $(this).addClass('.tariffs-tab_active');
+        $($(this).attr('href')).addClass('tariffs__content_active');
+
+    });
+    $('.tariffs-tab:first').click();
+
+    $('a[href="#tariffs"').click(function() {
+        let target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 100
+        }, 1000);
+    });
+
+    $('.accordion-item__trigger').click(function() {
+        $(this).next('.accordion-item__content').slideToggle(700);
+        if ($(this).find('.accordion-item__icon-down').css('display') == 'none') {
+
+            $(this).find('.accordion-item__icon-down').css('display', 'block');
+
+            $(this).find('.accordion-item__icon-up').css('display', 'none');
+        } else {
+            $(this).find('.accordion-item__icon-down').css('display', 'none');
+
+            $(this).find('.accordion-item__icon-up').css('display', 'block');
+        }
     });
 });

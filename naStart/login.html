@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Для бизнеса</title>
+    <title>Личный кабинет</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -14,10 +14,10 @@
 
 <body>
 
-    <section class="business">
+    <section class="login-page">
 
         <div class="container">
-            <header class="header header_business">
+            <header class="header header_login-page">
                 <div class="header-wrapper">
                     <div class="header-logo" id="logo">
                         <a class="header-logo__link" href="index.html">
@@ -32,33 +32,35 @@
             </header>
         </div>
 
-        <div class="container">
-            <div class="business-content">
-                <div class="business-content__wrapper">
-                    <div class="business-content__header">ПОДКЛЮЧИ<br>СВОЙ ОФИС</div>
-                    <div class="business-content__descr">Для решения ваших задач мы готовы подключить ваш офис или<br>производственное помещение к собственным оптико-волоконным<br>сетям связи на индивидуальных условиях.
-                    </div>
 
-                    <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
-                        <div class="form__wrapper form__wrapper_business">
-                            <div class="form__name"><label for="name">Ваше имя</label><input autocomplete="off" class="form__input" placeholder="" name="name" type="text" id="name"></div><br>
-                            <div class="form__mail"><label for="mail">Контакт для связи</label><input autocomplete="off" class="form__input" placeholder="" name="email" type="text" id="mail">
+        <div class="container">
+
+            <div class="login-page">
+                <div class="login-page__wrapper">
+                    <form class="form-authorization" enctype="multipart/form-data" action="#" method="post" id="form" onsubmit="">
+                        <div class="form__wrapper form__wrapper_login-page">
+                            <div class="form__header">Авторизация</div>
+                            <br>
+                            <div class="form__login"><input autocomplete="off" class="form__input" placeholder="Введите логин" name="login" type="text" id="login" required></div>
+                            <br>
+                            <div class="form__password"><input autocomplete="off" class="form__input" placeholder="Введите пароль" name="password" type="password" id="password" required>
                             </div>
                             <br>
-                            <br>
-                            <br>
-
                         </div>
-
-                        <input value="отправить" class="button" type="submit">
-
+                        <a class="form__link" href="#">Восстановить пароль</a>
+                        <br>
+                        <br>
+                        <input value="Войти" class="button button_mini button_white" type="submit">
+                        <br>
                     </form>
+
+                    <div class="login-page__footer">Телефон технической поддержки:<a class="phone__link" href="tel:+7(812)4163111"> +7 (812) 416-31-11</a>
+                    </div>
+
                 </div>
             </div>
         </div>
-
     </section>
-
 
 
 
@@ -66,8 +68,8 @@
     <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/post.js">
-    </script>
+    <script src="js/post.js"></script>
+
 </body>
 
 </html>

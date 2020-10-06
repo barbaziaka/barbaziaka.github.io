@@ -24,7 +24,7 @@ label {
 }
 
 .promo-content__pseudo {
-    height: 145px
+    height: 100px
 }
 
 .promo-content__wrapper {
@@ -56,11 +56,12 @@ label {
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 145px;
+    height: 100px;
     background-color: #e3e4e6;
-    padding-top: 70px
+    padding-top: 15px
 }
 
+.header_account-page,
 .header_business,
 .header_connect,
 .header_payment {
@@ -118,13 +119,18 @@ label {
     text-decoration: none
 }
 
+.header-menu__link:hover {
+    padding-bottom: 5px;
+    border-bottom: 3px solid #d70040
+}
+
 .header-menu__link-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 159px;
     height: 41px;
-    border: 1px solid #000
+    border: 1px solid #d70040
 }
 
 .header-menu__account-icon {
@@ -149,8 +155,7 @@ label {
 }
 
 .button:hover {
-    cursor: pointer;
-    transform: scale(.9, .9)
+    cursor: pointer
 }
 
 .button_promo {
@@ -196,6 +201,11 @@ label {
 
 .button_video-monitoring {
     background: #8a0dec
+}
+
+.button_mini {
+    width: 137px;
+    height: 34px
 }
 
 .advantages {
@@ -322,8 +332,19 @@ label {
     height: 312px
 }
 
+.tariffs-item__block_tv {
+    height: 378px;
+    padding-top: 0
+}
+
 .tariffs-item__block_inverse {
     color: #fff
+}
+
+.tariffs-item__block_cctv {
+    width: 100%;
+    height: 1512px;
+    background: url(../img/video-monitoring_bcg.jpg) #e3e4e6 center center/auto no-repeat
 }
 
 .tariffs-item__wrapper {
@@ -331,8 +352,23 @@ label {
     justify-content: space-between
 }
 
-.tariffs-item__title {
+.tariffs-item-descr__wrapper_cctv {
     padding-top: 38px
+}
+
+.tariffs-item__title {
+    padding-top: 48px
+}
+
+.tariffs-item__title-banner {
+    width: 500px;
+    height: 400px
+}
+
+.tariffs-item__title-banner img {
+    display: block;
+    width: 100%;
+    height: 100%
 }
 
 .tariffs-item-internet {
@@ -355,6 +391,22 @@ label {
 .tariffs-item-connect__wrapper {
     display: flex;
     align-items: center
+}
+
+.tariffs-item-descr__title_cctv {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    width: 250px
+}
+
+.tariffs-item-descr__text {
+    width: 170px;
+    font-size: 18px
+}
+
+.tariffs-item-descr__icon_cctv {
+    margin-right: 10%
 }
 
 .tariffs-item-descr__profit {
@@ -413,6 +465,10 @@ label {
     justify-content: space-between;
     width: 662px;
     height: auto
+}
+
+.tariffs-item-descr__wrapper_cctv {
+    width: 520px
 }
 
 .tariffs-item-descr__header {
@@ -527,6 +583,53 @@ label {
 
 .vector_video-monitoring {
     background-color: #8a0dec
+}
+
+.accordion-item {
+    background-color: #0ec4ec
+}
+
+.accordion-item__trigger {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 50px 0;
+    width: 280px;
+    color: #fff;
+    display: flex;
+    align-items: center
+}
+
+.accordion-item__trigger img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.accordion-item__trigger:hover {
+    cursor: pointer
+}
+
+.accordion-item__content {
+    display: none;
+    font-size: 18px;
+    color: #fff
+}
+
+.accordion-item__column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px
+}
+
+.accordion-item__icon-down,
+.accordion-item__icon-up {
+    width: 12px;
+    height: 12px;
+    margin-left: 10%
+}
+
+.accordion-item__icon-up {
+    display: none
 }
 
 .contacts__wrapper {
@@ -740,6 +843,56 @@ label {
     margin-bottom: 68px
 }
 
+.account-page {
+    width: 100%;
+    height: 100vh;
+    background: #f7f7f7
+}
+
+.account-page__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px
+}
+
+.account-page-menu {
+    width: auto;
+    height: 414px;
+    background-color: #d70041
+}
+
+.account-page__content {
+    width: 802px;
+    height: 414px;
+    display: flex;
+    justify-content: space-between
+}
+
+.account-page__info-user {
+    width: 365px;
+    height: 414px;
+    background-color: #fff
+}
+
+.account-page__info {
+    width: 408px;
+    height: 414px;
+    background-color: #fff
+}
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    background: #f7f7f7
+}
+
+.login-page__footer {
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    color: #d7006c
+}
+
 .footer__bcg_black {
     background-color: #000
 }
@@ -834,6 +987,30 @@ label {
     display: none
 }
 
+.form__header {
+    text-align: center;
+    color: #fff
+}
+
+.form-authorization {
+    width: 350px;
+    height: 240px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, #d7006c .01%, #d4000f 100%);
+    border-radius: 5px;
+    padding-top: 1%;
+    box-shadow: 0 5px 15px #d7006c
+}
+
+.form__link {
+    color: #fff;
+    text-decoration: none
+}
+
 .form__wrapper_business {
     width: 350px
 }
@@ -848,8 +1025,7 @@ label {
     outline: 0;
     border: none;
     height: 20px;
-    padding: 2px;
-    width: 210px
+    max-width: 100%
 }
 
 .form__address,
@@ -868,11 +1044,12 @@ label {
 }
 
 .form__apartment-number {
-    margin-left: 39.5%;
+    margin-left: 44.5%;
     width: 200px
 }
 
 .form__apartment-number input {
+    text-indent: 10%;
     width: 70px
 }
 
@@ -887,14 +1064,14 @@ label {
 }
 
 .form__item {
-    width: 330px
+    width: 360px
 }
 
 .form__input {
     border: none;
     height: 20px;
     outline: 0;
-    padding-left: 5px
+    text-indent: 2%
 }
 
 .form__checkboxes {
