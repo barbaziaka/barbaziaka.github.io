@@ -173,13 +173,13 @@ $(document).ready(function() {
     $('.tariffs-tab').click(function(e) {
         e.preventDefault();
 
-        $('.tariffs-tab').removeClass('tariffs-tab_active');
+        $('.tariffs-tab').removeClass('tariffs-tab_active tariffs-tab_animate');
         $('.tariffs__content').removeClass('tariffs__content_active');
 
-        $(this).addClass('.tariffs-tab_active');
+        $(this).addClass('.tariffs-tab_active .tariffs-tab_animate');
         $($(this).attr('href')).addClass('tariffs__content_active');
-
     });
+
     $('.tariffs-tab:first').click();
 
     $('a[href="#tariffs"').click(function() {
@@ -202,4 +202,6 @@ $(document).ready(function() {
             $(this).find('.accordion-item__icon-up').css('display', 'block');
         }
     });
+
+
 });

@@ -1,3 +1,75 @@
+.bcg_red {
+    background-color: #d70040
+}
+
+.bcg_white {
+    background-color: #fff
+}
+
+.bcg_yellow {
+    background-color: #ec930d
+}
+
+.bcg_lime {
+    background-color: #a3cf25
+}
+
+.bcg_blue {
+    background-color: #0ec4ec
+}
+
+.bcg_violet {
+    background-color: #8a0dec
+}
+
+.txt_red {
+    color: #d70040
+}
+
+.txt_white {
+    color: #fff
+}
+
+.txt_yellow {
+    color: #ec930d
+}
+
+.txt_lime {
+    color: #a3cf25
+}
+
+.txt_blue {
+    color: #0ec4ec
+}
+
+.txt_violet {
+    color: #8a0dec
+}
+
+.border_red {
+    border: 1px solid #d70040
+}
+
+.border_white {
+    border: 1px solid #fff
+}
+
+.border_yellow {
+    border: 1px solid #ec930d
+}
+
+.border_lime {
+    border: 1px solid #a3cf25
+}
+
+.border_blue {
+    border: 1px solid #0ec4ec
+}
+
+.border_violet {
+    border: 1px solid #8a0dec
+}
+
 *,
 ::after,
 ::before {
@@ -130,6 +202,11 @@ label {
     align-items: center;
     width: 159px;
     height: 41px;
+    transition: .5s;
+    border: 1px solid #000
+}
+
+.header-menu__link-wrapper:hover {
     border: 1px solid #d70040
 }
 
@@ -143,10 +220,13 @@ label {
     height: 50px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(0deg, #d7006c .01%, #d4000f 100%);
-    color: #fff;
     font-size: 18px;
     line-height: 21px
+}
+
+.button_promo {
+    color: #fff;
+    background: linear-gradient(0deg, #d7006c .01%, #d4000f 100%)
 }
 
 .button:focus,
@@ -160,47 +240,6 @@ label {
 
 .button_promo {
     margin-top: 107px
-}
-
-.button_connect {
-    background: #d70040
-}
-
-.button_white {
-    background: #fff;
-    color: #d70040
-}
-
-.button_orange {
-    color: #ec930d
-}
-
-.button_lime {
-    color: #a3cf25
-}
-
-.button_blue {
-    color: #0ec4ec
-}
-
-.button_violet {
-    color: #8a0dec
-}
-
-.button_internet-tv {
-    background: #ec930d
-}
-
-.button_internet-tv-movie {
-    background: #a3cf25
-}
-
-.button_tv {
-    background: #0ec4ec
-}
-
-.button_video-monitoring {
-    background: #8a0dec
 }
 
 .button_mini {
@@ -264,11 +303,14 @@ label {
 }
 
 .tariffs__content {
-    display: none
+    display: none;
+    transform: translateX(-100%)
 }
 
 .tariffs__content_active {
-    display: block
+    display: block;
+    transition: all 3s;
+    transform: translateX(0)
 }
 
 .tariffs-tab {
@@ -285,46 +327,9 @@ label {
     opacity: .7
 }
 
-.tariffs-tab_internet {
-    background-color: #d70040
-}
-
-.tariffs-tab_internet-tv {
-    background-color: #ec930d
-}
-
-.tariffs-tab_internet-tv-movie {
-    background-color: #a3cf25
-}
-
-.tariffs-tab_tv {
-    background-color: #0ec4ec
-}
-
-.tariffs-tab_video-monitoring {
-    background-color: #8a0dec
-}
-
 .tariffs-item__bcg {
     margin: 0 auto;
-    max-width: 1366px;
-    background-color: #d70040
-}
-
-.tariffs-item__bcg_internet-tv {
-    background-color: #ec930d
-}
-
-.tariffs-item__bcg_internet-tv-movie {
-    background-color: #a3cf25
-}
-
-.tariffs-item__bcg_tv {
-    background-color: #0ec4ec
-}
-
-.tariffs-item__bcg_video-monitoring {
-    background-color: #8a0dec
+    max-width: 1366px
 }
 
 .tariffs-item__block {
@@ -337,10 +342,6 @@ label {
     padding-top: 0
 }
 
-.tariffs-item__block_inverse {
-    color: #fff
-}
-
 .tariffs-item__block_cctv {
     width: 100%;
     height: 1512px;
@@ -350,10 +351,6 @@ label {
 .tariffs-item__wrapper {
     display: flex;
     justify-content: space-between
-}
-
-.tariffs-item-descr__wrapper_cctv {
-    padding-top: 38px
 }
 
 .tariffs-item__title {
@@ -393,6 +390,10 @@ label {
     align-items: center
 }
 
+.tariffs-item-descr__wrapper_cctv {
+    padding-top: 38px
+}
+
 .tariffs-item-descr__title_cctv {
     display: flex;
     justify-content: space-between;
@@ -414,50 +415,7 @@ label {
     padding-top: 1%;
     width: 132px;
     height: 28px;
-    color: #fff;
-    background-color: #d70040;
     font-size: 18px
-}
-
-.tariffs-item-descr__profit_white {
-    color: #d70040;
-    background: #fff
-}
-
-.tariffs-item-descr__profit_orange {
-    color: #ec930d;
-    background: #fff
-}
-
-.tariffs-item-descr__profit_lime {
-    color: #a3cf25;
-    background: #fff
-}
-
-.tariffs-item-descr__profit_blue {
-    color: #0ec4ec;
-    background: #fff
-}
-
-.tariffs-item-descr__profit_violet {
-    color: #8a0dec;
-    background: #fff
-}
-
-.tariffs-item-descr__profit_internet-tv {
-    background-color: #ec930d
-}
-
-.tariffs-item-descr__profit_internet-tv-movie {
-    background-color: #a3cf25
-}
-
-.tariffs-item-descr__profit_tv {
-    background-color: #0ec4ec
-}
-
-.tariffs-item-descr__profit_video-monitoring {
-    background-color: #8a0dec
 }
 
 .tariffs-item-descr__wrapper {
@@ -471,30 +429,6 @@ label {
     width: 520px
 }
 
-.tariffs-item-descr__header {
-    color: #d70040
-}
-
-.tariffs-item-descr__header_white {
-    color: #fff
-}
-
-.tariffs-item-descr__header_internet-tv {
-    color: #ec930d
-}
-
-.tariffs-item-descr__header_internet-tv-movie {
-    color: #a3cf25
-}
-
-.tariffs-item-descr__header_tv {
-    color: #0ec4ec
-}
-
-.tariffs-item-descr__header_video-monitoring {
-    color: #8a0dec
-}
-
 .tariffs-item-descr__cost {
     margin: 34px 0
 }
@@ -503,30 +437,6 @@ label {
     font-size: 18px;
     max-width: 250px;
     padding: 10px 20px 20px 30px
-}
-
-.tariffs-item-descr__content_border-red {
-    border: 1px solid #d70040
-}
-
-.tariffs-item-descr__content_border-white {
-    border: 1px solid #fff
-}
-
-.tariffs-item-descr__content_border-internet-tv {
-    border: 1px solid #ec930d
-}
-
-.tariffs-item-descr__content_border-internet-tv-movie {
-    border: 1px solid #a3cf25
-}
-
-.tariffs-item-descr__content_border-tv {
-    border: 1px solid #0ec4ec
-}
-
-.tariffs-item-descr__content_border-video-monitoring {
-    border: 1px solid #8a0dec
 }
 
 .tariffs-item-descr__content_down {
@@ -538,15 +448,14 @@ label {
     align-items: center;
     justify-content: start;
     transform: translateY(-40%);
-    width: 520px;
+    width: 640px;
     margin-left: 40%
 }
 
 .vector {
     display: block;
     height: 2px;
-    margin-right: 2px;
-    background-color: #d70040
+    margin-right: 2px
 }
 
 .vector_start {
@@ -565,34 +474,15 @@ label {
     width: 520px
 }
 
-.vector_white {
-    background-color: #fff
-}
-
-.vector_internet-tv {
-    background-color: #ec930d
-}
-
-.vector_internet-tv-movie {
-    background-color: #a3cf25
-}
-
-.vector_tv {
-    background-color: #0ec4ec
-}
-
-.vector_video-monitoring {
-    background-color: #8a0dec
-}
-
-.accordion-item {
-    background-color: #0ec4ec
+.accordion__breaker {
+    width: 100%;
+    height: 30px
 }
 
 .accordion-item__trigger {
     font-size: 24px;
     line-height: 24px;
-    padding: 50px 0;
+    padding: 20px 0;
     width: 280px;
     color: #fff;
     display: flex;
@@ -611,7 +501,9 @@ label {
 
 .accordion-item__content {
     display: none;
+    padding-top: 20px;
     font-size: 18px;
+    line-height: 30px;
     color: #fff
 }
 
@@ -630,6 +522,10 @@ label {
 
 .accordion-item__icon-up {
     display: none
+}
+
+.contacts {
+    padding-top: 50px
 }
 
 .contacts__wrapper {
@@ -730,7 +626,7 @@ label {
 .connect__descr {
     width: 155px;
     height: 47px;
-    background-color: #d70041;
+    background-color: #d70040;
     color: #fff;
     font-size: 18px;
     text-align: center;
@@ -858,7 +754,7 @@ label {
 .account-page-menu {
     width: auto;
     height: 414px;
-    background-color: #d70041
+    background-color: #d70040
 }
 
 .account-page__content {
