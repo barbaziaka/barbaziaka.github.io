@@ -173,11 +173,12 @@ $(document).ready(function() {
     $('.tariffs-tab').click(function(e) {
         e.preventDefault();
 
-        $('.tariffs-tab').removeClass('tariffs-tab_active tariffs-tab_animate');
+        $('.tariffs-tab').removeClass('tariffs-tab_active');
         $('.tariffs__content').removeClass('tariffs__content_active');
 
-        $(this).addClass('.tariffs-tab_active .tariffs-tab_animate');
+        $(this).addClass('.tariffs-tab_active');
         $($(this).attr('href')).addClass('tariffs__content_active');
+
     });
 
     $('.tariffs-tab:first').click();

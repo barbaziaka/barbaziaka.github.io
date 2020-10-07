@@ -22,6 +22,10 @@
     background-color: #8a0dec
 }
 
+.bcg_grey {
+    background-color: #e3e4e6
+}
+
 .txt_red {
     color: #d70040
 }
@@ -303,14 +307,11 @@ label {
 }
 
 .tariffs__content {
-    display: none;
-    transform: translateX(-100%)
+    display: none
 }
 
 .tariffs__content_active {
-    display: block;
-    transition: all 3s;
-    transform: translateX(0)
+    display: block
 }
 
 .tariffs-tab {
@@ -480,8 +481,8 @@ label {
 }
 
 .accordion-item__trigger {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 20px;
     padding: 20px 0;
     width: 280px;
     color: #fff;
