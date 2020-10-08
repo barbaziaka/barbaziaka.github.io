@@ -1,3 +1,55 @@
+.bcg-btn_red {
+    background-color: #d70040
+}
+
+.bcg-btn_red:hover {
+    background-color: #a00030
+}
+
+.bcg-btn_white {
+    background-color: #fff
+}
+
+.bcg-btn_white:hover {
+    background-color: #dfdfdf
+}
+
+.bcg-btn_yellow {
+    background-color: #ec930d
+}
+
+.bcg-btn_yellow:hover {
+    background-color: #d3830b
+}
+
+.bcg-btn_lime {
+    background-color: #a3cf25
+}
+
+.bcg-btn_lime:hover {
+    background-color: #8db420
+}
+
+.bcg-btn_blue {
+    background-color: #0ec4ec
+}
+
+.bcg-btn_blue:hover {
+    background-color: #0ba7ca
+}
+
+.bcg-btn_violet {
+    background-color: #8a0dec
+}
+
+.bcg-btn_violet:hover {
+    background-color: #770cc8
+}
+
+.bcg_black {
+    background-color: #000
+}
+
 .bcg_red {
     background-color: #d70040
 }
@@ -24,6 +76,10 @@
 
 .bcg_grey {
     background-color: #e3e4e6
+}
+
+.txt_black {
+    background-color: #000
 }
 
 .txt_red {
@@ -81,6 +137,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0
+}
+
+body {
+    background-color: #e4e4e6
 }
 
 label {
@@ -206,12 +266,20 @@ label {
     align-items: center;
     width: 159px;
     height: 41px;
-    transition: .5s;
-    border: 1px solid #000
+    transition: .7s
+}
+
+.header-menu__link-wrapper #svg {
+    transition: .7s
 }
 
 .header-menu__link-wrapper:hover {
-    border: 1px solid #d70040
+    background-color: #d7002f;
+    color: #fff
+}
+
+.header-menu__link-wrapper:hover #svg {
+    fill: #fff
 }
 
 .header-menu__account-icon {
@@ -231,6 +299,10 @@ label {
 .button_promo {
     color: #fff;
     background: linear-gradient(0deg, #d7006c .01%, #d4000f 100%)
+}
+
+.button_promo:hover {
+    background: linear-gradient(0deg, #a30052 .01%, #ad000c 100%)
 }
 
 .button:focus,
@@ -328,7 +400,7 @@ label {
     opacity: .7
 }
 
-.tariffs-item__bcg {
+.tariffs-item {
     margin: 0 auto;
     max-width: 1366px
 }
@@ -475,6 +547,11 @@ label {
     width: 520px
 }
 
+.accordion__wrapper {
+    max-width: 1366px;
+    margin: 0 auto
+}
+
 .accordion__breaker {
     width: 100%;
     height: 30px
@@ -485,15 +562,7 @@ label {
     line-height: 20px;
     padding: 20px 0;
     width: 280px;
-    color: #fff;
-    display: flex;
-    align-items: center
-}
-
-.accordion-item__trigger img {
-    display: block;
-    width: 100%;
-    height: 100%
+    display: flex
 }
 
 .accordion-item__trigger:hover {
@@ -504,8 +573,7 @@ label {
     display: none;
     padding-top: 20px;
     font-size: 18px;
-    line-height: 30px;
-    color: #fff
+    line-height: 30px
 }
 
 .accordion-item__column-wrapper {
@@ -523,6 +591,14 @@ label {
 
 .accordion-item__icon-up {
     display: none
+}
+
+#triangle-down,
+#triangle-up {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #fff
 }
 
 .contacts {
@@ -790,8 +866,9 @@ label {
     color: #d7006c
 }
 
-.footer__bcg_black {
-    background-color: #000
+.footer {
+    max-width: 1366px;
+    margin: 0 auto
 }
 
 .footer__address-wrapper,
@@ -965,7 +1042,7 @@ label {
 }
 
 .form__input {
-    border: none;
+    border: 1px solid #d3d3d3;
     height: 20px;
     outline: 0;
     text-indent: 2%
