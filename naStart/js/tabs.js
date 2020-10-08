@@ -1,27 +1,3 @@
-// document.querySelectorAll(".tariffs-tab").forEach((item) =>
-//     item.addEventListener("click", function(e) {
-//         e.preventDefault();
-//         const id = e.target.getAttribute("href").replace("#", "");
-
-//         document.querySelectorAll(".tariffs-tab").forEach(
-//             (child) => child.classList.remove("tariffs-tab_active")
-//         );
-//         document.querySelectorAll(".tariffs__content").forEach(
-//             (child) => child.classList.remove("tariffs__content_active")
-//         );
-
-//         item.classList.add("tariffs-tab_active");
-//         document.getElementById(id).classList.add("tariffs__content_active");
-
-//     })
-// );
-
-// document.querySelector(".tariffs-tab").click();
-
-
-
-
-
 window.onscroll = function() { scrollFunction(); };
 
 function scrollFunction() {
@@ -63,9 +39,9 @@ $(document).ready(function() {
 });
 
 
-let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv">интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv">интернет + ТВ + Кино</div><div class="connect__icons connect__icons_tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>'];
+let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_lime">интернет + ТВ + Кино</div><div class="connect__icons connect__icons_tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>'];
 
-let $replaceBtn = ['<input value="подключиться" class="button button_internet-tv" type="submit">', '<input value="подключиться" class="button button_internet-tv-movie" type="submit">'];
+let $replaceBtn = ['<input name="button" value="подключиться" class="button bcg-btn_yellow txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_lime txt_white" type="submit" id="btn-confirm" disabled="disabled" >'];
 
 let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket">Ракета / 300 Мбит/с + ТВ + Кино</option></select>'];
 
@@ -90,7 +66,7 @@ $(document).ready(function() {
         $('#tariff-select option:last-child').prop('selected', true);
     });
 
-    $('.modal__close').on('click', function() {
+    $('.modal-internet__close').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeOut('slow');
     });
 
@@ -99,7 +75,7 @@ $(document).ready(function() {
     $('.tariff-2-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[0]);
-        $('#btn').replaceWith($replaceBtn[0]);
+        $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
         return false;
     });
@@ -107,7 +83,7 @@ $(document).ready(function() {
     $('.tariff-2-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[0]);
-        $('#btn').replaceWith($replaceBtn[0]);
+        $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
         $('#tariff-select option:nth-child(2)').prop('selected', true);
         return false;
@@ -116,7 +92,7 @@ $(document).ready(function() {
     $('.tariff-2-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[0]);
-        $('#btn').replaceWith($replaceBtn[0]);
+        $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
         $('#tariff-select option:nth-child(3)').prop('selected', true);
         return false;
@@ -125,7 +101,7 @@ $(document).ready(function() {
     $('.tariff-2-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[0]);
-        $('#btn').replaceWith($replaceBtn[0]);
+        $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
         $('#tariff-select option:last-child').prop('selected', true);
         return false;
@@ -136,7 +112,7 @@ $(document).ready(function() {
     $('.tariff-3-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[1]);
-        $('#btn').replaceWith($replaceBtn[1]);
+        $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
         return false;
     });
@@ -144,7 +120,7 @@ $(document).ready(function() {
     $('.tariff-3-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[1]);
-        $('#btn').replaceWith($replaceBtn[1]);
+        $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
         $('#tariff-select option:nth-child(2)').prop('selected', true);
         return false;
@@ -153,7 +129,7 @@ $(document).ready(function() {
     $('.tariff-3-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[1]);
-        $('#btn').replaceWith($replaceBtn[1]);
+        $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
         $('#tariff-select option:nth-child(3)').prop('selected', true);
         return false;
@@ -162,7 +138,7 @@ $(document).ready(function() {
     $('.tariff-3-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[1]);
-        $('#btn').replaceWith($replaceBtn[1]);
+        $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
         $('#tariff-select option:last-child').prop('selected', true);
         return false;
@@ -204,5 +180,13 @@ $(document).ready(function() {
         }
     });
 
+
+    $('#checkbox-confirm').click(function() {
+        if ($(this).is(':checked')) {
+            $('#btn-confirm').removeAttr('disabled');
+        } else {
+            $('#btn-confirm').attr('disabled', 'disabled');
+        }
+    });
 
 });
