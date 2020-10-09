@@ -1213,31 +1213,53 @@
                     <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                         <div class="form__wrapper form__wrapper_connect">
                             <div class="form__item">
-                                <div class="form__tariff">
-                                    <label for="tariff">Я выбираю</label>
-                                    <select class="form__select" name="tariff" id="tariff-select">
-                                <option value="easy-start">Легкий старт / 50 Мбит/с</option>
-                                <option value="quick-start">Быстрый старт / 100 Мбит/с</option>
-                                <option value="afterburner">Форсаж / 200 Мбит/с</option>
-                                <option value="rocket">Ракета / 300 Мбит/с</option>
-                            </select>
+                                <div class="form__content">
+                                    <div class="form__tariff">
+                                        <label for="tariff">Я выбираю</label>
+                                    </div>
+                                    <br>
+                                    <div class="form__name form__name_connect"><label for="name">Меня зовут</label>
+                                    </div>
+                                    <br>
+                                    <div class="form__address"><label for="address">Адрес подключения</label>
+                                    </div>
+                                    <br>
+                                    <div class="form__apartment-number">
+                                        <label for="apartment-number">Номер квартиры</label>
+                                    </div>
+                                    <br>
+                                    <div class="form__phone"><label for="phone">Номер телефона<span>+7</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="form__mail form__mail_connect"><label for="mail">Почта</label>
+                                    </div>
+                                    <br>
                                 </div>
-                                <br>
-                                <div class="form__name form__name_connect"><label for="name">Меня зовут</label><input autocomplete="off" class="form__input" placeholder="" name="name" type="text" id="name">
+                                <div class="form__content">
+                                    <div class="form__tariff">
+                                        <select class="form__select" name="tariff" id="tariff-select">
+                                        <option value="easy-start">Легкий старт / 50 Мбит/с</option>
+                                        <option value="quick-start">Быстрый старт / 100 Мбит/с</option>
+                                        <option value="afterburner">Форсаж / 200 Мбит/с</option>
+                                        <option value="rocket">Ракета / 300 Мбит/с</option>
+                                    </select>
+                                    </div> <br>
+                                    <div class="form__name form__name_connect">
+                                        <input autocomplete="off" class="form__input" placeholder="" name="name" type="text" id="name">
+                                    </div> <br>
+                                    <div class="form__address">
+                                        <input autocomplete="off" class="form__input" placeholder="" name="address" type="text" id="address">
+                                    </div> <br>
+                                    <div class="form__apartment-number">
+                                        <input autocomplete="off" class="form__input" placeholder="" name="apartment-number" type="text" id="apartment-number">
+                                    </div> <br>
+                                    <div class="form__phone">
+                                        <input autocomplete="off" class="form__input" placeholder="911 222 33 44" name="phone" type="text" id="phone">
+                                    </div> <br>
+                                    <div class="form__mail form__mail_connect">
+                                        <input autocomplete="off" class="form__input" placeholder="" name="email" type="text" id="mail">
+                                    </div> <br>
                                 </div>
-                                <br>
-                                <div class="form__address"><label for="address">Адрес подключения</label><input autocomplete="off" class="form__input" placeholder="" name="address" type="text" id="address">
-                                </div>
-                                <br>
-                                <div class="form__apartment-number"><label for="apartment-number">Номер квартиры</label><input autocomplete="off" class="form__input" placeholder="" name="apartment-number" type="text" id="apartment-number">
-                                </div>
-                                <br>
-                                <div class="form__phone"><label for="phone">Номер телефона</label><span>+7</span><input autocomplete="off" class="form__input" placeholder="911 222 33 44" name="phone" type="text" id="phone">
-                                </div>
-                                <br>
-                                <div class="form__mail form__mail_connect"><label for="mail">Почта</label><input autocomplete="off" class="form__input" placeholder="" name="email" type="text" id="mail">
-                                </div>
-                                <br>
                             </div>
 
                             <div class="form__checkboxes">
@@ -1284,6 +1306,9 @@
                         </div>
                         <input name="button" class="button bcg-btn_red txt_white" type="submit" value="подключиться" id="btn-confirm" disabled="disabled">
                     </form>
+
+
+
                 </div>
             </div>
         </div>
@@ -1301,3 +1326,27 @@
 </body>
 
 </html>
+<div class="form-offer-agreement">
+    <label class="form-offer-agreement-check"><input type="checkbox" class="form-offer-agreement-check__input" id="checkbox-confirm"><span class="form-offer-agreement-check__box"></span></label>
+    <div class="form-offer-agreement__item">Нажимая на кнопку "подключиться", я даю<br>согласие на обработку персональных данных
+    </div>
+</div>
+<input name="button" class="button bcg-btn_red txt_white" type="submit" value="подключиться" id="btn-confirm" disabled="disabled">
+ -->
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/post.js"></script>
+<script src="js/tabs.js"></script>
+
+
+
