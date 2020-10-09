@@ -404,10 +404,6 @@ label {
     font-size: 18px
 }
 
-.tariffs-tab:hover {
-    opacity: .7
-}
-
 .tariffs-item {
     margin: 0 auto;
     max-width: 1366px
@@ -584,16 +580,24 @@ label {
     line-height: 120%
 }
 
+.accordion-link__item-icon {
+    max-width: 100%;
+    width: 240px;
+    height: auto
+}
+
 .accordion-link__item-icon_small {
     width: 88%
 }
 
 .accordion-link__item-icon_small img {
-    width: 100%
+    width: 100%;
+    height: auto
 }
 
 .accordion-link__item-icon img {
-    width: 100%
+    width: 100%;
+    height: auto
 }
 
 .accordion-link__item-title {
@@ -745,7 +749,7 @@ label {
 }
 
 .connect__wrapper {
-    margin-top: 58px
+    margin-top: 20px
 }
 
 .connect__banner {
