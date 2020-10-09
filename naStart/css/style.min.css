@@ -584,7 +584,15 @@ label {
     line-height: 120%
 }
 
-.accordion-link__item-text img {
+.accordion-link__item-icon_small {
+    width: 88%
+}
+
+.accordion-link__item-icon_small img {
+    width: 100%
+}
+
+.accordion-link__item-icon img {
     width: 100%
 }
 
@@ -601,6 +609,7 @@ label {
 
 .accordion-link__item:first-child {
     font-size: 64px;
+    font-weight: 400;
     line-height: 120%
 }
 
@@ -609,7 +618,7 @@ label {
     height: 128px;
     display: flex;
     padding-left: 5%;
-    transform: translateX(32%)
+    transform: translateX(33.5%)
 }
 
 .accordion-item__trigger {
