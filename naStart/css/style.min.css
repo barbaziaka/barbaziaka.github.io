@@ -211,7 +211,7 @@ label {
 }
 
 .header_connect {
-    padding-top: 30px;
+    padding-top: 15px;
     height: 100px
 }
 
@@ -228,6 +228,12 @@ label {
 .header-logo__link img {
     display: block;
     width: 100%;
+    height: auto
+}
+
+.header-logo__link_connect {
+    max-width: 100%;
+    width: 150px;
     height: auto
 }
 
@@ -749,13 +755,13 @@ label {
 }
 
 .connect__wrapper {
-    margin-top: 20px
+    margin-top: 50px
 }
 
 .connect__banner {
     display: flex;
-    margin-top: 50px;
-    width: 210px;
+    width: 180px;
+    height: auto;
     justify-content: space-between;
     align-items: center
 }
@@ -769,12 +775,12 @@ label {
 }
 
 .connect__descr {
-    width: 155px;
-    height: 47px;
+    width: 130px;
+    height: 35px;
     color: #fff;
     font-size: 18px;
     text-align: center;
-    padding: 6% 0
+    padding: 4% 0
 }
 
 .connect__descr_internet-tv {
@@ -785,6 +791,13 @@ label {
 .connect__descr_tv {
     width: 330px;
     padding: 2.5% 0
+}
+
+.connect__icons {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center
 }
 
 .connect__icons_internet-tv,
@@ -799,8 +812,8 @@ label {
 }
 
 .connect__icons img {
-    width: 42px;
-    height: 34px
+    width: 38px;
+    height: 30px
 }
 
 .pscb-payform {
@@ -1164,8 +1177,7 @@ label {
 
 .form__checkboxes {
     width: 252px;
-    height: 240px;
-    padding-top: 4%
+    height: 240px
 }
 
 .form-check__input {
@@ -1182,8 +1194,8 @@ label {
 
 .form-check__box {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     overflow: hidden;
     border: 1px solid #d3d3d3;
     background-color: #fff;
