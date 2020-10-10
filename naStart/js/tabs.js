@@ -39,11 +39,11 @@ $(document).ready(function() {
 });
 
 
-let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>'];
+let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_blue">ТВ</div><div class="connect__icons connect__icons_tv"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_cctv"><div class="connect__descr connect__descr_cctv bcg_violet">Видеонаблюдение</div><div class="connect__icons connect__icons_cctv"><img src="icons/cctv-camera.svg" alt="cctv-icon"></div></div>'];
 
-let $replaceBtn = ['<input name="button" value="подключиться" class="button bcg-btn_yellow txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_lime txt_white" type="submit" id="btn-confirm" disabled="disabled" >'];
+let $replaceBtn = ['<input name="button" value="подключиться" class="button bcg-btn_yellow txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_lime txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_blue txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_violet txt_white" type="submit" id="btn-confirm" disabled="disabled" >'];
 
-let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket">Ракета / 300 Мбит/с + ТВ + Кино</option></select>'];
+let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select-tv-movie"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
 
@@ -141,6 +141,26 @@ $(document).ready(function() {
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
         $('#tariff-select option:last-child').prop('selected', true);
+        return false;
+    });
+
+    $('.tariff-4-1').on('click', function() {
+        $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
+        $('.one, .two, .three, .four, .six').detach();
+        $('.connect__banner').replaceWith($replaceBanner[2]);
+        $('#btn-confirm').replaceWith($replaceBtn[2]);
+        $('#tariff-select').replaceWith($replaceSelect[2]);
+        $('#tariff-select option:first-child').prop('selected', true);
+        return false;
+    });
+
+    $('.tariff-5-1').on('click', function() {
+        $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
+        $('.one, .two, .three, .four, .five, .six, .seven, .eight').detach();
+        $('.connect__banner').replaceWith($replaceBanner[3]);
+        $('#btn-confirm').replaceWith($replaceBtn[3]);
+        $('#tariff-select').replaceWith($replaceSelect[3]);
+        $('#tariff-select option:first-child').prop('selected', true);
         return false;
     });
 });

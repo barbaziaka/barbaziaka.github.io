@@ -64,7 +64,9 @@
                 <div class="promo-content__wrapper">
                     <h1 class="promo-content__header">БЫСТРЫЙ<br> ИНТЕРНЕТ<br>У ВАС ДОМА</h1>
                 </div>
-                <button class="button button_promo">выбрать тариф</button>
+                <a href="#tariffs">
+                    <button class="button button_promo bcg-btn_red txt_white">выбрать тариф</button>
+                </a>
             </div>
         </div>
 
@@ -920,7 +922,7 @@
                             <div class="tariffs-item__title tariffs-item__title_down">
                                 <div class="tariffs-item__name">ОСНОВНОЙ ПАКЕТ<br>108 каналов</div>
                                 <div class="tariffs-item-connect__wrapper">
-                                    <button class="button bcg-btn_blue txt_white">подключиться</button>
+                                    <button class="button bcg-btn_blue txt_white tariff-4-1">подключиться</button>
                                     <div class="tariffs-item__cost">195 р.</div>
                                 </div>
                             </div>
@@ -1076,7 +1078,7 @@
                                 <div class="tariffs-item__title">
                                     <div class="tariffs-item__name">Видеонаблюдение</div><br><br><br>
                                     <div class="tariffs-item-connect__wrapper">
-                                        <button class="button bcg-btn_violet txt_white">подключиться</button>
+                                        <button class="button bcg-btn_violet txt_white tariff-5-1">подключиться</button>
                                         <div class="tariffs-item__cost">17 500 р. (6 месяцев)</div>
                                     </div>
                                 </div>
@@ -1192,18 +1194,6 @@
 
             <div class="container">
 
-                <!-- <div class="connect__banner connect__banner_tv">
-            <div class="connect__descr connect__descr_tv">Интернет + ТВ</div>
-            <div class="connect__icons connect__icons_tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div>
-        </div> -->
-
-                <!-- 
-        <div class="connect__banner connect__banner_tv">
-            <div class="connect__descr connect__descr_tv">Интернет + ТВ + Кино</div>
-            <div class="connect__icons connect__icons_tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div>
-        </div> -->
-
-
                 <div class="connect__banner">
                     <div class="connect__descr bcg_red">Интернет</div>
                     <div class="connect__icons"><img src="img/connect_internet-icon.svg" alt="wifi-icon"></div>
@@ -1214,85 +1204,79 @@
                         <div class="form__wrapper form__wrapper_connect">
                             <div class="form__item">
                                 <div class="form__content">
-                                    <div class="form__tariff">
+                                    <div class="form__tariff seven">
                                         <label for="tariff">Я выбираю</label>
                                     </div>
-                                    <br>
                                     <div class="form__name form__name_connect"><label for="name">Меня зовут</label>
                                     </div>
-                                    <br>
                                     <div class="form__address"><label for="address">Адрес подключения</label>
                                     </div>
-                                    <br>
                                     <div class="form__apartment-number">
                                         <label for="apartment-number">Номер квартиры</label>
                                     </div>
-                                    <br>
                                     <div class="form__phone"><label for="phone">Номер телефона<span>+7</span></label>
                                     </div>
-                                    <br>
                                     <div class="form__mail form__mail_connect"><label for="mail">Почта</label>
                                     </div>
-                                    <br>
                                 </div>
                                 <div class="form__content">
-                                    <div class="form__tariff">
+                                    <div class="form__tariff eight">
                                         <select class="form__select" name="tariff" id="tariff-select">
                                         <option value="easy-start">Легкий старт / 50 Мбит/с</option>
                                         <option value="quick-start">Быстрый старт / 100 Мбит/с</option>
                                         <option value="afterburner">Форсаж / 200 Мбит/с</option>
                                         <option value="rocket">Ракета / 300 Мбит/с</option>
                                     </select>
-                                    </div> <br>
+                                    </div>
                                     <div class="form__name form__name_connect">
                                         <input autocomplete="off" class="form__input" placeholder="" name="name" type="text" id="name">
-                                    </div> <br>
+                                    </div>
                                     <div class="form__address">
                                         <input autocomplete="off" class="form__input" placeholder="" name="address" type="text" id="address">
-                                    </div> <br>
+                                    </div>
                                     <div class="form__apartment-number">
                                         <input autocomplete="off" class="form__input" placeholder="" name="apartment-number" type="text" id="apartment-number">
-                                    </div> <br>
+                                    </div>
                                     <div class="form__phone">
                                         <input autocomplete="off" class="form__input" placeholder="911 222 33 44" name="phone" type="text" id="phone">
-                                    </div> <br>
+                                    </div>
                                     <div class="form__mail form__mail_connect">
                                         <input autocomplete="off" class="form__input" placeholder="" name="email" type="text" id="mail">
-                                    </div> <br>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form__checkboxes">
-                                <div class="form-check__item">
+                                <div class="form-check__item one">
                                     <label class="form-check__label">
-                        <input type="checkbox" class="form-check__input" id="checkbox-wi-fi"><span class="form-check__box"></span><div class="form-check__text">Оплачу за месяц</div></label>
+                        <input type="checkbox" class="form-check__input" id="checkbox-month"><span class="form-check__box"></span><div class="form-check__text">Оплачу за месяц</div></label>
                                 </div>
-                                <br>
-                                <div class="form-check__item">
+
+                                <div class="form-check__item two">
                                     <label class="form-check__label">
-                        <input type="checkbox" class="form-check__input" id="checkbox-wi-fi"><span class="form-check__box"></span><div class="form-check__text">Оплачу за пол года</div></label>
+                        <input type="checkbox" class="form-check__input" id="checkbox-half-year"><span class="form-check__box"></span><div class="form-check__text">Оплачу за пол года</div></label>
                                 </div>
-                                <br>
-                                <div class="form-check__item">
+
+                                <div class="form-check__item three">
                                     <label class="form-check__label">
-                        <input type="checkbox" class="form-check__input" id="checkbox-wi-fi"><span class="form-check__box"></span><div class="form-check__text">Оплачу за год</div></label>
+                        <input type="checkbox" class="form-check__input" id="checkbox-year"><span class="form-check__box"></span><div class="form-check__text">Оплачу за год</div></label>
                                 </div>
-                                <br>
-                                <div class="form-check__item">
+
+                                <div class="form-check__item four">
                                     <label class="form-check__label">
                             <input type="checkbox" class="form-check__input" id="checkbox-wi-fi"><span class="form-check__box"></span><div class="form-check__text">Мне нужен Wi-Fi роутер</div></label>
                                 </div>
-                                <br>
-                                <div class="form-check__item">
+
+                                <div class="form-check__item five">
                                     <label class="form-check__label">
                             <input type="checkbox" class="form-check__input" id="checkbox-tv-box"><span class="form-check__box"></span><div class="form-check__text">Мне нужна ТВ приставка</div></label>
                                 </div>
-                                <br>
-                                <div class="form-check__item">
+
+                                <div class="form-check__item six">
                                     <label class="form-check__label">
                             <input type="checkbox" class="form-check__input" id="checkbox-ip-tv"><span class="form-check__box"></span><div class="form-check__text">Мне нужен выделенный IP адрес</div></label>
                                 </div>
-                                <br>
+
                             </div>
                             <br>
                             <br>
