@@ -203,7 +203,7 @@ label {
     width: 100%;
     height: 100px;
     background-color: #e3e4e6;
-    padding-top: 15px
+    padding-top: 30px
 }
 
 .header_account-page,
@@ -885,7 +885,7 @@ label {
 
 .business {
     width: 100%;
-    height: 768px;
+    min-height: 768px;
     background: url(../img/for-business_1920.jpg) center center/cover no-repeat
 }
 

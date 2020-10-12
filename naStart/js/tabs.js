@@ -1,12 +1,10 @@
-window.onscroll = function() { scrollFunction(); };
-
-function scrollFunction() {
+window.onscroll = function scrollFunction() {
     if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
         document.getElementById("up").style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.15)";
     } else {
         document.getElementById("up").style.boxShadow = "none";
     }
-}
+};
 
 const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -37,7 +35,6 @@ $(document).ready(function() {
     });
 
 });
-
 
 let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_blue">ТВ</div><div class="connect__icons connect__icons_tv"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_cctv"><div class="connect__descr connect__descr_cctv bcg_violet">Видеонаблюдение</div><div class="connect__icons connect__icons_cctv"><img src="icons/cctv-camera.svg" alt="cctv-icon"></div></div>'];
 
@@ -179,7 +176,7 @@ $(document).ready(function() {
 
     $('.tariffs-tab:first').click();
 
-    $('a[href="#tariffs"').click(function() {
+    $('a[href="#tariffs"], a[href="#contacts"]').click(function() {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top - 100
@@ -209,4 +206,35 @@ $(document).ready(function() {
         }
     });
 
+});
+
+var letAnimate = false;
+
+function scrollTracking() {
+    if (letAnimate) {
+        return false;
+    }
+
+    let wt = $(window).scrollTop();
+    let wh = $(window).height();
+    let et = $('.advantages__wrapper').offset().top - 100;
+    let eh = $('.advantages__wrapper').outerHeight();
+    let dh = $(document).height();
+
+
+    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+        block_show = true;
+
+        // Код анимации
+        $('.advantages__wrapper div').addClass('animate__animated animate__fadeInUp');
+        $('.anime div').addClass('animate__animated animate__fadeInLeftBig animate__delay-2s');
+    }
+}
+
+$(window).scroll(function() {
+    scrollTracking();
+});
+
+$(document).ready(function() {
+    scrollTracking();
 });
