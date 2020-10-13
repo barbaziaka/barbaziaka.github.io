@@ -244,12 +244,12 @@ label {
 
 .header-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center
+    justify-content: space-between
 }
 
 .header-menu {
-    width: 745px
+    width: 745px;
+    height: auto
 }
 
 .header-menu__list {
@@ -822,6 +822,10 @@ label {
     width: 200px
 }
 
+.connect__icons_cctv img {
+    opacity: .5
+}
+
 .connect__icons img {
     width: 38px;
     height: 30px
@@ -884,9 +888,11 @@ label {
 }
 
 .business {
+    margin: 0 auto;
     width: 100%;
+    max-width: 1366px;
     min-height: 768px;
-    background: url(../img/for-business_1920.jpg) center center/cover no-repeat
+    background: url(../img/1366_for-business.jpg) center center/cover no-repeat
 }
 
 .business-content {

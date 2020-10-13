@@ -227,7 +227,6 @@ function scrollTracking() {
 
         // Код анимации
         $('.advantages__wrapper div').addClass('animate__animated animate__fadeInUp');
-        $('.anime div').addClass('animate__animated animate__fadeInLeftBig animate__delay-2s');
     }
 }
 
