@@ -1,25 +1,11 @@
-window.onscroll = function scrollFunction() {
-    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-        document.getElementById("up").style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.15)";
-    } else {
-        document.getElementById("up").style.boxShadow = "none";
-    }
-};
+let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_blue">ТВ</div><div class="connect__icons connect__icons_tv"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_cctv"><div class="connect__descr connect__descr_cctv bcg_violet">Видеонаблюдение</div><div class="connect__icons connect__icons_cctv"><img src="icons/cctv-camera.svg" alt="cctv-icon"></div></div>', '<div class="connect__banner"><div class="connect__descr bcg_red">Интернет</div><div class="connect__icons"><img src="img/connect_internet-icon.svg" alt="wifi-icon"></div></div>'];
 
-const anchors = document.querySelectorAll('a[href*="#"]');
+let $replaceBtn = ['<input name="button" value="подключиться" class="button bcg-btn_yellow txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_lime txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_blue txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_violet txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" class="button bcg-btn_red txt_white" type="submit" value="подключиться" id="btn-confirm" disabled="disabled" />'];
 
-for (let anchor of anchors) {
-    anchor.addEventListener("click", function(event) {
-        event.preventDefault();
-        const blockID = anchor.getAttribute('href');
-        document.querySelector('' + blockID).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
-}
+let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/с</option><option value="quick-start">Быстрый старт / 100 Мбит/с</option><option value="afterburner">Форсаж / 200 Мбит/с</option><option value="rocket">Ракета / 300 Мбит/с</option></select>', ' <select class="form__select" name="tariff" id="tariff-select"><option value="cabel-tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie">Онлайн-ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
+
     // smooth scroll and page up
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1600) {
@@ -28,15 +14,6 @@ $(document).ready(function() {
             $('.pageup').fadeOut();
         }
     });
-});
-
-let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_blue">ТВ</div><div class="connect__icons connect__icons_tv"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_cctv"><div class="connect__descr connect__descr_cctv bcg_violet">Видеонаблюдение</div><div class="connect__icons connect__icons_cctv"><img src="icons/cctv-camera.svg" alt="cctv-icon"></div></div>', '<div class="connect__banner"><div class="connect__descr bcg_red">Интернет</div><div class="connect__icons"><img src="img/connect_internet-icon.svg" alt="wifi-icon"></div></div>'];
-
-let $replaceBtn = ['<input name="button" value="подключиться" class="button bcg-btn_yellow txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_lime txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_blue txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_violet txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" class="button bcg-btn_red txt_white" type="submit" value="подключиться" id="btn-confirm" disabled="disabled" />'];
-
-let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/с</option><option value="quick-start">Быстрый старт / 100 Мбит/с</option><option value="afterburner">Форсаж / 200 Мбит/с</option><option value="rocket">Ракета / 300 Мбит/с</option></select>', ' <select class="form__select" name="tariff" id="tariff-select"><option value="cabel-tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie">Онлайн-ТВ + Кино</option></select>'];
-
-$(document).ready(function() {
 
     let cost = [$('.price-1-1').text(), $('.price-1-2').text(), $('.price-1-3').text(), $('.price-1-4').text(), $('.price-2-1').text(), $('.price-2-2').text(), $('.price-2-3').text(), $('.price-2-4').text(), $('.price-3-1').text(), $('.price-3-2').text(), $('.price-3-3').text(), $('.price-3-4').text(), $('.price-4-1').text(), $('.price-5-1').text()];
 
@@ -274,34 +251,167 @@ $(document).ready(function() {
             $('#btn-confirm').attr('disabled', 'disabled');
         }
     });
+
+
+
+    $(window).scroll(function() {
+        let element = $('.advantages__wrapper');
+
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = element.offset().top + element.height();
+        if (scroll > offset) {
+            $(element).removeClass('hidden');
+            $(element).addClass('animate__animated animate__fadeInUp animate__slow');
+        }
+    });
+
+    $(window).scroll(function() {
+        let element = $('.rocket__icon_start');
+
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = element.offset().top + element.height();
+        if (scroll > offset) {
+            $(element).removeClass('hidden');
+            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+        }
+    });
+
+    $(window).scroll(function() {
+        let element = $('.rocket__icon_first-step');
+
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = element.offset().top + element.height();
+        if (scroll > offset) {
+            $(element).removeClass('hidden');
+            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+        }
+    });
+
+
+    $(window).scroll(function() {
+        let element = $('.rocket__icon_second-step');
+
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = element.offset().top + element.height();
+        if (scroll > offset) {
+            $(element).removeClass('hidden');
+            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+        }
+    });
+
+    $(window).scroll(function() {
+        let element = $('.rocket__icon_finish');
+
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = element.offset().top + element.height();
+        if (scroll > offset) {
+            $(element).removeClass('hidden');
+            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+        }
+    });
+
 });
 
-let startAnimate = false;
 
-function scrollTracking() {
-    if (startAnimate) {
-        return false;
+
+
+
+
+
+
+// $(window).scroll(function() {
+//     let element = [$('.advantages__wrapper, .contacts__wrapper')];
+//     for (let i = 0; i < element.length; i++) {
+//         let scroll = $(window).scrollTop() + $(window).height();
+//         let offset = element[i].offset().top + element[i].height();
+//         if (scroll > offset) {
+//             $(element[i]).removeClass('hidden');
+//             $(element[i]).addClass('animate__animated animate__fadeInUp animate__slow');
+//         }
+//     }
+
+// });
+
+
+// let startAnimate = false;
+
+// function scrollTracking() {
+//     if (startAnimate) {
+//         return false;
+//     }
+
+//     let wt = $(window).scrollTop();
+//     let wh = $(window).height();
+//     let et = $('.advantages__wrapper').offset().top - 100;
+//     let eh = $('.advantages__wrapper').outerHeight();
+//     let dh = $(document).height();
+
+
+//     if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+//         block_show = true;
+
+//         // Код анимации
+//         $('.advantages__wrapper div').addClass('animate__animated animate__fadeInUp');
+//     }
+// }
+
+// $(window).scroll(function() {
+//     scrollTracking();
+// });
+
+// $(document).ready(function() {
+//     scrollTracking();
+// });
+
+
+window.onscroll = function scrollFunction() {
+    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+        document.getElementById("up").style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.15)";
+    } else {
+        document.getElementById("up").style.boxShadow = "none";
     }
+};
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-    let wt = $(window).scrollTop();
-    let wh = $(window).height();
-    let et = $('.advantages__wrapper').offset().top - 100;
-    let eh = $('.advantages__wrapper').outerHeight();
-    let dh = $(document).height();
-
-
-    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-        block_show = true;
-
-        // Код анимации
-        $('.advantages__wrapper div').addClass('animate__animated animate__fadeInUp');
-    }
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function(event) {
+        event.preventDefault();
+        const blockID = anchor.getAttribute('href');
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
 }
 
-$(window).scroll(function() {
-    scrollTracking();
-});
+// const animItems = document.querySelectorAll('.anim-items');
 
-$(document).ready(function() {
-    scrollTracking();
-});
+// if (animItems.length > 0) {
+//     window.addEventListener('scroll', animOnScroll);
+
+//     function animOnScroll() {
+//         for (let index = 0; index < animItems.length; index++) {
+//             const animItem = animItems[index];
+//             const animItemHeight = animItem.offsetHeight;
+//             const animItemOffset = offset(animItem).top;
+//             const animStart = 4;
+
+//             let animItemPoint = window.innerHeight - animItemHeight / animStart;
+//             if (animItemHeight > window.innerHeight) {
+//                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
+//             }
+
+//             if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+//                 animItem.classList.add('animate__animated animate__bounce animate__faster');
+//             } else { if (!animItem.classList.contains('anim-disabled')) animItem.classList.remove('animate__animated animate__bounce animate__faster'); }
+
+//         }
+//     }
+
+//     function offset(el) {
+//         const rect = el.getBoundingClientRect(),
+//             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+//             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//         return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+//     }
+// }
