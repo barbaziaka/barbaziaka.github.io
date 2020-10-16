@@ -222,7 +222,7 @@ $(document).ready(function() {
 
     $('.tariffs-tab:first').click();
 
-    $('a[href="#tariffs"], a[href="#contacts"]').click(function() {
+    $('a[href="#tariffs"], a[href="#contacts"], a[href="#tab-1"]').click(function() {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top - 100
@@ -266,7 +266,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        let element = $('.rocket__icon_start');
+        let element = $('.rocket_start');
 
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = element.offset().top + element.height();
@@ -277,7 +277,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        let element = $('.rocket__icon_first-step');
+        let element = $('.rocket_first-step');
 
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = element.offset().top + element.height();
@@ -289,7 +289,7 @@ $(document).ready(function() {
 
 
     $(window).scroll(function() {
-        let element = $('.rocket__icon_second-step');
+        let element = $('.rocket_second-step');
 
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = element.offset().top + element.height();
@@ -300,7 +300,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        let element = $('.rocket__icon_finish');
+        let element = $('.rocket_finish');
 
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = element.offset().top + element.height();
