@@ -87,12 +87,12 @@ $(document).ready(function() {
                 $('.form-check__item-pay-period input:checkbox').not(this).prop('checked', false);
                 $(".form-check__item-pay-period input:checkbox").on('change', function() {
                     if ($('#checkbox-year').is(':checked')) {
+                        $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
                         $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>360 р.</div>');
                     } else if ($('#checkbox-half-year').is(':checked')) {
-                        $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>380 р.</div>');
-                    } else if ($('#checkbox-year:not(:checked)')) {
                         $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
-                    } else if ($('#checkbox-half-year:not(:checked)')) {
+                        $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>380 р.</div>');
+                    } else {
                         $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
                     }
 
