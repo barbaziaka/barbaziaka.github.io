@@ -225,13 +225,6 @@ label {
 }
 
 .header-logo__link {
-    display: block;
-    width: 190px;
-    height: 55px
-}
-
-.header-logo__link img {
-    display: block;
     width: 100%;
     height: 100%
 }
@@ -413,6 +406,12 @@ label {
     max-width: 1366px
 }
 
+.tariffs-item_bcg_cctv {
+    width: 100%;
+    height: 1512px;
+    background: url(../img/video-monitoring_bcg.jpg) #e3e4e6 center center/auto no-repeat
+}
+
 .tariffs-item__block {
     padding-top: 20px;
     height: 312px
@@ -421,12 +420,6 @@ label {
 .tariffs-item__block_tv {
     height: 378px;
     padding-top: 0
-}
-
-.tariffs-item__block_cctv {
-    width: 100%;
-    height: 1512px;
-    background: url(../img/video-monitoring_bcg.jpg) #e3e4e6 center center/auto no-repeat
 }
 
 .tariffs-item__wrapper {
@@ -1025,10 +1018,23 @@ label {
     align-items: center
 }
 
-.form-confirm__cost {
+.form-confirm__cost,
+.form-confirm__discount {
     font-size: 30px;
     font-weight: 700;
     margin-left: 30px
+}
+
+.form-confirm__discount {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    color: #d70040
+}
+
+.form-confirm__discount span {
+    color: #000;
+    text-decoration: line-through
 }
 
 .form-confirm__item {
@@ -1198,6 +1204,13 @@ label {
     width: 280px
 }
 
+.form-check__item-pay-period {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
 .form-check__text {
     margin-left: 10%;
     line-height: 20px;
@@ -1321,4 +1334,8 @@ label {
 
 .hidden {
     display: none
+}
+
+.line-through {
+    text-decoration: line-through
 }

@@ -17,12 +17,13 @@ $(document).ready(function() {
 
     let cost = [$('.price-1-1').text(), $('.price-1-2').text(), $('.price-1-3').text(), $('.price-1-4').text(), $('.price-2-1').text(), $('.price-2-2').text(), $('.price-2-3').text(), $('.price-2-4').text(), $('.price-3-1').text(), $('.price-3-2').text(), $('.price-3-3').text(), $('.price-3-4').text(), $('.price-4-1').text(), $('.price-5-1').text()];
 
-    let currentValue = ['easy-start', 'quick-start', 'afterburner', 'rocket', 'easy-start-tv', 'quick-start-tv', 'afterburner-tv', 'rocket-tv', 'easy-start-tv-movie', 'quick-start-tv-movie', 'afterburner-tv-movie', 'rocket-tv-movie', 'cabel-tv'];
+    let currentValueCost = ['easy-start', 'quick-start', 'afterburner', 'rocket', 'easy-start-tv', 'quick-start-tv', 'afterburner-tv', 'rocket-tv', 'easy-start-tv-movie', 'quick-start-tv-movie', 'afterburner-tv-movie', 'rocket-tv-movie', 'cabel-tv'];
+
 
     function replaceCost() {
         $('#tariff-select').on('change', function() {
-            for (let i = 0; i < currentValue.length; i++) {
-                if ($(this).val() === currentValue[i]) {
+            for (let i = 0; i < currentValueCost.length; i++) {
+                if ($(this).val() === currentValueCost[i]) {
                     $('.form-confirm__cost').text(cost[i]);
                 }
             }
@@ -38,8 +39,71 @@ $(document).ready(function() {
         $('#tariff-select').replaceWith($replaceSelect[3]);
         $('.form-confirm__cost').text(cost[0]);
         replaceCost();
+
+
+
+
+        // $('.form-check__item-pay-period input:checkbox').click(function() {
+        //     if ($(this).is(':checked')) {
+        //         $('.form-check__item-pay-period input:checkbox').not(this).prop('checked', false);
+
+
+        //         $(".form-check__item-pay-period input:checkbox").on("change", function() {
+
+        //             if ($('#checkbox-year').is(":checked")) {
+        //                 $(this).change(function() {
+        //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
+        //                     $('.form-confirm__cost').after('<div class="good"></div>');
+        //                     let $newCost = $('.good').text(costHalfYearValues[0]);
+        //                     $newCost.css({ 'color': 'red', 'font-size': '30px', 'font-weight': '700', 'margin-left': '30px' });
+        //                 });
+        //             } else {
+        //                 $('.good').detach();
+        //                 $('.form-confirm__cost').css('text-decoration', 'none');
+        //             }
+        //             if ($('#checkbox-half-year').is(":checked")) {
+        //                 $(this).change(function() {
+        //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
+        //                     $('.form-confirm__cost').after('<div class="good"></div>');
+        //                     let $newCost = $('.good').text(costHalfYearValues[0]);
+        //                     $newCost.css({ 'color': 'red', 'font-size': '30px', 'font-weight': '700', 'margin-left': '30px' });
+        //                 });
+        //             } else {
+        //                 $('.good').detach();
+        //                 $('.form-confirm__cost').css('text-decoration', 'none');
+        //             }
+        //             if ($('#checkbox-month').is(":checked")) {
+        //                 $(this).change(function() {
+        //                     $('.good').detach();
+        //                     $('.form-confirm__cost').css('text-decoration', 'none');
+        //                 });
+        //             }
+        //         });
+        //     }
+        // });
+
+        $('.form-check__item-pay-period input:checkbox').click(function() {
+            if ($(this).is(':checked')) {
+                $('.form-check__item-pay-period input:checkbox').not(this).prop('checked', false);
+                $(".form-check__item-pay-period input:checkbox").on('change', function() {
+                    if ($('#checkbox-year').is(':checked')) {
+                        $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>360 р.</div>');
+                    } else if ($('#checkbox-half-year').is(':checked')) {
+                        $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>380 р.</div>');
+                    } else if ($('#checkbox-year:not(:checked)')) {
+                        $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
+                    } else if ($('#checkbox-half-year:not(:checked)')) {
+                        $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
+                    }
+
+                });
+            }
+        });
+
         return false;
     });
+
+
 
     $('.tariff-1-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
@@ -50,6 +114,7 @@ $(document).ready(function() {
         $('#tariff-select option:nth-child(2)').prop('selected', true);
         $('.form-confirm__cost').text(cost[1]);
         replaceCost();
+
         return false;
     });
 
@@ -222,10 +287,17 @@ $(document).ready(function() {
 
     $('.tariffs-tab:first').click();
 
-    $('a[href="#tariffs"], a[href="#contacts"], a[href="#tab-1"]').click(function() {
+    $('a[href="#tariffs"], a[href="#contacts"]').click(function() {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top - 100
+        }, 1000);
+    });
+
+    $('a[href="#tab-1"], a[href="#tab-2"],a[href="#tab-3"], a[href="#tab-3"], a[href="#tab-4"], a[href="#tab-5"]').click(function() {
+        let target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 160
         }, 1000);
     });
 
