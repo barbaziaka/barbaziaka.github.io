@@ -1026,15 +1026,8 @@ label {
 }
 
 .form-confirm__discount {
-    display: flex;
-    width: 180px;
-    justify-content: space-between;
+    display: none;
     color: #d70040
-}
-
-.form-confirm__discount span {
-    color: #000;
-    text-decoration: line-through
 }
 
 .form-confirm__item {

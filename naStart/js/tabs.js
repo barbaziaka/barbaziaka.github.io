@@ -15,21 +15,196 @@ $(document).ready(function() {
         }
     });
 
+    function resetCost() {
+        $('.form-confirm__discount').css('display', 'none');
+        $('.form-confirm__cost').text();
+        $('.form-confirm__cost').css('text-decoration', 'none');
+    }
+
+
+    $('.form-check__item-pay-period input:checkbox').click(function() {
+        if ($(this).is(':checked')) {
+            $('.form-check__item-pay-period input:checkbox').not(this).prop('checked', false);
+        }
+    });
+
     let cost = [$('.price-1-1').text(), $('.price-1-2').text(), $('.price-1-3').text(), $('.price-1-4').text(), $('.price-2-1').text(), $('.price-2-2').text(), $('.price-2-3').text(), $('.price-2-4').text(), $('.price-3-1').text(), $('.price-3-2').text(), $('.price-3-3').text(), $('.price-3-4').text(), $('.price-4-1').text(), $('.price-5-1').text()];
+
+    let discountHalfYear = [$('.price-half-year-1-1').text(), $('.price-half-year-1-2').text(), $('.price-half-year-1-3').text(), $('.price-half-year-1-4').text()];
+
+    let discountYear = [$('.price-year-1-1').text(), $('.price-year-1-2').text(), $('.price-year-1-3').text(), $('.price-year-1-4').text()];
 
     let currentValueCost = ['easy-start', 'quick-start', 'afterburner', 'rocket', 'easy-start-tv', 'quick-start-tv', 'afterburner-tv', 'rocket-tv', 'easy-start-tv-movie', 'quick-start-tv-movie', 'afterburner-tv-movie', 'rocket-tv-movie', 'cabel-tv'];
 
+
+    $("#checkbox-half-year").on('change', function() {
+        resetCost();
+        if ($('#checkbox-half-year').is(':checked')) {
+            let tariffValue = $('#tariff-select').val();
+            let i = currentValueCost.indexOf(tariffValue);
+            $('.form-confirm__cost').css('text-decoration', 'line-through');
+            $('.form-confirm__discount').css('display', 'block');
+            $('.form-confirm__discount').text(discountHalfYear[i]);
+        } else {
+            resetCost();
+        }
+    });
+
+
+    $("#checkbox-year").on('change', function() {
+        resetCost();
+        if ($('#checkbox-year').is(':checked')) {
+            let tariffValue = $('#tariff-select').val();
+            let i = currentValueCost.indexOf(tariffValue);
+            $('.form-confirm__cost').css('text-decoration', 'line-through');
+            $('.form-confirm__discount').css('display', 'block');
+            $('.form-confirm__discount').text(discountYear[i]);
+        } else {
+            resetCost();
+        }
+    });
 
     function replaceCost() {
         $('#tariff-select').on('change', function() {
             for (let i = 0; i < currentValueCost.length; i++) {
                 if ($(this).val() === currentValueCost[i]) {
                     $('.form-confirm__cost').text(cost[i]);
+                    $(".form-check__item-pay-period input:checkbox").on('change', function() {
+                        if ($('#checkbox-half-year').is(':checked')) {
+                            resetCost();
+                            $('.form-confirm__discount').css('display', 'block');
+                            $('.form-confirm__discount').text(discountHalfYear[i]);
+                            $('.form-confirm__cost').css('text-decoration', 'line-through');
+                        } else if ($('#checkbox-year').is(':checked')) {
+                            resetCost();
+                            $('.form-confirm__discount').css('display', 'block');
+                            $('.form-confirm__cost').css('text-decoration', 'line-through');
+                            $('.form-confirm__discount').text(discountYear[i]);
+                        } else {
+                            resetCost();
+                        }
+                    });
+                    if ($('#checkbox-half-year').is(':checked')) {
+                        resetCost();
+                        $('.form-confirm__discount').css('display', 'block');
+                        $('.form-confirm__discount').text(discountHalfYear[i]);
+                        $('.form-confirm__cost').css('text-decoration', 'line-through');
+                    } else if ($('#checkbox-year').is(':checked')) {
+                        resetCost();
+                        $('.form-confirm__discount').css('display', 'block');
+                        $('.form-confirm__cost').css('text-decoration', 'line-through');
+                        $('.form-confirm__discount').text(discountYear[i]);
+                    } else {
+                        resetCost();
+                    }
                 }
             }
-            return false;
         });
     }
+
+
+    // $(".form-check__item-pay-period input:checkbox").on('change', function() {
+    //     if ($('#checkbox-month').is(':checked')) {
+    //         $('.form-confirm__discount').css('display', 'none');
+    //         $('.form-confirm__cost').css('text-decoration', 'none');
+    //     } else if ($('#checkbox-half-year').is(':checked')) {
+    //         $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //         $('.form-confirm__discount').text(discountHalfYear[numb]);
+    //         $('.form-confirm__discount').css('display', 'block');
+    //     } else if ($('#checkbox-year').is(':checked')) {
+    //         $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //         $('.form-confirm__discount').text(discountYear[numb]);
+    //         $('.form-confirm__discount').css('display', 'block');
+    //     } else {
+    //         $('.form-confirm__cost').css('text-decoration', 'none');
+    //         $('.form-confirm__discount').css('display', 'none');
+    //     }
+    // });
+    // $('#tariff-select').on('change', function() {
+    //     for (let i = 0; i < currentValueCost.length; i++) {
+    //         if ($(this).val() === currentValueCost[i]) {
+    //             $('.form-confirm__cost').text(cost[i]);
+    //             $(".form-check__item-pay-period input:checkbox").on('change', function() {
+    //                 if ($('#checkbox-month').is(':checked')) {
+    //                     $('.form-confirm__discount').css('display', 'none');
+    //                     $('.form-confirm__cost').css('text-decoration', 'none');
+    //                 } else if ($('#checkbox-half-year').is(':checked')) {
+    //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //                     $('.form-confirm__discount').text(discountHalfYear[i]);
+    //                     $('.form-confirm__discount').css('display', 'block');
+    //                 } else if ($('#checkbox-year').is(':checked')) {
+    //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //                     $('.form-confirm__discount').text(discountYear[i]);
+    //                     $('.form-confirm__discount').css('display', 'block');
+    //                 } else {
+    //                     $('.form-confirm__cost').css('text-decoration', 'none');
+    //                     $('.form-confirm__discount').css('display', 'none');
+    //                 }
+    //             });
+    //         }
+    //     }
+    //     let tariffValue = $(this).val();
+    //     let numb = currentValueCost.indexOf(tariffValue);
+    //     $(".form-check__item-pay-period input:checkbox").on('change', function() {
+    //         if ($('#checkbox-month').is(':checked')) {
+    //             $('.form-confirm__discount').css('display', 'none');
+    //             $('.form-confirm__cost').css('text-decoration', 'none');
+    //         } else if ($('#checkbox-half-year').is(':checked')) {
+    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //             $('.form-confirm__discount').text(discountHalfYear[numb]);
+    //             $('.form-confirm__discount').css('display', 'block');
+    //         } else if ($('#checkbox-year').is(':checked')) {
+    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //             $('.form-confirm__discount').text(discountYear[numb]);
+    //             $('.form-confirm__discount').css('display', 'block');
+    //         } else {
+    //             $('.form-confirm__cost').css('text-decoration', 'none');
+    //             $('.form-confirm__discount').css('display', 'none');
+    //         }
+    //     });
+    // });
+
+
+    // if ($('#checkbox-month').is(':checked')) {
+    //     $('.form-confirm__discount').css('display', 'none');
+    //     $('.form-confirm__cost').css('text-decoration', 'none');
+    // } else if ($('#checkbox-half-year').is(':checked')) {
+    //     $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //     $('.form-confirm__discount').text(discountHalfYear[numb]);
+    //     $('.form-confirm__discount').css('display', 'block');
+    // } else if ($('#checkbox-year').is(':checked')) {
+    //     $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //     $('.form-confirm__discount').text(discountYear[numb]);
+    //     $('.form-confirm__discount').css('display', 'block');
+    // } else {
+    //     $('.form-confirm__cost').css('text-decoration', 'none');
+    //     $('.form-confirm__discount').css('display', 'none');
+    // }
+
+
+    // function numbCost() {
+    //     let numb = $('#tariff-select').val();
+    //     $(".form-check__item-pay-period input:checkbox").on('change', function() {
+    //         if ($('#checkbox-month').is(':checked')) {
+    //             $('.form-confirm__cost').text(cost[numb]);
+    //             $('.form-confirm__discount').css('display', 'none');
+    //             $('.form-confirm__cost').css('text-decoration', 'none');
+    //         } else if ($('#checkbox-half-year').is(':checked')) {
+    //             $('.form-confirm__cost').text(cost[numb]);
+    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //             $('.form-confirm__discount').text(discountHalfYear[numb]).css('display', 'block');
+    //         } else if ($('#checkbox-year').is(':checked')) {
+    //             $('.form-confirm__cost').text(cost[numb]);
+    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
+    //             $('.form-confirm__discount').text(discountYear[numb]).css('display', 'block');
+    //         } else {
+    //             $('.form-confirm__cost').text(cost[numb]);
+    //             $('.form-confirm__cost').css('text-decoration', 'none');
+    //             $('.form-confirm__discount').css('display', 'none');
+    //         }
+    //     });
+    // }
+
 
     $('.tariff-1-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
@@ -39,67 +214,6 @@ $(document).ready(function() {
         $('#tariff-select').replaceWith($replaceSelect[3]);
         $('.form-confirm__cost').text(cost[0]);
         replaceCost();
-
-
-
-
-        // $('.form-check__item-pay-period input:checkbox').click(function() {
-        //     if ($(this).is(':checked')) {
-        //         $('.form-check__item-pay-period input:checkbox').not(this).prop('checked', false);
-
-
-        //         $(".form-check__item-pay-period input:checkbox").on("change", function() {
-
-        //             if ($('#checkbox-year').is(":checked")) {
-        //                 $(this).change(function() {
-        //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
-        //                     $('.form-confirm__cost').after('<div class="good"></div>');
-        //                     let $newCost = $('.good').text(costHalfYearValues[0]);
-        //                     $newCost.css({ 'color': 'red', 'font-size': '30px', 'font-weight': '700', 'margin-left': '30px' });
-        //                 });
-        //             } else {
-        //                 $('.good').detach();
-        //                 $('.form-confirm__cost').css('text-decoration', 'none');
-        //             }
-        //             if ($('#checkbox-half-year').is(":checked")) {
-        //                 $(this).change(function() {
-        //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
-        //                     $('.form-confirm__cost').after('<div class="good"></div>');
-        //                     let $newCost = $('.good').text(costHalfYearValues[0]);
-        //                     $newCost.css({ 'color': 'red', 'font-size': '30px', 'font-weight': '700', 'margin-left': '30px' });
-        //                 });
-        //             } else {
-        //                 $('.good').detach();
-        //                 $('.form-confirm__cost').css('text-decoration', 'none');
-        //             }
-        //             if ($('#checkbox-month').is(":checked")) {
-        //                 $(this).change(function() {
-        //                     $('.good').detach();
-        //                     $('.form-confirm__cost').css('text-decoration', 'none');
-        //                 });
-        //             }
-        //         });
-        //     }
-        // });
-
-        $('.form-check__item-pay-period input:checkbox').click(function() {
-            if ($(this).is(':checked')) {
-                $('.form-check__item-pay-period input:checkbox').not(this).prop('checked', false);
-                $(".form-check__item-pay-period input:checkbox").on('change', function() {
-                    if ($('#checkbox-year').is(':checked')) {
-                        $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
-                        $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>360 р.</div>');
-                    } else if ($('#checkbox-half-year').is(':checked')) {
-                        $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
-                        $('.form-confirm__cost').replaceWith('<div class="form-confirm__discount"><span>400 р.</span>380 р.</div>');
-                    } else {
-                        $('.form-confirm__discount').replaceWith('<div class="form-confirm__cost">400 р.</div>');
-                    }
-
-                });
-            }
-        });
-
         return false;
     });
 
@@ -114,7 +228,6 @@ $(document).ready(function() {
         $('#tariff-select option:nth-child(2)').prop('selected', true);
         $('.form-confirm__cost').text(cost[1]);
         replaceCost();
-
         return false;
     });
 
@@ -265,11 +378,15 @@ $(document).ready(function() {
         return false;
     });
 
+
+
     $('.modal-internet__close').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeOut('fast');
         $('#tariff-select').prop('selectedIndex', 0);
         $('.one, .two, .three, .four, .five, .six, .seven, .eight').removeClass('visible');
         $('.one, .two, .three, .four, .five, .six, .seven, .eight').removeClass('hidden');
+        $('.form__checkboxes input:checkbox').prop('checked', false);
+        resetCost();
     });
 });
 
