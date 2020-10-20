@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF Viewer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .top-bar {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+        
+        .btn {
+            background: coral;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 0.7rem 2rem;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        .page-info {
+            margin-left: 1rem;
+        }
+        
+        .error {
+            background: orangered;
+            color: #fff;
+            padding: 1rem;
+        }
+    </style>
+    <div class="container">
+        <div class="top-bar">
+            <button class="btn" id="prev-page">
+		<div class="arrow-circle-left"></div>Prev Page
+			</button>
+            <button class="btn" id="prev-page">
+		<div class="arrow-circle-right"></div>Next Page
+			</button>
+
+            <span class="page-info">Page <span id="page-num"></span> of <span id="page-count"></span></span>
+        </div>
+
+        <canvas id="pdf-render"></canvas>
+    </div>
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="../js/myPdf.js">
+    </script>
+</body>
+
+</html>

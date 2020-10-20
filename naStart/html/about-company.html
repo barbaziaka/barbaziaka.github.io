@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Для бизнеса</title>
+    <title>О компании</title>
     <link rel="stylesheet" type="text/css" href="../css/style.min.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
@@ -15,10 +15,10 @@
 
 <body>
 
-    <section class="business">
+    <section class="about">
 
         <div class="container">
-            <header class="header header_business">
+            <header class="header header_about">
                 <div class="header-wrapper">
                     <div class="header-logo" id="logo">
                         <a class="header-logo__link" href="../index.html">
@@ -34,10 +34,10 @@
                                 <a href="payment-page.html" class="header-menu__link">оплата</a>
                             </li>
                             <li class="header-menu__item">
-                                <a href="for-business.html" class="header-menu__link header-menu__link_active">для бизнеса</a>
+                                <a href="for-business.html" class="header-menu__link">для бизнеса</a>
                             </li>
                             <li class="header-menu__item">
-                                <a href="about-company.html" class="header-menu__link">о компании</a>
+                                <a href="#" class="header-menu__link header-menu__link_active">о компании</a>
                             </li>
                             <li class="header-menu__item phone">
                                 <a class="phone__link phone__link_top" href="tel:+7(812)4163111">+7 (812) 416-31-11</a>
@@ -63,26 +63,39 @@
         </div>
 
         <div class="container">
-            <div class="business-content">
-                <div class="business-content__wrapper">
-                    <div class="business-content__header animate__animated animate__bounceInLeft">ПОДКЛЮЧИ<br>СВОЙ ОФИС</div>
-                    <div class="business-content__descr animate__animated animate__bounceInLeft">Для решения ваших задач мы готовы подключить ваш офис или<br>производственное помещение к собственным оптико-волоконным<br>сетям связи на индивидуальных условиях.
+            <div class="about-content">
+                <div class="about-content__header">Документы</div>
+                <div class="about-content__wrapper">
+                    <div class="about-content__column">
+                        <div class="about-content__descr">Лицензии
+                        </div>
+                        <div class="about-content__item">
+                            <a class="about-content__link" href="pdf.html">
+                                <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Лицензия №176063 на оказание услуг связи по передачи данных для целей передачи голосовой информации</a></div>
+                        
+                        <div class="about-content__item">
+                            <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Лицензия №176064 на оказание услуг связи по передачи данных, за исключением услуг связи по передачи данных для целей передачи голосовой информации</div>
+                        <div class="about-content__item">
+                            <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Лицензия №176065 на оказание услуг связи для целей проводного радиовещания</div>
+                        <div class="about-content__item">
+                            <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Лицензия №176066 на оказание услуг связи для целей кабельного вещания</div>
+                    </div>
+                    <div class="about-content__column">
+                        <div class="about-content__descr">Свидетельства
+                        </div>
+                        <div class="about-content__item">
+                            <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Свидетельство СРО проектирование</div>
+                        <div class="about-content__descr">Сертификаты</div>
+                        <div class="about-content__item">
+                            <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Сертификат соответствия</div>
+                        <div class="about-content__descr">Реквизиты
+                        </div>
+                        <div class="about-content__item">
+                            <div class="about-content__icon"><img src="../icons/doc-icon.svg" alt="" class="doc-icon"></div> Реквизиты ООО “Старт”</div>
                     </div>
 
-                    <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
-                        <div class="form__wrapper form__wrapper_business animate__animated animate__bounceInRight">
-                            <div class="form__name"><label for="name">Ваше имя</label><input autocomplete="off" class="form__input" placeholder="" name="name" type="text" id="name-business"></div><br>
-                            <div class="form__mail"><label for="mail">Контакт для связи</label><input autocomplete="off" class="form__input" placeholder="" name="email" type="text" id="mail-business">
-                            </div>
-                            <br>
-                            <br>
 
 
-                        </div>
-
-                        <input value="отправить" class="button bcg-btn_red txt_white animate__animated animate__bounceInRight" type="submit">
-
-                    </form>
                 </div>
             </div>
         </div>

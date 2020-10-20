@@ -37,34 +37,25 @@ $(document).ready(function() {
     let currentValueCost = ['easy-start', 'quick-start', 'afterburner', 'rocket', 'easy-start-tv', 'quick-start-tv', 'afterburner-tv', 'rocket-tv', 'easy-start-tv-movie', 'quick-start-tv-movie', 'afterburner-tv-movie', 'rocket-tv-movie', 'cabel-tv'];
 
 
-    $("#checkbox-half-year").on('change', function() {
-        resetCost();
-        if ($('#checkbox-half-year').is(':checked')) {
-            let tariffValue = $('#tariff-select').val();
-            let i = currentValueCost.indexOf(tariffValue);
-            $('.form-confirm__cost').css('text-decoration', 'line-through');
-            $('.form-confirm__discount').css('display', 'block');
-            $('.form-confirm__discount').text(discountHalfYear[i]);
-        } else {
-            resetCost();
-        }
-    });
-
-
-    $("#checkbox-year").on('change', function() {
-        resetCost();
-        if ($('#checkbox-year').is(':checked')) {
-            let tariffValue = $('#tariff-select').val();
-            let i = currentValueCost.indexOf(tariffValue);
-            $('.form-confirm__cost').css('text-decoration', 'line-through');
-            $('.form-confirm__discount').css('display', 'block');
-            $('.form-confirm__discount').text(discountYear[i]);
-        } else {
-            resetCost();
-        }
-    });
 
     function replaceCost() {
+        $(".form-check__item-pay-period input:checkbox").on('change', function() {
+            resetCost();
+            let tariffValue = $('#tariff-select').val();
+            let i = currentValueCost.indexOf(tariffValue);
+            if ($('#checkbox-year').is(':checked')) {
+                $('.form-confirm__cost').css('text-decoration', 'line-through');
+                $('.form-confirm__discount').css('display', 'block');
+                $('.form-confirm__discount').text(discountYear[i]);
+            } else if ($('#checkbox-half-year').is(':checked')) {
+                $('.form-confirm__cost').css('text-decoration', 'line-through');
+                $('.form-confirm__discount').css('display', 'block');
+                $('.form-confirm__discount').text(discountHalfYear[i]);
+            } else {
+                resetCost();
+            }
+        });
+
         $('#tariff-select').on('change', function() {
             for (let i = 0; i < currentValueCost.length; i++) {
                 if ($(this).val() === currentValueCost[i]) {
@@ -103,108 +94,6 @@ $(document).ready(function() {
     }
 
 
-    // $(".form-check__item-pay-period input:checkbox").on('change', function() {
-    //     if ($('#checkbox-month').is(':checked')) {
-    //         $('.form-confirm__discount').css('display', 'none');
-    //         $('.form-confirm__cost').css('text-decoration', 'none');
-    //     } else if ($('#checkbox-half-year').is(':checked')) {
-    //         $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //         $('.form-confirm__discount').text(discountHalfYear[numb]);
-    //         $('.form-confirm__discount').css('display', 'block');
-    //     } else if ($('#checkbox-year').is(':checked')) {
-    //         $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //         $('.form-confirm__discount').text(discountYear[numb]);
-    //         $('.form-confirm__discount').css('display', 'block');
-    //     } else {
-    //         $('.form-confirm__cost').css('text-decoration', 'none');
-    //         $('.form-confirm__discount').css('display', 'none');
-    //     }
-    // });
-    // $('#tariff-select').on('change', function() {
-    //     for (let i = 0; i < currentValueCost.length; i++) {
-    //         if ($(this).val() === currentValueCost[i]) {
-    //             $('.form-confirm__cost').text(cost[i]);
-    //             $(".form-check__item-pay-period input:checkbox").on('change', function() {
-    //                 if ($('#checkbox-month').is(':checked')) {
-    //                     $('.form-confirm__discount').css('display', 'none');
-    //                     $('.form-confirm__cost').css('text-decoration', 'none');
-    //                 } else if ($('#checkbox-half-year').is(':checked')) {
-    //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //                     $('.form-confirm__discount').text(discountHalfYear[i]);
-    //                     $('.form-confirm__discount').css('display', 'block');
-    //                 } else if ($('#checkbox-year').is(':checked')) {
-    //                     $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //                     $('.form-confirm__discount').text(discountYear[i]);
-    //                     $('.form-confirm__discount').css('display', 'block');
-    //                 } else {
-    //                     $('.form-confirm__cost').css('text-decoration', 'none');
-    //                     $('.form-confirm__discount').css('display', 'none');
-    //                 }
-    //             });
-    //         }
-    //     }
-    //     let tariffValue = $(this).val();
-    //     let numb = currentValueCost.indexOf(tariffValue);
-    //     $(".form-check__item-pay-period input:checkbox").on('change', function() {
-    //         if ($('#checkbox-month').is(':checked')) {
-    //             $('.form-confirm__discount').css('display', 'none');
-    //             $('.form-confirm__cost').css('text-decoration', 'none');
-    //         } else if ($('#checkbox-half-year').is(':checked')) {
-    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //             $('.form-confirm__discount').text(discountHalfYear[numb]);
-    //             $('.form-confirm__discount').css('display', 'block');
-    //         } else if ($('#checkbox-year').is(':checked')) {
-    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //             $('.form-confirm__discount').text(discountYear[numb]);
-    //             $('.form-confirm__discount').css('display', 'block');
-    //         } else {
-    //             $('.form-confirm__cost').css('text-decoration', 'none');
-    //             $('.form-confirm__discount').css('display', 'none');
-    //         }
-    //     });
-    // });
-
-
-    // if ($('#checkbox-month').is(':checked')) {
-    //     $('.form-confirm__discount').css('display', 'none');
-    //     $('.form-confirm__cost').css('text-decoration', 'none');
-    // } else if ($('#checkbox-half-year').is(':checked')) {
-    //     $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //     $('.form-confirm__discount').text(discountHalfYear[numb]);
-    //     $('.form-confirm__discount').css('display', 'block');
-    // } else if ($('#checkbox-year').is(':checked')) {
-    //     $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //     $('.form-confirm__discount').text(discountYear[numb]);
-    //     $('.form-confirm__discount').css('display', 'block');
-    // } else {
-    //     $('.form-confirm__cost').css('text-decoration', 'none');
-    //     $('.form-confirm__discount').css('display', 'none');
-    // }
-
-
-    // function numbCost() {
-    //     let numb = $('#tariff-select').val();
-    //     $(".form-check__item-pay-period input:checkbox").on('change', function() {
-    //         if ($('#checkbox-month').is(':checked')) {
-    //             $('.form-confirm__cost').text(cost[numb]);
-    //             $('.form-confirm__discount').css('display', 'none');
-    //             $('.form-confirm__cost').css('text-decoration', 'none');
-    //         } else if ($('#checkbox-half-year').is(':checked')) {
-    //             $('.form-confirm__cost').text(cost[numb]);
-    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //             $('.form-confirm__discount').text(discountHalfYear[numb]).css('display', 'block');
-    //         } else if ($('#checkbox-year').is(':checked')) {
-    //             $('.form-confirm__cost').text(cost[numb]);
-    //             $('.form-confirm__cost').css('text-decoration', 'line-through');
-    //             $('.form-confirm__discount').text(discountYear[numb]).css('display', 'block');
-    //         } else {
-    //             $('.form-confirm__cost').text(cost[numb]);
-    //             $('.form-confirm__cost').css('text-decoration', 'none');
-    //             $('.form-confirm__discount').css('display', 'none');
-    //         }
-    //     });
-    // }
-
 
     $('.tariff-1-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
@@ -216,8 +105,6 @@ $(document).ready(function() {
         replaceCost();
         return false;
     });
-
-
 
     $('.tariff-1-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
@@ -391,20 +278,18 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+
     $('.tariffs-tab').click(function(e) {
         e.preventDefault();
-
         $('.tariffs-tab').removeClass('tariffs-tab_active');
         $('.tariffs__content').removeClass('tariffs__content_active');
-
         $(this).addClass('.tariffs-tab_active');
         $($(this).attr('href')).addClass('tariffs__content_active');
-
     });
 
     $('.tariffs-tab:first').click();
 
-    $('a[href="#tariffs"], a[href="#contacts"]').click(function() {
+    $('a[href="#tariffs"]').click(function() {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top - 100
@@ -449,109 +334,59 @@ $(document).ready(function() {
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = element.offset().top + element.height();
         if (scroll > offset) {
-            $(element).removeClass('hidden');
             $(element).addClass('animate__animated animate__fadeInUp animate__slow');
         }
     });
 
-    $(window).scroll(function() {
-        let element = $('.rocket_start');
 
-        let scroll = $(window).scrollTop() + $(window).height();
-        let offset = element.offset().top + element.height();
-        if (scroll > offset) {
-            $(element).removeClass('hidden');
-            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+    $(window).scroll(function() {
+        let elements = [$('.rocket_start'), $('.rocket_first-step'), $('.rocket_second-step'), $('.rocket_finish')];
+        for (let i = 0; i < elements.length; i++) {
+            let element = elements[i];
+            let scroll = $(window).scrollTop() + $(window).height();
+            let offset = element.offset().top + element.height();
+            if (scroll > offset) {
+                $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+            }
+
         }
     });
 
-    $(window).scroll(function() {
-        let element = $('.rocket_first-step');
+    // $(window).scroll(function() {
+    //     let element = $('.rocket_first-step');
 
-        let scroll = $(window).scrollTop() + $(window).height();
-        let offset = element.offset().top + element.height();
-        if (scroll > offset) {
-            $(element).removeClass('hidden');
-            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-        }
-    });
+    //     let scroll = $(window).scrollTop() + $(window).height();
+    //     let offset = element.offset().top + element.height();
+    //     if (scroll > offset) {
+    //         $(element).removeClass('hidden');
+    //         $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+    //     }
+    // });
 
 
-    $(window).scroll(function() {
-        let element = $('.rocket_second-step');
+    // $(window).scroll(function() {
+    //     let element = $('.rocket_second-step');
 
-        let scroll = $(window).scrollTop() + $(window).height();
-        let offset = element.offset().top + element.height();
-        if (scroll > offset) {
-            $(element).removeClass('hidden');
-            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-        }
-    });
+    //     let scroll = $(window).scrollTop() + $(window).height();
+    //     let offset = element.offset().top + element.height();
+    //     if (scroll > offset) {
+    //         $(element).removeClass('hidden');
+    //         $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+    //     }
+    // });
 
-    $(window).scroll(function() {
-        let element = $('.rocket_finish');
+    // $(window).scroll(function() {
+    //     let element = $('.rocket_finish');
 
-        let scroll = $(window).scrollTop() + $(window).height();
-        let offset = element.offset().top + element.height();
-        if (scroll > offset) {
-            $(element).removeClass('hidden');
-            $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-        }
-    });
+    //     let scroll = $(window).scrollTop() + $(window).height();
+    //     let offset = element.offset().top + element.height();
+    //     if (scroll > offset) {
+    //         $(element).removeClass('hidden');
+    //         $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+    //     }
+    // });
 
 });
-
-
-
-
-
-
-
-
-// $(window).scroll(function() {
-//     let element = [$('.advantages__wrapper, .contacts__wrapper')];
-//     for (let i = 0; i < element.length; i++) {
-//         let scroll = $(window).scrollTop() + $(window).height();
-//         let offset = element[i].offset().top + element[i].height();
-//         if (scroll > offset) {
-//             $(element[i]).removeClass('hidden');
-//             $(element[i]).addClass('animate__animated animate__fadeInUp animate__slow');
-//         }
-//     }
-
-// });
-
-
-// let startAnimate = false;
-
-// function scrollTracking() {
-//     if (startAnimate) {
-//         return false;
-//     }
-
-//     let wt = $(window).scrollTop();
-//     let wh = $(window).height();
-//     let et = $('.advantages__wrapper').offset().top - 100;
-//     let eh = $('.advantages__wrapper').outerHeight();
-//     let dh = $(document).height();
-
-
-//     if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-//         block_show = true;
-
-//         // Код анимации
-//         $('.advantages__wrapper div').addClass('animate__animated animate__fadeInUp');
-//     }
-// }
-
-// $(window).scroll(function() {
-//     scrollTracking();
-// });
-
-// $(document).ready(function() {
-//     scrollTracking();
-// });
-
 
 window.onscroll = function scrollFunction() {
     if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
@@ -560,6 +395,7 @@ window.onscroll = function scrollFunction() {
         document.getElementById("up").style.boxShadow = "none";
     }
 };
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
@@ -572,35 +408,3 @@ for (let anchor of anchors) {
         });
     });
 }
-
-// const animItems = document.querySelectorAll('.anim-items');
-
-// if (animItems.length > 0) {
-//     window.addEventListener('scroll', animOnScroll);
-
-//     function animOnScroll() {
-//         for (let index = 0; index < animItems.length; index++) {
-//             const animItem = animItems[index];
-//             const animItemHeight = animItem.offsetHeight;
-//             const animItemOffset = offset(animItem).top;
-//             const animStart = 4;
-
-//             let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//             if (animItemHeight > window.innerHeight) {
-//                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//             }
-
-//             if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-//                 animItem.classList.add('animate__animated animate__bounce animate__faster');
-//             } else { if (!animItem.classList.contains('anim-disabled')) animItem.classList.remove('animate__animated animate__bounce animate__faster'); }
-
-//         }
-//     }
-
-//     function offset(el) {
-//         const rect = el.getBoundingClientRect(),
-//             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-//     }
-// }

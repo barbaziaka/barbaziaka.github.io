@@ -206,6 +206,7 @@ label {
     padding: 15px 0
 }
 
+.header_about,
 .header_account-page,
 .header_business,
 .header_connect,
@@ -263,6 +264,11 @@ label {
 .header-menu__link {
     color: #000;
     text-decoration: none
+}
+
+.header-menu__link_active {
+    padding-bottom: 5px;
+    border-bottom: 3px solid #d70040
 }
 
 .header-menu__link:hover {
@@ -334,6 +340,7 @@ label {
 }
 
 .advantages__wrapper {
+    transform: translateY(-1000%);
     padding-top: 70px;
     padding-bottom: 70px;
     display: flex;
@@ -522,6 +529,7 @@ label {
 }
 
 .rocket {
+    display: none;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -743,6 +751,61 @@ label {
 
 .payment-icons__item:first-child {
     margin-bottom: 25px
+}
+
+.about {
+    width: 100%;
+    min-height: 100vh
+}
+
+.about-content__header {
+    margin-top: 110px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 130px;
+    margin-bottom: 50px
+}
+
+.about-content__wrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.about-content__column {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.about-content__descr {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 50px
+}
+
+.about-content__item {
+    display: flex;
+    word-wrap: break-word;
+    align-items: center;
+    width: 394px;
+    height: 74px;
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 120%;
+    margin-bottom: 30px;
+    padding: 0 10px
+}
+
+.about-content__link {
+    display: flex;
+    color: #000
+}
+
+.about-content__icon {
+    margin-right: 10px
 }
 
 .connect__wrapper {
