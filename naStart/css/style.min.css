@@ -529,7 +529,6 @@ label {
 }
 
 .rocket {
-    display: none;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -541,24 +540,9 @@ label {
 
 .vector {
     display: block;
+    width: 0;
     height: 2px;
     margin-right: 2px
-}
-
-.vector_start {
-    width: 50px
-}
-
-.vector_first-step {
-    width: 180px
-}
-
-.vector_second-step {
-    width: 340px
-}
-
-.vector_finish {
-    width: 520px
 }
 
 .accordion__wrapper {
@@ -762,7 +746,6 @@ label {
     margin-top: 110px;
     font-size: 30px;
     font-weight: 700;
-    margin-left: 130px;
     margin-bottom: 50px
 }
 

@@ -5,6 +5,60 @@ let $replaceBtn = ['<input name="button" value="подключиться" class=
 let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/с</option><option value="quick-start">Быстрый старт / 100 Мбит/с</option><option value="afterburner">Форсаж / 200 Мбит/с</option><option value="rocket">Ракета / 300 Мбит/с</option></select>', ' <select class="form__select" name="tariff" id="tariff-select"><option value="cabel-tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie">Онлайн-ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
+    //     let elements = [$('.rocket_start'), $('.rocket_first-step'), $('.rocket_second-step'), $('.rocket_finish')];
+    // $(window).scroll(function() {
+    //     if ($(this).scrollTop() + $(window).height() > 1000) {
+    //         $('.rocket_start').removeClass('animate__animated animate__bounceInLeft animate__slow');
+    //         $('.rocket_start').addClass('animate__animated animate__bounceInLeft animate__slow');
+    //     } else { $('.rocket_start').removeClass('animate__animated animate__bounceInLeft animate__slow'); }
+    // });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
+            $('.rocket_start').addClass('animate__animated animate__slideInLeft animate__slow');
+            $('.vector_start').stop().animate({ 'width': '50px' }, 2000);
+
+        } else {
+            $('.vector_start').stop().animate({ 'width': '0px' }, 50);
+            $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 600) {
+            $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+            $('.rocket_first-step').addClass('animate__animated animate__slideInLeft animate__slow');
+            $('.vector_first-step').stop().animate({ 'width': '180px' }, 2000);
+        } else {
+            $('.vector_first-step').stop().animate({ 'width': '0px' }, 50);
+            $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1000) {
+            $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+            $('.rocket_second-step').addClass('animate__animated animate__slideInLeft animate__slow');
+            $('.vector_second-step').stop().animate({ 'width': '340px' }, 2000);
+        } else {
+            $('.vector_second-step').stop().animate({ 'width': '0px' }, 50);
+            $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1300) {
+            $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
+            $('.rocket_finish').addClass('animate__animated animate__slideInLeft animate__slow');
+            $('.vector_finish').stop().animate({ 'width': '520px' }, 2000);
+        } else {
+            $('.vector_finish').stop().animate({ 'width': '0px' }, 50);
+            $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
+        }
+    });
+
+
 
     // smooth scroll and page up
     $(window).scroll(function() {
@@ -283,8 +337,10 @@ $(document).ready(function() {
         e.preventDefault();
         $('.tariffs-tab').removeClass('tariffs-tab_active');
         $('.tariffs__content').removeClass('tariffs__content_active');
+        $('.tariffs__content').removeClass('animate__animated animate__slideInRight');
         $(this).addClass('.tariffs-tab_active');
         $($(this).attr('href')).addClass('tariffs__content_active');
+        $('.tariffs__content').addClass('animate__animated animate__slideInRight');
     });
 
     $('.tariffs-tab:first').click();
@@ -330,7 +386,6 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         let element = $('.advantages__wrapper');
-
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = element.offset().top + element.height();
         if (scroll > offset) {
@@ -339,53 +394,18 @@ $(document).ready(function() {
     });
 
 
-    $(window).scroll(function() {
-        let elements = [$('.rocket_start'), $('.rocket_first-step'), $('.rocket_second-step'), $('.rocket_finish')];
-        for (let i = 0; i < elements.length; i++) {
-            let element = elements[i];
-            let scroll = $(window).scrollTop() + $(window).height();
-            let offset = element.offset().top + element.height();
-            if (scroll > offset) {
-                $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-            }
-
-        }
-    });
-
     // $(window).scroll(function() {
-    //     let element = $('.rocket_first-step');
+    //     let elements = [$('.rocket_start'), $('.rocket_first-step'), $('.rocket_second-step'), $('.rocket_finish')];
+    //     for (let i = 0; i < elements.length; i++) {
+    //         let element = elements[i];
+    //         let scroll = $(window).scrollTop() + $(window).height();
+    //         let offset = element.offset().top + element.height();
+    //         if (scroll > offset) {
+    //             $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
+    //         }
 
-    //     let scroll = $(window).scrollTop() + $(window).height();
-    //     let offset = element.offset().top + element.height();
-    //     if (scroll > offset) {
-    //         $(element).removeClass('hidden');
-    //         $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
     //     }
     // });
-
-
-    // $(window).scroll(function() {
-    //     let element = $('.rocket_second-step');
-
-    //     let scroll = $(window).scrollTop() + $(window).height();
-    //     let offset = element.offset().top + element.height();
-    //     if (scroll > offset) {
-    //         $(element).removeClass('hidden');
-    //         $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-    //     }
-    // });
-
-    // $(window).scroll(function() {
-    //     let element = $('.rocket_finish');
-
-    //     let scroll = $(window).scrollTop() + $(window).height();
-    //     let offset = element.offset().top + element.height();
-    //     if (scroll > offset) {
-    //         $(element).removeClass('hidden');
-    //         $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-    //     }
-    // });
-
 });
 
 window.onscroll = function scrollFunction() {
