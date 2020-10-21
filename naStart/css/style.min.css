@@ -707,6 +707,10 @@ label {
     height: 26px
 }
 
+.contacts .docs {
+    margin-top: 40px
+}
+
 .payment {
     width: 100%;
     min-height: 100vh;

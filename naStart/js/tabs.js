@@ -345,7 +345,7 @@ $(document).ready(function() {
 
     $('.tariffs-tab:first').click();
 
-    $('a[href="#tariffs"]').click(function() {
+    $('a[href="#tariffs"],a[href="#contacts"]').click(function() {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top - 100
