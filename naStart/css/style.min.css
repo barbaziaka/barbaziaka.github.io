@@ -791,7 +791,8 @@ label {
     font-size: 14px;
     font-weight: 300;
     line-height: 120%;
-    padding: 0 10px
+    padding: 0 10px;
+    transition: .7s
 }
 
 .about-content__item #doc-icon-path-1,
@@ -801,7 +802,7 @@ label {
 .about-content__item #doc-icon-path-5,
 .about-content__item #doc-icon-path-6,
 .about-content__item #doc-icon-path-7 {
-    transition: .5s
+    transition: .7s
 }
 
 .about-content__item:hover {
@@ -1322,7 +1323,7 @@ label {
 
 .back {
     display: flex;
-    align-self: flex-start
+    align-self: start
 }
 
 .back__link {

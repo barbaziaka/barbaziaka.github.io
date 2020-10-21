@@ -14,7 +14,7 @@ $(document).ready(function() {
     // });
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 600) {
             $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
             $('.rocket_start').addClass('animate__animated animate__slideInLeft animate__slow');
             $('.vector_start').stop().animate({ 'width': '50px' }, 2000);
@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 600) {
+        if ($(this).scrollTop() > 900) {
             $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
             $('.rocket_first-step').addClass('animate__animated animate__slideInLeft animate__slow');
             $('.vector_first-step').stop().animate({ 'width': '180px' }, 2000);
@@ -37,7 +37,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 1000) {
+        if ($(this).scrollTop() > 1200) {
             $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
             $('.rocket_second-step').addClass('animate__animated animate__slideInLeft animate__slow');
             $('.vector_second-step').stop().animate({ 'width': '340px' }, 2000);
@@ -48,7 +48,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 1300) {
+        if ($(this).scrollTop() > 1500) {
             $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
             $('.rocket_finish').addClass('animate__animated animate__slideInLeft animate__slow');
             $('.vector_finish').stop().animate({ 'width': '520px' }, 2000);
