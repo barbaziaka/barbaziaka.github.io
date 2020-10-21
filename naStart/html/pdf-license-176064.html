@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PDF Viewer</title>
+    <title>PDF license-176064</title>
     <link rel="stylesheet" type="text/css" href="../css/style.min.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
@@ -15,7 +15,8 @@
 <body>
     <div class="container">
         <div class="pdf-top-bar">
-            <div class="pdf-logo"><svg width="149" height="43" viewBox="0 0 190 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="pdf-logo">
+                <svg width="149" height="43" viewBox="0 0 190 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.00308 46.3816C4.72546 46.7128 4.4006 47.1328 4.03438 47.6415C3.66817 48.1502 3.29605 48.6885 2.92393 49.2564C2.55181 49.8242 2.1915 50.3862 1.84891 50.9481C1.50633 51.5042 1.21099 52.001 0.957007 52.4269H0.106445V45.2222H0.998353V50.9895C1.22281 50.5932 1.50042 50.1259 1.82529 49.6054C2.15606 49.0789 2.50456 48.5525 2.87668 48.0142C3.2488 47.4818 3.62092 46.9672 3.99894 46.4762C4.37697 45.9852 4.72546 45.5653 5.05033 45.2222H5.90089V52.4269H5.00308V46.3816Z" fill="#ffffff"/>
                 <path d="M22.351 52.4269H21.4472V49.0671H17.537V52.4269H16.6333V45.2222H17.537V48.304H21.4472V45.2222H22.351V52.4269Z" fill="#ffffff"/>
                 <path d="M37.7261 45.2222V45.9852H35.3635V52.421H34.4597V45.9912H32.1089V45.2281H37.7261V45.2222Z" fill="#ffffff"/>
@@ -49,14 +50,14 @@
 
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script>
-        const url = '../pdf/СТАРТ СРО.pdf';
+        const url = '../pdf/176064_01.pdf';
 
         let pdfDoc = null,
             pageNum = 1,
             pageIsRendering = false,
             pageNumIsPending = null;
 
-        const scale = 1.8,
+        const scale = 1.75,
             canvas = document.querySelector('#pdf-render'),
             ctx = canvas.getContext('2d');
 

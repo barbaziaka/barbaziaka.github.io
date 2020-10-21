@@ -330,6 +330,15 @@ label {
     height: 34px
 }
 
+.button_pdf {
+    background: #fff;
+    border-radius: 0
+}
+
+.button_pdf:hover {
+    opacity: .9
+}
+
 .button:disabled {
     background-color: #d3d3d3
 }
@@ -742,8 +751,13 @@ label {
     min-height: 100vh
 }
 
+.about-content {
+    width: 80%;
+    margin: 0 auto
+}
+
 .about-content__header {
-    margin-top: 110px;
+    margin-top: 50px;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 50px
@@ -755,35 +769,61 @@ label {
 }
 
 .about-content__column {
-    width: 400px;
-    height: auto;
+    width: 394px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between
+    flex-direction: column
 }
 
 .about-content__descr {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: 50px
 }
 
 .about-content__item {
+    margin: 0;
     display: flex;
     word-wrap: break-word;
     align-items: center;
     width: 394px;
-    height: 74px;
+    height: 96px;
     background-color: #fff;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 120%;
-    margin-bottom: 30px;
     padding: 0 10px
 }
 
+.about-content__item #doc-icon-path-1,
+.about-content__item #doc-icon-path-2,
+.about-content__item #doc-icon-path-3,
+.about-content__item #doc-icon-path-4,
+.about-content__item #doc-icon-path-5,
+.about-content__item #doc-icon-path-6,
+.about-content__item #doc-icon-path-7 {
+    transition: .5s
+}
+
+.about-content__item:hover {
+    background-color: #d70040;
+    color: #fff;
+    -webkit-text-decoration: underline #fff;
+    text-decoration: underline #fff
+}
+
+.about-content__item:hover #doc-icon-path-1,
+.about-content__item:hover #doc-icon-path-2,
+.about-content__item:hover #doc-icon-path-3,
+.about-content__item:hover #doc-icon-path-4,
+.about-content__item:hover #doc-icon-path-5,
+.about-content__item:hover #doc-icon-path-6,
+.about-content__item:hover #doc-icon-path-7 {
+    fill: #fff
+}
+
 .about-content__link {
-    display: flex;
+    display: block;
+    margin-bottom: 30px;
     color: #000
 }
 
@@ -1000,6 +1040,30 @@ label {
     font-size: 12px;
     text-align: center;
     color: #d7006c
+}
+
+.pdf-logo {
+    margin-right: 10%
+}
+
+.pdf-top-bar {
+    display: flex;
+    background: #d70040;
+    color: #fff;
+    padding: 20px 40px
+}
+
+.pdf-wrapper {
+    width: 440px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.pdf .error {
+    background: #ff4500;
+    color: #fff;
+    padding: 20px
 }
 
 .footer {
