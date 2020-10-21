@@ -164,7 +164,7 @@ label {
 }
 
 .promo-content__pseudo {
-    height: 100px
+    height: 120px
 }
 
 .promo-content__wrapper {
@@ -226,6 +226,10 @@ label {
 }
 
 .header-logo__link {
+    display: block
+}
+
+.header-logo__link img {
     width: 100%;
     height: 100%
 }
@@ -244,7 +248,7 @@ label {
 }
 
 .header-menu {
-    width: 745px;
+    width: 70%;
     height: auto
 }
 
@@ -410,7 +414,7 @@ label {
 .tariffs-tab {
     text-decoration: none;
     padding: 20px 0 20px;
-    width: 384px;
+    width: 100%;
     height: 60px;
     text-align: center;
     color: #fff;
@@ -462,11 +466,6 @@ label {
     height: 100%
 }
 
-.tariffs-item-internet {
-    width: 100%;
-    height: auto
-}
-
 .tariffs-item__name {
     font-size: 30px;
     font-weight: 700;
@@ -491,7 +490,6 @@ label {
 .tariffs-item-descr__title_cctv {
     display: flex;
     justify-content: space-between;
-    align-items: top;
     width: 250px
 }
 
@@ -515,7 +513,7 @@ label {
 .tariffs-item-descr__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 662px;
+    width: 62%;
     height: auto
 }
 
@@ -572,7 +570,6 @@ label {
     align-items: center;
     justify-content: center;
     width: 60px;
-    font-size: 18px;
     font-weight: 700;
     text-align: center;
     font-size: 40px;
@@ -626,7 +623,7 @@ label {
 
 .accordion-item__trigger {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 180%;
     padding: 20px 0;
     width: 280px;
     display: flex
@@ -897,7 +894,7 @@ label {
 .connect__icons_internet-tv-movie {
     display: flex;
     justify-content: space-between;
-    width: 100px
+    width: 120px
 }
 
 .connect__icons_internet-tv-movie {
@@ -1322,7 +1319,7 @@ label {
 .form-check__text {
     margin-left: 10%;
     line-height: 20px;
-    max-width: 230px
+    width: 230px
 }
 
 .back {
@@ -1393,7 +1390,7 @@ label {
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: 100%;
-    height: 90%;
+    height: 700px;
     max-height: 100%;
     background: url(../img/connect.jpg) center center/cover no-repeat;
     z-index: 11
@@ -1446,4 +1443,408 @@ label {
 
 .line-through {
     text-decoration: line-through
+}
+
+@media (min-width:1920px) {
+    .container {
+        min-width: 1540px
+    }
+    .header {
+        height: 140px
+    }
+    .header_connect {
+        padding: 0
+    }
+    .header-menu {
+        width: 60%
+    }
+    .header-menu__list {
+        font-size: 18px
+    }
+    .header-menu__link-wrapper {
+        width: 170px
+    }
+    .header-logo {
+        width: 258px;
+        height: 75px
+    }
+    .header-logo__link_connect {
+        display: block;
+        width: 100%;
+        height: 100%
+    }
+    .header-wrapper {
+        height: 120px
+    }
+    .promo {
+        min-height: 1080px;
+        background: url(../img/front-part_1920.jpg) #e3e4e6 center center/auto no-repeat
+    }
+    .promo-content__pseudo {
+        height: 140px
+    }
+    .promo-content__wrapper {
+        max-width: 548px
+    }
+    .promo-content__header {
+        margin-top: 210px;
+        font-size: 72px
+    }
+    .button {
+        width: 274px;
+        height: 67px;
+        font-size: 24px
+    }
+    .button_promo {
+        margin-top: 175px
+    }
+    .advantages__wrapper {
+        padding-top: 110px;
+        padding-bottom: 110px
+    }
+    .advantages__item {
+        width: 450px
+    }
+    .advantages__icon {
+        min-width: 54px;
+        height: 63px
+    }
+    .advantages__icon_bigger {
+        min-width: 65px;
+        height: 74px
+    }
+    .advantages__icon_medium {
+        min-width: 60px;
+        height: 69px
+    }
+    .advantages__subtitle {
+        font-size: 24px
+    }
+    .advantages__text {
+        margin-left: 32px;
+        font-size: 22px
+    }
+    .tariffs-tabs {
+        max-width: 1920px
+    }
+    .tariffs-tab {
+        height: 83px;
+        padding: 28px 0 28px;
+        font-size: 24px
+    }
+    .tariffs-item {
+        margin: 0 auto;
+        max-width: 1920px
+    }
+    .tariffs-item_bcg_cctv {
+        height: 2204px;
+        background: url(../img/video-monitoring_bcg.jpg) #e3e4e6 center center/cover no-repeat
+    }
+    .tariffs-item__block {
+        padding-top: 80px;
+        height: 552px
+    }
+    .tariffs-item__block_tv {
+        padding-top: 0
+    }
+    .tariffs-item__title {
+        padding-top: 36px
+    }
+    .tariffs-item__title_down {
+        padding-top: 66px
+    }
+    .tariffs-item__title-banner {
+        width: 740px;
+        height: 585px
+    }
+    .tariffs-item__name {
+        font-size: 36px;
+        margin-bottom: 110px
+    }
+    .tariffs-item__cost {
+        font-size: 50px;
+        margin-left: 40px
+    }
+    .tariffs-item-descr__wrapper_cctv {
+        padding-top: 38px;
+        width: 680px
+    }
+    .tariffs-item-descr__title:last-child {
+        width: 300px
+    }
+    .tariffs-item-descr__title_cctv {
+        width: 330px
+    }
+    .tariffs-item-descr__title_cctv:last-child {
+        width: 330px
+    }
+    .tariffs-item-descr__text {
+        width: 250px;
+        font-size: 24px
+    }
+    .tariffs-item-descr__icon_cctv {
+        margin-right: 10%
+    }
+    .tariffs-item-descr__profit {
+        width: 167px;
+        height: 36px;
+        font-size: 24px
+    }
+    .tariffs-item-descr__cost {
+        margin: 42px 0
+    }
+    .tariffs-item-descr__content {
+        font-size: 24px;
+        max-width: 300px;
+        padding: 20px 30px 30px 40px
+    }
+    .tariffs-item-descr__content_down {
+        margin-top: 36px
+    }
+    .rocket img {
+        width: 135px;
+        height: 56px
+    }
+    .vector {
+        height: 4px;
+        margin-right: 4px
+    }
+    .accordion__wrapper {
+        max-width: 1920px
+    }
+    .accordion-item__trigger {
+        font-size: 24px;
+        line-height: 24px;
+        padding: 30px 0;
+        height: 83px
+    }
+    .accordion-item__content {
+        padding-top: 40px;
+        font-size: 20px;
+        line-height: 180%
+    }
+    .accordion-item__column-wrapper {
+        padding-bottom: 60px
+    }
+    .accordion-link__item {
+        font-size: 50px
+    }
+    .accordion-link__item-icon {
+        width: 90%
+    }
+    .accordion-link__item-icon_small {
+        width: 90%
+    }
+    .accordion-link__item-icon_small img {
+        width: 100%;
+        height: auto
+    }
+    .accordion-link__item-icon img {
+        width: 100%;
+        height: auto
+    }
+    .accordion-link__item-title {
+        font-size: 24px
+    }
+    .accordion-link__item:last-child {
+        width: 350px
+    }
+    .accordion-link__item:first-child {
+        font-size: 80px
+    }
+    .accordion-link__wrapper {
+        width: 540px;
+        height: 160px
+    }
+    .contacts {
+        padding-top: 95px
+    }
+    .contacts__title {
+        font-size: 24px
+    }
+    .contacts__info {
+        width: 300px
+    }
+    .contacts__item {
+        margin-top: 26px
+    }
+    .contacts__link {
+        margin-left: 26px;
+        font-size: 24px
+    }
+    .contacts__image img {
+        width: 35px;
+        height: 35px
+    }
+    .contacts .docs {
+        margin-top: 70px
+    }
+    iframe {
+        width: 996px;
+        height: 490px
+    }
+    .footer {
+        max-width: 1920px
+    }
+    .footer__logo {
+        width: 226px;
+        height: 66px
+    }
+    .footer__logo img {
+        width: 100%;
+        height: 100%
+    }
+    .footer__address-wrapper {
+        width: 900px
+    }
+    .footer__address-wrapper address {
+        font-size: 24px
+    }
+    .footer__license-wrapper {
+        width: 100%;
+        height: 552px
+    }
+    .footer__license {
+        margin-top: 95px;
+        font-size: 18px
+    }
+    .footer__license a {
+        color: #fff
+    }
+    .modal-internet {
+        height: 90%
+    }
+    .modal__header {
+        margin-bottom: 0
+    }
+    .connect__wrapper {
+        margin-top: 80px
+    }
+    .connect__banner {
+        margin-top: 40px;
+        width: 300px;
+        height: 47px
+    }
+    .connect__banner_internet-tv {
+        width: 440px
+    }
+    .connect__banner_internet-tv-movie {
+        width: 560px
+    }
+    .connect__banner_cctv {
+        width: 540px
+    }
+    .connect__descr {
+        width: 220px;
+        height: 47px;
+        font-size: 24px;
+        line-height: 100%
+    }
+    .connect__descr_internet-tv {
+        line-height: 130%;
+        width: 288px
+    }
+    .connect__descr_internet-tv-movie {
+        width: 356px;
+        line-height: 130%
+    }
+    .connect__descr_cctv {
+        width: 330px;
+        line-height: 140%
+    }
+    .connect__icons_cctv,
+    .connect__icons_internet-tv,
+    .connect__icons_internet-tv-movie {
+        width: 130px
+    }
+    .connect__icons_internet-tv-movie {
+        width: 190px
+    }
+    .connect__icons_cctv {
+        width: 200px
+    }
+    .connect__icons img {
+        width: 59px;
+        height: 47px
+    }
+    .form__item {
+        width: 600px;
+        display: flex;
+        justify-content: space-between
+    }
+    .form__tariff {
+        font-size: 18px;
+        height: 30px;
+        line-height: 30px
+    }
+    .form__content {
+        width: 400px
+    }
+    .form__content label {
+        width: 200px;
+        font-size: 18px;
+        height: 30px;
+        line-height: 120%
+    }
+    .form__content:first-child {
+        width: 200px
+    }
+    .form__wrapper_connect {
+        width: 70%;
+        height: 260px
+    }
+    .form__select {
+        font-size: 18px;
+        height: 30px
+    }
+    .form__phone span {
+        font-size: 18px;
+        line-height: 30px
+    }
+    .form__input {
+        font-size: 18px;
+        height: 30px
+    }
+    .form__checkboxes {
+        width: 330px
+    }
+    .form-check__box {
+        width: 30px;
+        height: 30px
+    }
+    .form-check__item {
+        width: 330px
+    }
+    .form-check__item-pay-period {
+        height: 120px
+    }
+    .form-check__text {
+        min-width: 330px;
+        font-size: 18px;
+        margin-left: 15%;
+        line-height: 30px
+    }
+    .form-confirm {
+        font-size: 12px;
+        line-height: 120%
+    }
+    .form-confirm__cost,
+    .form-confirm__discount {
+        font-size: 50px;
+        margin-left: 50px
+    }
+    .form-confirm__item {
+        margin: 52px 0
+    }
+    .form-confirm-check__box {
+        top: 0;
+        width: 30px;
+        height: 30px
+    }
+    .form-confirm-check__item {
+        height: 30px
+    }
+    .form-confirm-check__text {
+        margin-left: 10%
+    }
 }
