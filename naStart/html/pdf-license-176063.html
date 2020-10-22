@@ -57,9 +57,12 @@
             pageIsRendering = false,
             pageNumIsPending = null;
 
-        const scale = 1.75,
+        let scale = 1.75,
             canvas = document.querySelector('#pdf-render'),
             ctx = canvas.getContext('2d');
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            scale = 2.517;
+        }
 
         // Render the page
         const renderPage = num => {

@@ -709,8 +709,9 @@ label {
 }
 
 .payment {
-    width: 100%;
-    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1366px;
+    min-height: 768px;
     padding-bottom: 20px
 }
 
@@ -728,7 +729,13 @@ label {
 }
 
 .payment-info__header {
-    font-size: 12px
+    font-size: 12px;
+    margin: 20px 0
+}
+
+.payment-info__block {
+    line-height: 140%;
+    margin-bottom: 10px
 }
 
 .payment-icons {
@@ -928,7 +935,7 @@ label {
 }
 
 .pscb-payform-check__input:checked+.pscb-payform-check__box {
-    background-image: url(../icons/checkbox-checked.svg)
+    background: url(../icons/checkbox-checked.svg) center center/cover no-repeat
 }
 
 .pscb-payform-check__box {
@@ -1145,8 +1152,8 @@ label {
 .form-confirm__item {
     display: flex;
     align-items: center;
-    margin: 32px 0;
-    margin-left: 3%
+    margin: 2% 0;
+    padding-left: 3%
 }
 
 .form-confirm-check__input {
@@ -1158,7 +1165,7 @@ label {
 }
 
 .form-confirm-check__input:checked+.form-confirm-check__box {
-    background-image: url(../icons/checkbox-checked.svg)
+    background: url(../icons/checkbox-checked.svg) center center/cover no-repeat
 }
 
 .form-confirm-check__box {
@@ -1291,7 +1298,7 @@ label {
 }
 
 .form-check__input:checked+.form-check__box {
-    background-image: url(../icons/checkbox-checked.svg)
+    background: url(../icons/checkbox-checked.svg) center center/cover no-repeat
 }
 
 .form-check__box {
@@ -1445,7 +1452,7 @@ label {
     text-decoration: line-through
 }
 
-@media (min-width:1920px) {
+@media (min-width:1900px) {
     .container {
         min-width: 1540px
     }
@@ -1465,6 +1472,10 @@ label {
         width: 170px
     }
     .header-logo {
+        width: 335px;
+        height: 97px
+    }
+    .header-logo_connect {
         width: 258px;
         height: 75px
     }
@@ -1497,6 +1508,15 @@ label {
     }
     .button_promo {
         margin-top: 175px
+    }
+    .button_pdf {
+        width: 220px;
+        height: 50px;
+        background: #fff;
+        border-radius: 0
+    }
+    .button_pdf:hover {
+        opacity: .9
     }
     .advantages__wrapper {
         padding-top: 110px;
@@ -1600,6 +1620,9 @@ label {
     }
     .tariffs-item-descr__content_down {
         margin-top: 36px
+    }
+    .rocket {
+        width: 900px
     }
     .rocket img {
         width: 135px;
@@ -1767,6 +1790,11 @@ label {
         width: 59px;
         height: 47px
     }
+    .form__mail label,
+    .form__name label {
+        font-size: 18px;
+        line-height: 30px
+    }
     .form__item {
         width: 600px;
         display: flex;
@@ -1792,6 +1820,9 @@ label {
     .form__wrapper_connect {
         width: 70%;
         height: 260px
+    }
+    .form__wrapper_business {
+        width: 420px
     }
     .form__select {
         font-size: 18px;
@@ -1833,9 +1864,6 @@ label {
         font-size: 50px;
         margin-left: 50px
     }
-    .form-confirm__item {
-        margin: 52px 0
-    }
     .form-confirm-check__box {
         top: 0;
         width: 30px;
@@ -1846,5 +1874,163 @@ label {
     }
     .form-confirm-check__text {
         margin-left: 10%
+    }
+    .about-content {
+        width: 80%;
+        margin: 0 auto
+    }
+    .about-content__header {
+        margin-top: 70px;
+        font-size: 50px;
+        margin-bottom: 70px
+    }
+    .about-content__column {
+        width: 560px
+    }
+    .about-content__descr {
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-left: 70px
+    }
+    .about-content__item {
+        width: 550px;
+        height: 130px;
+        font-size: 18px;
+        padding: 0 20px
+    }
+    .about-content__link {
+        margin-bottom: 30px;
+        color: #000
+    }
+    .about-content__icon {
+        margin-right: 10px
+    }
+    .about-content__icon svg {
+        width: 30px;
+        height: 30px
+    }
+    .business {
+        min-width: 1900px;
+        min-height: 980px
+    }
+    .business-content {
+        margin-top: 140px
+    }
+    .business-content__header {
+        font-size: 72px
+    }
+    .business-content__descr {
+        font-size: 18px;
+        line-height: 140%;
+        margin-top: 54px;
+        margin-bottom: 83px
+    }
+    .visa-icon img {
+        width: 105px;
+        height: 34px
+    }
+    .mastercard-icon img {
+        width: 90px;
+        height: 70px
+    }
+    .maestro-icon img {
+        width: 90px;
+        height: 70px
+    }
+    .world-icon img {
+        width: 117px;
+        height: 33px
+    }
+    .qiwi-purse-icon img {
+        width: 111px;
+        height: 56px
+    }
+    .yandex-money-icon img {
+        width: 133px;
+        height: 52px
+    }
+    .web-money-icon img {
+        width: 165px;
+        height: 43px
+    }
+    .payment {
+        min-width: 1900px;
+        min-height: 980px;
+        padding-bottom: 0
+    }
+    .payment-main__wrapper {
+        width: 70%;
+        margin-top: 110px
+    }
+    .payment-info {
+        width: 1550px;
+        margin-top: 86px;
+        font-size: 14px
+    }
+    .payment-info__header {
+        font-size: 18px
+    }
+    .payment-icons {
+        width: 515px;
+        height: 200px
+    }
+    .payment-icons__item {
+        height: 70px
+    }
+    .payment-icons__item:first-child {
+        margin-bottom: 25px
+    }
+    .pscb-payform {
+        font-size: 18px;
+        width: 540px
+    }
+    .pscb-payform-check__input:checked+.pscb-payform-check__box {
+        background-image: url(../icons/checkbox-checked.svg)
+    }
+    .pscb-payform-check__box {
+        width: 30px;
+        height: 30px
+    }
+    .pscb-payform-offer-agreement {
+        width: 370px;
+        height: 30px;
+        margin: 50px 0
+    }
+    .pscb-payform-offer-agreement__item {
+        height: 30px;
+        line-height: 30px
+    }
+    .pscb-payform-amount__wrapper,
+    .pscb-payform-customer-account__wrapper {
+        width: 430px
+    }
+    .pscb-payform-amount__wrapper label,
+    .pscb-payform-customer-account__wrapper label {
+        font-size: 18px;
+        line-height: 30px
+    }
+    .pscb-payform-amount__input,
+    .pscb-payform-customer-account__input {
+        height: 30px;
+        font-size: 18px;
+        padding-left: 1%
+    }
+    .pdf-logo {
+        margin-right: 10%;
+        width: 258px;
+        height: 75px
+    }
+    .pdf-logo svg {
+        width: 100%;
+        height: 100%
+    }
+    .pdf-page-info {
+        font-size: 24px
+    }
+    .pdf-top-bar {
+        padding: 20px 60px
+    }
+    .pdf-wrapper {
+        width: 640px
     }
 }
