@@ -159,8 +159,8 @@ label {
 
 .promo {
     width: 100%;
-    min-height: 768px;
-    background: url(../img/front-part.jpg) #e3e4e6 center center/auto no-repeat
+    height: 768px;
+    background: url(../img/front-part_1366.jpg) #e3e4e6 center center/auto no-repeat
 }
 
 .promo-content__pseudo {
@@ -183,6 +183,11 @@ label {
     text-decoration: none
 }
 
+.phone__link:hover {
+    padding-bottom: 0;
+    border-bottom: none
+}
+
 .phone__link_top {
     font-size: 17px
 }
@@ -197,10 +202,17 @@ label {
     font-weight: 300
 }
 
+.phone__link_footer {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10%
+}
+
 .header {
+    min-width: 100%;
     position: fixed;
     z-index: 1;
-    width: 100%;
+    max-width: 100%;
     height: 100px;
     background-color: #e3e4e6;
     padding: 15px 0
@@ -218,7 +230,10 @@ label {
 
 .header_connect {
     padding-top: 30px;
-    height: 100px
+    height: 100px;
+    max-width: 100%;
+    display: flex;
+    align-items: center
 }
 
 .header-text {
@@ -241,6 +256,7 @@ label {
 }
 
 .header-wrapper {
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -270,12 +286,8 @@ label {
     text-decoration: none
 }
 
+.header-menu__link:hover,
 .header-menu__link_active {
-    padding-bottom: 5px;
-    border-bottom: 3px solid #d70040
-}
-
-.header-menu__link:hover {
     padding-bottom: 5px;
     border-bottom: 3px solid #d70040
 }
@@ -354,8 +366,7 @@ label {
 
 .advantages__wrapper {
     transform: translateY(-1000%);
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 0;
     display: flex;
     justify-content: space-between
 }
@@ -366,17 +377,17 @@ label {
 }
 
 .advantages__icon {
-    min-width: 25px;
+    width: 25px;
     height: 30px
 }
 
 .advantages__icon_bigger {
-    min-width: 30px;
+    width: 30px;
     height: 32px
 }
 
 .advantages__icon_medium {
-    min-width: 27px;
+    width: 27px;
     height: 27px
 }
 
@@ -411,7 +422,7 @@ label {
     display: block
 }
 
-.tariffs-tab {
+.tariffs-tab-top {
     text-decoration: none;
     padding: 20px 0 20px;
     width: 100%;
@@ -495,11 +506,30 @@ label {
 
 .tariffs-item-descr__text {
     width: 170px;
-    font-size: 18px
+    height: 170px;
+    font-size: 18px;
+    word-wrap: break-word
+}
+
+.tariffs-item-descr__icon {
+    width: 66px;
+    height: 66px
+}
+
+.tariffs-item-descr__icon img {
+    width: 100%;
+    height: 100%
 }
 
 .tariffs-item-descr__icon_cctv {
+    width: 70px;
+    height: 70px;
     margin-right: 10%
+}
+
+.tariffs-item-descr__icon_cctv img {
+    min-width: 100%;
+    min-height: 100%
 }
 
 .tariffs-item-descr__profit {
@@ -552,17 +582,28 @@ label {
     margin-right: 2px
 }
 
+.accordion {
+    position: relative
+}
+
 .accordion__wrapper {
     max-width: 1366px;
     margin: 0 auto
 }
 
 .accordion-link {
-    text-decoration: none;
-    text-align: center;
-    color: #000;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    height: 120px
+}
+
+.accordion-link__pseudo {
+    z-index: 0;
+    width: 490px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 0
 }
 
 .accordion-link__item {
@@ -614,11 +655,11 @@ label {
 }
 
 .accordion-link__wrapper {
-    width: 440px;
-    height: 128px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
     display: flex;
-    padding-left: 5%;
-    transform: translateX(33.5%)
+    z-index: 1
 }
 
 .accordion-item__trigger {
@@ -653,6 +694,12 @@ label {
     margin-left: 10%
 }
 
+.accordion-item__icon-down svg,
+.accordion-item__icon-up svg {
+    width: 100%;
+    height: 100%
+}
+
 .accordion-item__icon-up {
     display: none
 }
@@ -660,8 +707,6 @@ label {
 #triangle-down,
 #triangle-up {
     display: block;
-    width: 100%;
-    height: 100%;
     fill: #fff
 }
 
@@ -711,7 +756,7 @@ label {
 .payment {
     margin: 0 auto;
     max-width: 1366px;
-    min-height: 768px;
+    height: 768px;
     padding-bottom: 20px
 }
 
@@ -756,7 +801,7 @@ label {
 
 .about {
     width: 100%;
-    min-height: 100vh
+    padding-bottom: 150px
 }
 
 .about-content {
@@ -981,7 +1026,7 @@ label {
     margin: 0 auto;
     width: 100%;
     max-width: 1366px;
-    min-height: 768px;
+    height: 768px;
     background: url(../img/1366_for-business.jpg) center center/cover no-repeat
 }
 
@@ -1075,36 +1120,86 @@ label {
     padding: 20px
 }
 
-.footer {
-    max-width: 1366px;
-    margin: 0 auto
+.address-wrapper {
+    padding: 90px 0;
+    width: 60%
 }
 
-.footer__address-wrapper,
-.footer__license-wrapper {
-    padding: 90px 0
-}
-
-.footer__address-wrapper {
-    width: 550px
-}
-
-.footer__address-wrapper address {
+.address-wrapper address {
     line-height: 140%;
     font-style: normal;
     font-weight: 400;
     font-size: 15px
 }
 
-.footer__license-wrapper {
+.footer {
     width: 100%;
-    height: 378px
+    margin: 0 auto;
+    font-size: 13px
+}
+
+.footer-bcg__wrapper {
+    height: 100%
+}
+
+.footer-header {
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between
+}
+
+.footer-header__logo img {
+    width: 100%;
+    height: 100%
+}
+
+.footer-header-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 14%;
+    margin-right: 3%
+}
+
+.footer-menu {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    list-style: none
+}
+
+.footer-menu__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 80%
+}
+
+.footer-menu__list:first-child {
+    height: 35%
+}
+
+.footer-menu__list:last-child {
+    height: 20%
+}
+
+.footer-menu__link {
+    text-decoration: none;
+    color: #fff
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 220px;
+    padding-bottom: 40px
 }
 
 .footer__license {
-    margin-top: 75px;
-    color: #fff;
-    font-size: 13px
+    color: #fff
 }
 
 .footer__license a {
@@ -1118,13 +1213,13 @@ label {
     justify-content: space-between
 }
 
+.form__content:first-child {
+    width: 150px
+}
+
 .form__content label {
     height: 20px;
     line-height: 20px
-}
-
-.form__content:first-child {
-    width: 150px
 }
 
 .form-confirm {
@@ -1170,7 +1265,7 @@ label {
 
 .form-confirm-check__box {
     position: absolute;
-    top: 15%;
+    top: 12%;
     width: 20px;
     height: 20px;
     overflow: hidden;
@@ -1181,7 +1276,6 @@ label {
 }
 
 .form-confirm-check__item {
-    width: 280px;
     height: 20px
 }
 
@@ -1218,7 +1312,7 @@ label {
 }
 
 .form__wrapper_connect {
-    width: 770px;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     height: 220px
@@ -1247,11 +1341,7 @@ label {
 .form__name label,
 .form__phone label,
 .form__tariff label {
-    min-width: 150px
-}
-
-.form__apartment-number {
-    width: 250px
+    width: 150px
 }
 
 .form__apartment-number input {
@@ -1271,7 +1361,7 @@ label {
 }
 
 .form__item {
-    width: 360px;
+    width: 50%;
     display: flex
 }
 
@@ -1310,10 +1400,6 @@ label {
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: 50% 50%
-}
-
-.form-check__item {
-    width: 280px
 }
 
 .form-check__item-pay-period {
@@ -1357,7 +1443,8 @@ label {
 }
 
 .pageup img {
-    width: 100%
+    width: 100%;
+    height: 100%
 }
 
 .modal-internet__wrapper,
@@ -1388,6 +1475,11 @@ label {
     max-height: 100%;
     background-color: #f2f2f2;
     z-index: 11
+}
+
+.modal-tariff__wrapper {
+    max-width: 90%;
+    margin: 0 auto
 }
 
 .modal-internet {
@@ -1452,15 +1544,21 @@ label {
     text-decoration: line-through
 }
 
-@media (min-width:1900px) {
+@media (min-width:1921px) {
+    .header_branch {
+        margin-bottom: 18%
+    }
+    .footer_branch {
+        margin-top: 18%
+    }
+}
+
+@media (min-width:1700px) {
     .container {
-        min-width: 1540px
+        width: 1540px
     }
     .header {
         height: 140px
-    }
-    .header_connect {
-        padding: 0
     }
     .header-menu {
         width: 60%
@@ -1490,6 +1588,9 @@ label {
     .promo {
         min-height: 1080px;
         background: url(../img/front-part_1920.jpg) #e3e4e6 center center/auto no-repeat
+    }
+    .promo-content {
+        margin: 0 auto
     }
     .promo-content__pseudo {
         height: 140px
@@ -1547,7 +1648,7 @@ label {
     .tariffs-tabs {
         max-width: 1920px
     }
-    .tariffs-tab {
+    .tariffs-tab-top {
         height: 83px;
         padding: 28px 0 28px;
         font-size: 24px
@@ -1557,8 +1658,7 @@ label {
         max-width: 1920px
     }
     .tariffs-item_bcg_cctv {
-        height: 2204px;
-        background: url(../img/video-monitoring_bcg.jpg) #e3e4e6 center center/cover no-repeat
+        height: 2204px
     }
     .tariffs-item__block {
         padding-top: 80px;
@@ -1602,8 +1702,14 @@ label {
         width: 250px;
         font-size: 24px
     }
+    .tariffs-item-descr__icon {
+        width: 82px;
+        height: 82px
+    }
     .tariffs-item-descr__icon_cctv {
-        margin-right: 10%
+        margin-right: 10%;
+        width: 94px;
+        height: 94px
     }
     .tariffs-item-descr__profit {
         width: 167px;
@@ -1635,6 +1741,16 @@ label {
     .accordion__wrapper {
         max-width: 1920px
     }
+    .accordion-item__icon-down,
+    .accordion-item__icon-up {
+        width: 16px;
+        height: 16px
+    }
+    .accordion-item__icon-down svg,
+    .accordion-item__icon-up svg {
+        width: 100%;
+        height: 100%
+    }
     .accordion-item__trigger {
         font-size: 24px;
         line-height: 24px;
@@ -1648,6 +1764,13 @@ label {
     }
     .accordion-item__column-wrapper {
         padding-bottom: 60px
+    }
+    .accordion-link {
+        height: 160px
+    }
+    .accordion-link__pseudo {
+        width: 645px;
+        height: 160px
     }
     .accordion-link__item {
         font-size: 50px
@@ -1674,10 +1797,6 @@ label {
     }
     .accordion-link__item:first-child {
         font-size: 80px
-    }
-    .accordion-link__wrapper {
-        width: 540px;
-        height: 160px
     }
     .contacts {
         padding-top: 95px
@@ -1706,36 +1825,9 @@ label {
         width: 996px;
         height: 490px
     }
-    .footer {
-        max-width: 1920px
-    }
-    .footer__logo {
-        width: 226px;
-        height: 66px
-    }
-    .footer__logo img {
-        width: 100%;
-        height: 100%
-    }
-    .footer__address-wrapper {
-        width: 900px
-    }
-    .footer__address-wrapper address {
-        font-size: 24px
-    }
-    .footer__license-wrapper {
-        width: 100%;
-        height: 552px
-    }
-    .footer__license {
-        margin-top: 95px;
-        font-size: 18px
-    }
-    .footer__license a {
-        color: #fff
-    }
     .modal-internet {
-        height: 90%
+        height: 90%;
+        background: url(../img/1920_connect.jpg) center center/cover no-repeat
     }
     .modal__header {
         margin-bottom: 0
@@ -1875,10 +1967,6 @@ label {
     .form-confirm-check__text {
         margin-left: 10%
     }
-    .about-content {
-        width: 80%;
-        margin: 0 auto
-    }
     .about-content__header {
         margin-top: 70px;
         font-size: 50px;
@@ -1910,7 +1998,7 @@ label {
         height: 30px
     }
     .business {
-        min-width: 1900px;
+        max-width: 1920px;
         min-height: 980px
     }
     .business-content {
@@ -1924,6 +2012,73 @@ label {
         line-height: 140%;
         margin-top: 54px;
         margin-bottom: 83px
+    }
+    .payment {
+        max-width: 1920px;
+        padding-bottom: 100px
+    }
+    .payment-main__wrapper {
+        width: 70%;
+        margin-top: 110px
+    }
+    .payment-info {
+        width: 1550px;
+        margin-top: 86px;
+        font-size: 14px
+    }
+    .payment-info__header {
+        font-size: 18px
+    }
+    .payment-icons {
+        width: 515px;
+        height: 200px
+    }
+    .payment-icons__item {
+        height: 70px
+    }
+    .payment-icons__item:first-child {
+        margin-bottom: 25px
+    }
+    .footer {
+        font-size: 18px;
+        max-width: 1920px
+    }
+    .footer-header {
+        padding: 80px 0 40px 0
+    }
+    .footer-header__logo {
+        width: 226px;
+        height: 66px
+    }
+    .footer-header-contacts__item svg {
+        width: 55px;
+        height: 55px
+    }
+    .footer-menu__list {
+        height: 100%
+    }
+    .footer-menu__list:first-child {
+        height: 45%
+    }
+    .footer-menu__list:last-child {
+        height: 30%
+    }
+    .footer-menu__link {
+        text-decoration: none;
+        color: #fff
+    }
+    .footer__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 300px;
+        padding-bottom: 100px
+    }
+    .footer__license {
+        color: #fff
+    }
+    .footer__license a {
+        color: #fff
     }
     .visa-icon img {
         width: 105px;
@@ -1952,33 +2107,6 @@ label {
     .web-money-icon img {
         width: 165px;
         height: 43px
-    }
-    .payment {
-        min-width: 1900px;
-        min-height: 980px;
-        padding-bottom: 0
-    }
-    .payment-main__wrapper {
-        width: 70%;
-        margin-top: 110px
-    }
-    .payment-info {
-        width: 1550px;
-        margin-top: 86px;
-        font-size: 14px
-    }
-    .payment-info__header {
-        font-size: 18px
-    }
-    .payment-icons {
-        width: 515px;
-        height: 200px
-    }
-    .payment-icons__item {
-        height: 70px
-    }
-    .payment-icons__item:first-child {
-        margin-bottom: 25px
     }
     .pscb-payform {
         font-size: 18px;
@@ -2032,5 +2160,451 @@ label {
     }
     .pdf-wrapper {
         width: 640px
+    }
+    .address-wrapper address {
+        font-size: 24px
+    }
+    .phone__link_bottom,
+    .phone__link_top {
+        font-size: 24px
+    }
+    .phone__link_footer {
+        font-size: 18px
+    }
+}
+
+@media (max-width:1300px) {
+    .container {
+        width: 950px
+    }
+    .container_modal {
+        width: 90%
+    }
+    .promo {
+        background: url(../img/front-part_1366.jpg) #e3e4e6 center center/cover no-repeat;
+        height: auto
+    }
+    .promo-content {
+        margin: 0 auto;
+        max-width: 90%
+    }
+    .promo-content__pseudo {
+        height: 80px
+    }
+    .promo-content__header {
+        font-size: 45px;
+        margin-top: 200px
+    }
+    .header {
+        height: 80px;
+        padding: 10px 0
+    }
+    .header-wrapper {
+        margin: 0 auto;
+        max-width: 90%;
+        height: 60px
+    }
+    .header-menu__list {
+        font-size: 13px
+    }
+    .header-menu__link:hover,
+    .header-menu__link_active {
+        padding-bottom: 1px;
+        border-bottom: 2px solid #d70040
+    }
+    .header-menu__link-wrapper {
+        width: 125px;
+        height: 25px
+    }
+    .header-menu__link-wrapper svg {
+        width: 12px;
+        height: auto
+    }
+    .phone__link_top {
+        font-size: 15px
+    }
+    .phone__link_top:hover {
+        padding-bottom: 1px;
+        border-bottom: 2px solid #d70040
+    }
+    .button {
+        width: 145px;
+        height: 37px;
+        font-size: 14px;
+        line-height: 140%
+    }
+    .button_promo {
+        margin: 107px 0
+    }
+    .advantages__wrapper {
+        margin: 0 auto;
+        max-width: 90%;
+        padding: 20px 0
+    }
+    .advantages__icon {
+        width: 27px;
+        height: 25px
+    }
+    .advantages__icon_bigger {
+        width: 35px;
+        height: 30px
+    }
+    .advantages__icon_medium {
+        width: 25px;
+        height: 25px
+    }
+    .advantages__subtitle {
+        color: #d60136;
+        font-size: 15px
+    }
+    .advantages__text {
+        margin-left: 22px;
+        font-size: 13px
+    }
+    .tariffs-tab-top {
+        padding: 10px 0 10px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 130%
+    }
+    .tariffs-item__wrapper {
+        margin: 0 auto;
+        max-width: 90%
+    }
+    .tariffs-item__block {
+        padding-top: 30px;
+        max-height: 290px
+    }
+    .tariffs-item__block_tv {
+        padding-top: 0
+    }
+    .tariffs-item__title {
+        padding-top: 30px
+    }
+    .tariffs-item__title_down {
+        padding-top: 50px
+    }
+    .tariffs-item__title-banner {
+        max-width: 45%;
+        height: auto
+    }
+    .tariffs-item__name {
+        font-size: 26px;
+        margin-bottom: 70px
+    }
+    .tariffs-item__cost {
+        font-size: 26px;
+        margin-left: 30px
+    }
+    .tariffs-item-descr__wrapper {
+        max-width: 500px
+    }
+    .tariffs-item-descr__wrapper_cctv {
+        padding-top: 20px;
+        max-width: 400px
+    }
+    .tariffs-item-descr__title:last-child {
+        max-width: 300px
+    }
+    .tariffs-item-descr__title_cctv {
+        max-width: 200px
+    }
+    .tariffs-item-descr__title_cctv:last-child {
+        max-width: 200px
+    }
+    .tariffs-item-descr__text {
+        max-width: 250px;
+        font-size: 14px
+    }
+    .tariffs-item-descr__icon {
+        width: 54px;
+        height: 54px
+    }
+    .tariffs-item-descr__icon_cctv {
+        margin-right: 10%
+    }
+    .tariffs-item-descr__profit {
+        max-width: 110px;
+        max-height: 20px;
+        font-size: 14px;
+        line-height: 90%
+    }
+    .tariffs-item-descr__cost {
+        margin: 20px 0
+    }
+    .tariffs-item-descr__content {
+        font-size: 14px;
+        max-width: 300px;
+        padding: 10px 15px 15px 20px
+    }
+    .tariffs-item-descr__content_down {
+        margin-top: 20px
+    }
+    .rocket {
+        margin-top: 10px;
+        max-width: 565px
+    }
+    .rocket img {
+        width: 84px;
+        height: 35px
+    }
+    .accordion-item {
+        position: relative
+    }
+    .accordion-item__icon-down,
+    .accordion-item__icon-up {
+        width: 9px;
+        height: 9px
+    }
+    .accordion-item__trigger {
+        font-size: 14px;
+        line-height: 140%;
+        padding: 10px 0;
+        height: 40px
+    }
+    .accordion-item__content {
+        padding-top: 20px;
+        font-size: 14px;
+        line-height: 180%
+    }
+    .accordion-item__column-wrapper {
+        padding-bottom: 30px
+    }
+    .accordion-item__wrapper {
+        width: 90%;
+        margin: 0 auto
+    }
+    .accordion-link {
+        height: 100px
+    }
+    .accordion-link__item {
+        font-size: 14px
+    }
+    .accordion-link__item-title {
+        font-size: 17px
+    }
+    .accordion-link__item:last-child {
+        max-width: 230px
+    }
+    .accordion-link__item:first-child {
+        font-size: 44px
+    }
+    .accordion-link__pseudo {
+        height: 100px
+    }
+    .contacts {
+        padding-top: 30px
+    }
+    .contacts__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between
+    }
+    .contacts__title {
+        font-size: 15px
+    }
+    .contacts__info {
+        width: 25%
+    }
+    .contacts__item {
+        margin-top: 10px
+    }
+    .contacts__link {
+        margin-left: 16px;
+        font-size: 14px
+    }
+    .contacts__image img {
+        width: 22px;
+        height: 22px
+    }
+    .contacts .docs {
+        margin-top: 40px
+    }
+    iframe {
+        max-width: 75%;
+        max-height: 330px
+    }
+    .address-wrapper {
+        padding: 55px
+    }
+    .address-wrapper address {
+        font-size: 13px
+    }
+    .footer {
+        font-size: 12px
+    }
+    .footer-header {
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 0 30px 0
+    }
+    .footer-header__logo {
+        width: 137px;
+        height: 40px
+    }
+    .footer-header-contacts {
+        width: 125px
+    }
+    .footer-header-contacts__item svg {
+        width: 35px;
+        height: 35px
+    }
+    .footer__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 30px
+    }
+    .footer__license {
+        font-size: 11px
+    }
+    .pageup {
+        width: 40px;
+        height: 40px
+    }
+    .pscb-payform-amount__wrapper label,
+    .pscb-payform-customer-account__wrapper label {
+        font-size: 14px;
+        line-height: 18px
+    }
+    .pscb-payform-check__box {
+        width: 18px;
+        height: 18px
+    }
+    .pscb-payform-offer-agreement {
+        height: 18px
+    }
+    .pscb-payform-offer-agreement__item {
+        height: 18px;
+        line-height: 18px
+    }
+    .pscb-payform-amount__input,
+    .pscb-payform-customer-account__input {
+        height: 18px;
+        font-size: 14px
+    }
+    .payment-main {
+        width: 90%;
+        margin: 0 auto
+    }
+    .payment-main__wrapper {
+        margin-top: 90px;
+        width: 85%
+    }
+    .payment-info {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 66px;
+        font-size: 10px
+    }
+    .payment-info__header {
+        font-size: 12px;
+        margin: 10px 0
+    }
+    .payment-info__block {
+        margin-bottom: 5px
+    }
+    .payment-icons {
+        width: 50%
+    }
+    .business-content {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 96px
+    }
+    .business-content__header {
+        font-size: 45px
+    }
+    .about-content__header {
+        margin-top: 40px;
+        font-size: 28px;
+        margin-bottom: 40px
+    }
+    .about-content__column {
+        width: 48%
+    }
+    .about-content__item {
+        max-width: 100%;
+        height: 80px;
+        font-size: 13px
+    }
+    .about-content__link {
+        margin-bottom: 20px
+    }
+    .about-content__icon {
+        margin-right: 10px
+    }
+    .about-content__icon svg {
+        width: 20px;
+        height: 20px
+    }
+    .modal-tariff__wrapper {
+        margin-top: 30px
+    }
+    .modal-internet {
+        background: url(../img/height-700_connect.jpg) center center/cover no-repeat
+    }
+    .form__item {
+        width: 54%
+    }
+    .form__content:first-child {
+        width: 125px
+    }
+    .form__content label {
+        font-size: 12px
+    }
+    .form-confirm {
+        font-size: 9px
+    }
+    .form-confirm-check__box {
+        width: 18px;
+        height: 18px;
+        top: 0
+    }
+    .form-confirm__item {
+        padding-left: 4%;
+        height: 18px
+    }
+    .form__wrapper_connect {
+        width: 95%;
+        height: 180px
+    }
+    .form__select {
+        height: 18px;
+        font-size: 11px
+    }
+    .form__address label,
+    .form__apartment-number label,
+    .form__mail label,
+    .form__name label,
+    .form__phone label,
+    .form__tariff label {
+        width: 125px
+    }
+    .form__phone span {
+        font-size: 12px;
+        line-height: 180%
+    }
+    .form__input {
+        height: 18px;
+        font-size: 12px
+    }
+    .form__checkboxes {
+        width: 270px
+    }
+    .form__checkboxes label {
+        font-size: 12px
+    }
+    .form-check__box {
+        width: 18px;
+        height: 18px
+    }
+    .form-check__item-pay-period {
+        height: 84px
+    }
+    .form-check__text {
+        margin-left: 10%;
+        line-height: 18px;
+        width: 190px
     }
 }

@@ -1,20 +1,10 @@
-let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="img/connect_internet-icon.svg" alt="wifi-icon"><img src="img/connect_tv-icon.svg" alt="tv-icon"><img src="img/movie-icon.svg" alt="movie-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_blue">ТВ</div><div class="connect__icons connect__icons_tv"><img src="img/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_cctv"><div class="connect__descr connect__descr_cctv bcg_violet">Видеонаблюдение</div><div class="connect__icons connect__icons_cctv"><img src="icons/cctv-camera.svg" alt="cctv-icon"></div></div>', '<div class="connect__banner"><div class="connect__descr bcg_red">Интернет</div><div class="connect__icons"><img src="img/connect_internet-icon.svg" alt="wifi-icon"></div></div>'];
+let $replaceBanner = ['<div class="connect__banner connect__banner_internet-tv"><div class="connect__descr connect__descr_internet-tv bcg_yellow">Интернет + ТВ</div><div class="connect__icons connect__icons_internet-tv"><img src="icons/connect_internet-icon.svg" alt="wifi-icon"><img src="icons/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_internet-tv-movie"><div class="connect__descr connect__descr_internet-tv-movie bcg_lime">Интернет + ТВ + Кино</div><div class="connect__icons connect__icons_internet-tv-movie"><img src="icons/connect_internet-icon.svg" alt="wifi-icon"><img src="icons/connect_tv-icon.svg" alt="tv-icon"><img src="icons/movie-icon.svg" alt="movie-icon"></div></div>', '<div class="connect__banner connect__banner_tv"><div class="connect__descr connect__descr_tv bcg_blue">ТВ</div><div class="connect__icons connect__icons_tv"><img src="icons/connect_tv-icon.svg" alt="tv-icon"></div></div>', '<div class="connect__banner connect__banner_cctv"><div class="connect__descr connect__descr_cctv bcg_violet">Видеонаблюдение</div><div class="connect__icons connect__icons_cctv"><img src="icons/cctv-camera.svg" alt="cctv-icon"></div></div>', '<div class="connect__banner"><div class="connect__descr bcg_red">Интернет</div><div class="connect__icons"><img src="icons/connect_internet-icon.svg" alt="wifi-icon"></div></div>'];
 
 let $replaceBtn = ['<input name="button" value="подключиться" class="button bcg-btn_yellow txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_lime txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_blue txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" value="подключиться" class="button bcg-btn_violet txt_white" type="submit" id="btn-confirm" disabled="disabled" >', '<input name="button" class="button bcg-btn_red txt_white" type="submit" value="подключиться" id="btn-confirm" disabled="disabled" />'];
 
 let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/с</option><option value="quick-start">Быстрый старт / 100 Мбит/с</option><option value="afterburner">Форсаж / 200 Мбит/с</option><option value="rocket">Ракета / 300 Мбит/с</option></select>', ' <select class="form__select" name="tariff" id="tariff-select"><option value="cabel-tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie">Онлайн-ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
-    //     let elements = [$('.rocket_start'), $('.rocket_first-step'), $('.rocket_second-step'), $('.rocket_finish')];
-    // $(window).scroll(function() {
-    //     if ($(this).scrollTop() + $(window).height() > 1000) {
-    //         $('.rocket_start').removeClass('animate__animated animate__bounceInLeft animate__slow');
-    //         $('.rocket_start').addClass('animate__animated animate__bounceInLeft animate__slow');
-    //     } else { $('.rocket_start').removeClass('animate__animated animate__bounceInLeft animate__slow'); }
-    // });
-
-
-
     $(window).scroll(function() {
         if (this.matchMedia('(min-width: 1900px)').matches) {
             if ($(this).scrollTop() > 900) {
@@ -384,9 +374,8 @@ $(document).ready(function() {
         $('.form__checkboxes input:checkbox').prop('checked', false);
         resetCost();
     });
-});
 
-$(document).ready(function() {
+
 
     $('.tariffs-tab').click(function(e) {
         e.preventDefault();
@@ -400,7 +389,7 @@ $(document).ready(function() {
 
     $('.tariffs-tab:first').click();
 
-    $('a[href="#tariffs"],a[href="#contacts"]').click(function() {
+    $('a[href="#tariffs"], a[href="#contacts"], a[href="#address-wrapper"]').click(function() {
         let target = $(this).attr('href');
         if (window.matchMedia('(max-width: 1366px)').matches) {
             $('html, body').animate({
@@ -413,7 +402,47 @@ $(document).ready(function() {
         }
     });
 
-    $('a[href="#tab-1"], a[href="#tab-2"],a[href="#tab-3"], a[href="#tab-3"], a[href="#tab-4"], a[href="#tab-5"]').click(function() {
+
+
+    let a = "#tariffs";
+    let b = "#contacts";
+    let c = "#address-wrapper";
+
+    if (window.location.hash === a) {
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 140 + 'px'
+            }, 1000);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 100 + 'px'
+            }, 1000);
+        }
+    }
+    if (window.location.hash === b) {
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 140 + 'px'
+            }, 1000);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 100 + 'px'
+            }, 1000);
+        }
+    }
+    if (window.location.hash === c) {
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 140 + 'px'
+            }, 1000);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 100 + 'px'
+            }, 1000);
+        }
+    }
+
+    $('a[href="#tab-1"], a[href="#tab-2"], a[href="#tab-3"], a[href="#tab-3"], a[href="#tab-4"], a[href="#tab-5"]').click(function() {
         let target = $(this).attr('href');
         if (window.matchMedia('(max-width: 1366px)').matches) {
             $('html, body').animate({
@@ -425,6 +454,76 @@ $(document).ready(function() {
             }, 1000);
         }
     });
+
+    let d = "#tab-1";
+    let e = "#tab-2";
+    let f = "#tab-3";
+    let g = "#tab-4";
+    let h = "#tab-5";
+
+    if (window.location.hash === d) {
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 223 + 'px'
+            }, 1000);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 160 + 'px'
+            }, 1000);
+        }
+    }
+
+    if (window.location.hash === e) {
+        $('.tab-2').click();
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 223 + 'px'
+            }, 300);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 160 + 'px'
+            }, 300);
+        }
+    }
+
+    if (window.location.hash === f) {
+        $('.tab-3').click();
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 223 + 'px'
+            }, 300);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 160 + 'px'
+            }, 300);
+        }
+    }
+
+    if (window.location.hash === g) {
+        $('.tab-4').click();
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 223 + 'px'
+            }, 300);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 160 + 'px'
+            }, 300);
+        }
+    }
+
+    if (window.location.hash === h) {
+        $('.tab-5').click();
+        if (window.matchMedia('(min-width: 1900px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 223 + 'px'
+            }, 1000);
+        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+            $('html,body').animate({
+                scrollTop: $(window.location.hash).offset().top - 160 + 'px'
+            }, 1000);
+        }
+    }
 
     $('.accordion-item__trigger').click(function() {
         $(this).next('.accordion-item__content').slideToggle(700);
@@ -459,21 +558,8 @@ $(document).ready(function() {
             $(element).addClass('animate__animated animate__fadeInUp animate__slow');
         }
     });
-
-
-    // $(window).scroll(function() {
-    //     let elements = [$('.rocket_start'), $('.rocket_first-step'), $('.rocket_second-step'), $('.rocket_finish')];
-    //     for (let i = 0; i < elements.length; i++) {
-    //         let element = elements[i];
-    //         let scroll = $(window).scrollTop() + $(window).height();
-    //         let offset = element.offset().top + element.height();
-    //         if (scroll > offset) {
-    //             $(element).addClass('animate__animated animate__bounceInLeft animate__slow');
-    //         }
-
-    //     }
-    // });
 });
+
 
 window.onscroll = function scrollFunction() {
     if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
