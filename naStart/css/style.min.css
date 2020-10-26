@@ -1884,6 +1884,7 @@ label {
     }
     .form__mail label,
     .form__name label {
+        width: 180px;
         font-size: 18px;
         line-height: 30px
     }
@@ -2015,7 +2016,8 @@ label {
     }
     .payment {
         max-width: 1920px;
-        padding-bottom: 100px
+        padding-bottom: 100px;
+        height: 1080px
     }
     .payment-main__wrapper {
         width: 70%;
