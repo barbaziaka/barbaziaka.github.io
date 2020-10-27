@@ -391,7 +391,7 @@ $(document).ready(function() {
 
     $('a[href="#tariffs"], a[href="#contacts"], a[href="#address-wrapper"]').click(function() {
         let target = $(this).attr('href');
-        if (window.matchMedia('(max-width: 1366px)').matches) {
+        if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html, body').animate({
                 scrollTop: $(target).offset().top - 100
             }, 1000);
@@ -409,33 +409,33 @@ $(document).ready(function() {
     let c = "#address-wrapper";
 
     if (window.location.hash === a) {
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 140 + 'px'
             }, 1000);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 100 + 'px'
             }, 1000);
         }
     }
     if (window.location.hash === b) {
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 140 + 'px'
             }, 1000);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 100 + 'px'
             }, 1000);
         }
     }
     if (window.location.hash === c) {
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 140 + 'px'
             }, 1000);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 100 + 'px'
             }, 1000);
@@ -444,11 +444,11 @@ $(document).ready(function() {
 
     $('a[href="#tab-1"], a[href="#tab-2"], a[href="#tab-3"], a[href="#tab-3"], a[href="#tab-4"], a[href="#tab-5"]').click(function() {
         let target = $(this).attr('href');
-        if (window.matchMedia('(max-width: 1366px)').matches) {
+        if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html, body').animate({
                 scrollTop: $(target).offset().top - 160
             }, 1000);
-        } else if (window.matchMedia('(min-width: 1900px)').matches) {
+        } else if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html, body').animate({
                 scrollTop: $(target).offset().top - 223
             }, 1000);
@@ -462,11 +462,11 @@ $(document).ready(function() {
     let h = "#tab-5";
 
     if (window.location.hash === d) {
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 223 + 'px'
             }, 1000);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 160 + 'px'
             }, 1000);
@@ -475,11 +475,11 @@ $(document).ready(function() {
 
     if (window.location.hash === e) {
         $('.tab-2').click();
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 223 + 'px'
             }, 300);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 160 + 'px'
             }, 300);
@@ -488,11 +488,11 @@ $(document).ready(function() {
 
     if (window.location.hash === f) {
         $('.tab-3').click();
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 223 + 'px'
             }, 300);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 160 + 'px'
             }, 300);
@@ -501,11 +501,11 @@ $(document).ready(function() {
 
     if (window.location.hash === g) {
         $('.tab-4').click();
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 223 + 'px'
             }, 300);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 160 + 'px'
             }, 300);
@@ -514,11 +514,11 @@ $(document).ready(function() {
 
     if (window.location.hash === h) {
         $('.tab-5').click();
-        if (window.matchMedia('(min-width: 1900px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 223 + 'px'
             }, 1000);
-        } else if (window.matchMedia('(max-width: 1366px)').matches) {
+        } else if (window.matchMedia('(max-width: 1699px)').matches) {
             $('html,body').animate({
                 scrollTop: $(window.location.hash).offset().top - 160 + 'px'
             }, 1000);
