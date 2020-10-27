@@ -899,11 +899,15 @@ label {
 }
 
 .connect__banner_internet-tv {
-    width: 320px
+    width: 310px
 }
 
 .connect__banner_internet-tv-movie {
     width: 420px
+}
+
+.connect__banner_tv {
+    width: 300px
 }
 
 .connect__banner_cctv {
@@ -919,6 +923,11 @@ label {
     padding: 4% 0
 }
 
+.connect__descr_tv {
+    padding: 2% 0;
+    width: 240px
+}
+
 .connect__descr_internet-tv {
     width: 200px;
     padding: 2% 0
@@ -927,6 +936,11 @@ label {
 .connect__descr_internet-tv-movie {
     width: 250px;
     padding: 1.5% 0
+}
+
+.connect__descr_tv {
+    padding: 2% 0;
+    width: 240px
 }
 
 .connect__descr_cctv {
@@ -947,6 +961,10 @@ label {
     display: flex;
     justify-content: space-between;
     width: 120px
+}
+
+.connect__icons_internet-tv {
+    width: 90px
 }
 
 .connect__icons_internet-tv-movie {
@@ -1840,6 +1858,9 @@ label {
         width: 300px;
         height: 47px
     }
+    .connect__banner_tv {
+        width: 400px
+    }
     .connect__banner_internet-tv {
         width: 440px
     }
@@ -1854,6 +1875,10 @@ label {
         height: 47px;
         font-size: 24px;
         line-height: 100%
+    }
+    .connect__descr_tv {
+        padding: 2.5% 0;
+        width: 320px
     }
     .connect__descr_internet-tv {
         line-height: 130%;
