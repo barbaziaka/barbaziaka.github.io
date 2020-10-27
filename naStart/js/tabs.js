@@ -5,105 +5,315 @@ let $replaceBtn = ['<input name="button" value="подключиться" class=
 let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/с</option><option value="quick-start">Быстрый старт / 100 Мбит/с</option><option value="afterburner">Форсаж / 200 Мбит/с</option><option value="rocket">Ракета / 300 Мбит/с</option></select>', ' <select class="form__select" name="tariff" id="tariff-select"><option value="cabel-tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie">Онлайн-ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
-    $(window).scroll(function() {
-        if (this.matchMedia('(min-width: 1900px)').matches) {
-            if ($(this).scrollTop() > 900) {
-                $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_start').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_start').stop().animate({ 'width': '100px' }, 2000);
+    let animClass = 'animate__animated animate__slideInLeft animate__slow';
 
+    let tariff = [$('.tariff-1-1'), $('.tariff-1-2'), $('.tariff-1-3'), $('.tariff-1-4'), $('.tariff-2-1'), $('.tariff-2-2'), $('.tariff-2-3'), $('.tariff-2-4'), $('.tariff-3-1'), $('.tariff-3-2'), $('.tariff-3-3'), $('.tariff-3-4')];
+
+    let rocket = [$('.rocket-1-1'), $('.rocket-1-2'), $('.rocket-1-3'), $('.rocket-1-4'), $('.rocket-2-1'), $('.rocket-2-2'), $('.rocket-2-3'), $('.rocket-2-4'), $('.rocket-3-1'), $('.rocket-3-2'), $('.rocket-3-3'), $('.rocket-3-4')];
+
+    let vector = [$('.vector-1-1'), $('.vector-1-2'), $('.vector-1-3'), $('.vector-1-4'), $('.vector-2-1'), $('.vector-2-2'), $('.vector-2-3'), $('.vector-2-4'), $('.vector-3-1'), $('.vector-3-2'), $('.vector-3-3'), $('.vector-3-4')];
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[0]).offset().top + $(tariff[0]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[0]).removeClass(animClass);
+                $(rocket[0]).addClass(animClass);
+                $(vector[0]).stop().animate({ 'width': '100px' }, 2000);
             } else {
-                $('.vector_start').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[0]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[0]).removeClass(animClass);
             }
         }
-        if (this.matchMedia('(max-width: 1366px)').matches) {
-            if ($(this).scrollTop() > 600) {
-                $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_start').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_start').stop().animate({ 'width': '50px' }, 2000);
-
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[0]).removeClass(animClass);
+                $(rocket[0]).addClass(animClass);
+                $(vector[0]).stop().animate({ 'width': '50px' }, 2000);
             } else {
-                $('.vector_start').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_start').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[0]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[0]).removeClass(animClass);
             }
         }
     });
 
     $(window).scroll(function() {
-        if (this.matchMedia('(min-width: 1900px)').matches) {
-            if ($(this).scrollTop() > 1400) {
-                $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_first-step').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_first-step').stop().animate({ 'width': '300px' }, 2000);
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[1]).offset().top + $(tariff[1]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[1]).removeClass(animClass);
+                $(rocket[1]).addClass(animClass);
+                $(vector[1]).stop().animate({ 'width': '300px' }, 2000);
             } else {
-                $('.vector_first-step').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[1]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[1]).removeClass(animClass);
             }
         }
-        if (this.matchMedia('(max-width: 1366px)').matches) {
-            if ($(this).scrollTop() > 900) {
-                $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_first-step').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_first-step').stop().animate({ 'width': '180px' }, 2000);
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[1]).removeClass(animClass);
+                $(rocket[1]).addClass(animClass);
+                $(vector[1]).stop().animate({ 'width': '180px' }, 2000);
             } else {
-                $('.vector_first-step').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_first-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[1]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[1]).removeClass(animClass);
             }
         }
-
     });
 
     $(window).scroll(function() {
-        if (this.matchMedia('(min-width: 1900px)').matches) {
-            if ($(this).scrollTop() > 2000) {
-                $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_second-step').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_second-step').stop().animate({ 'width': '480px' }, 2000);
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[2]).offset().top + $(tariff[2]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[2]).removeClass(animClass);
+                $(rocket[2]).addClass(animClass);
+                $(vector[2]).stop().animate({ 'width': '480px' }, 2000);
             } else {
-                $('.vector_second-step').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[2]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[2]).removeClass(animClass);
             }
         }
-        if (this.matchMedia('(max-width: 1366px)').matches) {
-            if ($(this).scrollTop() > 1200) {
-                $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_second-step').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_second-step').stop().animate({ 'width': '340px' }, 2000);
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[2]).removeClass(animClass);
+                $(rocket[2]).addClass(animClass);
+                $(vector[2]).stop().animate({ 'width': '340px' }, 2000);
             } else {
-                $('.vector_second-step').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_second-step').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[2]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[2]).removeClass(animClass);
             }
         }
-
     });
 
     $(window).scroll(function() {
-        if (this.matchMedia('(min-width: 1900px)').matches) {
-            if ($(this).scrollTop() > 2500) {
-                $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_finish').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_finish').stop().animate({ 'width': '760px' }, 2000);
-
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[3]).offset().top + $(tariff[3]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[3]).removeClass(animClass);
+                $(rocket[3]).addClass(animClass);
+                $(vector[3]).stop().animate({ 'width': '760px' }, 2000);
             } else {
-                $('.vector_finish').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[3]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[3]).removeClass(animClass);
             }
         }
-        if (this.matchMedia('(max-width: 1366px)').matches) {
-            if ($(this).scrollTop() > 1500) {
-                $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
-                $('.rocket_finish').addClass('animate__animated animate__slideInLeft animate__slow');
-                $('.vector_finish').stop().animate({ 'width': '500px' }, 2000);
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[3]).removeClass(animClass);
+                $(rocket[3]).addClass(animClass);
+                $(vector[3]).stop().animate({ 'width': '500px' }, 2000);
             } else {
-                $('.vector_finish').stop().animate({ 'width': '0px' }, 50);
-                $('.rocket_finish').removeClass('animate__animated animate__slideInLeft animate__slow');
+                $(vector[3]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[3]).removeClass(animClass);
             }
         }
-
     });
 
 
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[4]).offset().top + $(tariff[4]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[4]).removeClass(animClass);
+                $(rocket[4]).addClass(animClass);
+                $(vector[4]).stop().animate({ 'width': '100px' }, 2000);
+            } else {
+                $(vector[4]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[4]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[4]).removeClass(animClass);
+                $(rocket[4]).addClass(animClass);
+                $(vector[4]).stop().animate({ 'width': '50px' }, 2000);
+            } else {
+                $(vector[4]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[4]).removeClass(animClass);
+            }
+        }
+    });
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[5]).offset().top + $(tariff[5]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[5]).removeClass(animClass);
+                $(rocket[5]).addClass(animClass);
+                $(vector[5]).stop().animate({ 'width': '300px' }, 2000);
+            } else {
+                $(vector[5]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[5]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[5]).removeClass(animClass);
+                $(rocket[5]).addClass(animClass);
+                $(vector[5]).stop().animate({ 'width': '180px' }, 2000);
+            } else {
+                $(vector[5]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[5]).removeClass(animClass);
+            }
+        }
+    });
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[6]).offset().top + $(tariff[6]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[6]).removeClass(animClass);
+                $(rocket[6]).addClass(animClass);
+                $(vector[6]).stop().animate({ 'width': '480px' }, 2000);
+            } else {
+                $(vector[6]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[6]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[6]).removeClass(animClass);
+                $(rocket[6]).addClass(animClass);
+                $(vector[6]).stop().animate({ 'width': '340px' }, 2000);
+            } else {
+                $(vector[6]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[6]).removeClass(animClass);
+            }
+        }
+    });
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[7]).offset().top + $(tariff[7]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[7]).removeClass(animClass);
+                $(rocket[7]).addClass(animClass);
+                $(vector[7]).stop().animate({ 'width': '760px' }, 2000);
+            } else {
+                $(vector[7]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[7]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[7]).removeClass(animClass);
+                $(rocket[7]).addClass(animClass);
+                $(vector[7]).stop().animate({ 'width': '500px' }, 2000);
+            } else {
+                $(vector[7]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[7]).removeClass(animClass);
+            }
+        }
+    });
+
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[8]).offset().top + $(tariff[8]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[8]).removeClass(animClass);
+                $(rocket[8]).addClass(animClass);
+                $(vector[8]).stop().animate({ 'width': '100px' }, 2000);
+            } else {
+                $(vector[8]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[8]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[8]).removeClass(animClass);
+                $(rocket[8]).addClass(animClass);
+                $(vector[8]).stop().animate({ 'width': '50px' }, 2000);
+            } else {
+                $(vector[8]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[8]).removeClass(animClass);
+            }
+        }
+    });
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[9]).offset().top + $(tariff[9]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[9]).removeClass(animClass);
+                $(rocket[9]).addClass(animClass);
+                $(vector[9]).stop().animate({ 'width': '300px' }, 2000);
+            } else {
+                $(vector[9]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[9]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[9]).removeClass(animClass);
+                $(rocket[9]).addClass(animClass);
+                $(vector[9]).stop().animate({ 'width': '180px' }, 2000);
+            } else {
+                $(vector[9]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[9]).removeClass(animClass);
+            }
+        }
+    });
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[10]).offset().top + $(tariff[10]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[10]).removeClass(animClass);
+                $(rocket[10]).addClass(animClass);
+                $(vector[10]).stop().animate({ 'width': '480px' }, 2000);
+            } else {
+                $(vector[10]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[10]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[10]).removeClass(animClass);
+                $(rocket[10]).addClass(animClass);
+                $(vector[10]).stop().animate({ 'width': '340px' }, 2000);
+            } else {
+                $(vector[10]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[10]).removeClass(animClass);
+            }
+        }
+    });
+
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + $(window).height();
+        let offset = $(tariff[11]).offset().top + $(tariff[11]).height();
+        if (this.matchMedia('(max-height: 1080px)').matches) {
+            if (scroll > offset) {
+                $(rocket[11]).removeClass(animClass);
+                $(rocket[11]).addClass(animClass);
+                $(vector[11]).stop().animate({ 'width': '760px' }, 2000);
+            } else {
+                $(vector[11]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[11]).removeClass(animClass);
+            }
+        }
+        if (this.matchMedia('(max-height: 768px)').matches) {
+            if (scroll > offset) {
+                $(rocket[11]).removeClass(animClass);
+                $(rocket[11]).addClass(animClass);
+                $(vector[11]).stop().animate({ 'width': '500px' }, 2000);
+            } else {
+                $(vector[11]).stop().animate({ 'width': '0px' }, 50);
+                $(rocket[11]).removeClass(animClass);
+            }
+        }
+    });
 
     // smooth scroll and page up
     $(window).scroll(function() {
