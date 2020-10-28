@@ -406,7 +406,7 @@ $(document).ready(function() {
 
     $('.tariff-1-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -417,7 +417,7 @@ $(document).ready(function() {
 
     $('.tariff-1-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -429,7 +429,7 @@ $(document).ready(function() {
 
     $('.tariff-1-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -441,7 +441,7 @@ $(document).ready(function() {
 
     $('.tariff-1-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -455,7 +455,7 @@ $(document).ready(function() {
 
     $('.tariff-2-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -466,7 +466,7 @@ $(document).ready(function() {
 
     $('.tariff-2-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -478,7 +478,7 @@ $(document).ready(function() {
 
     $('.tariff-2-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -490,7 +490,7 @@ $(document).ready(function() {
 
     $('.tariff-2-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -504,7 +504,7 @@ $(document).ready(function() {
 
     $('.tariff-3-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -515,7 +515,7 @@ $(document).ready(function() {
 
     $('.tariff-3-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -527,7 +527,7 @@ $(document).ready(function() {
 
     $('.tariff-3-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -539,7 +539,7 @@ $(document).ready(function() {
 
     $('.tariff-3-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -557,8 +557,8 @@ $(document).ready(function() {
         $('#btn-confirm').replaceWith($replaceBtn[2]);
         $('#tariff-select').replaceWith($replaceSelect[4]);
         $('#tariff-select option:first-child').prop('selected', true);
-        $('.five, .seven, .eight').addClass('visible');
-        $('.one, .two, .three, .four, .six').addClass('hidden');
+        $('.form-check__item_five, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_six').addClass('hidden');
         $('.form-confirm__cost').text(cost[12]);
         return false;
     });
@@ -569,7 +569,7 @@ $(document).ready(function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[3]);
         $('#btn-confirm').replaceWith($replaceBtn[3]);
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').addClass('hidden');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('hidden');
         $('.form-confirm__cost').text('17 500 р. (6 месяцев)');
         return false;
     });
@@ -612,44 +612,6 @@ $(document).ready(function() {
         }
     });
 
-    let a = "#tariffs";
-    let b = "#contacts";
-    let c = "#address-wrapper";
-
-    if (window.location.hash === a) {
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-            }, 1000);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-            }, 1000);
-        }
-    }
-    if (window.location.hash === b) {
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-            }, 1000);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-            }, 1000);
-        }
-    }
-    if (window.location.hash === c) {
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-            }, 1000);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-            }, 1000);
-        }
-    }
-
     $('a[href="#tab-1"], a[href="#tab-2"], a[href="#tab-3"], a[href="#tab-3"], a[href="#tab-4"], a[href="#tab-5"]').click(function() {
         let target = $(this).attr('href');
         if (window.matchMedia('(max-width: 1699px)').matches) {
@@ -663,75 +625,119 @@ $(document).ready(function() {
         }
     });
 
-    let d = "#tab-1";
-    let e = "#tab-2";
-    let f = "#tab-3";
-    let g = "#tab-4";
-    let h = "#tab-5";
 
-    if (window.location.hash === d) {
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 1000);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 1000);
+    if (window.location.hash) {
+
+        let a = "#tariffs";
+        let b = "#contacts";
+        let c = "#address-wrapper";
+
+
+        if (window.location.hash === a) {
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
+                }, 1000);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
+                }, 1000);
+            }
+        }
+        if (window.location.hash === b) {
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
+                }, 1000);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
+                }, 1000);
+            }
+        }
+        if (window.location.hash === c) {
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
+                }, 1000);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
+                }, 1000);
+            }
+        }
+
+        let d = "#tab-1";
+        let e = "#tab-2";
+        let f = "#tab-3";
+        let g = "#tab-4";
+        let h = "#tab-5";
+
+        if (window.location.hash === d) {
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 1000);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 1000);
+            }
+        }
+
+        if (window.location.hash === e) {
+            $('.tab-2').click();
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 300);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 300);
+            }
+        }
+
+        if (window.location.hash === f) {
+            $('.tab-3').click();
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 300);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 300);
+            }
+        }
+
+        if (window.location.hash === g) {
+            $('.tab-4').click();
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 300);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 300);
+            }
+        }
+
+        if (window.location.hash === h) {
+            $('.tab-5').click();
+            if (window.matchMedia('(min-width: 1700px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 1000);
+            } else if (window.matchMedia('(max-width: 1699px)').matches) {
+                $('html,body').animate({
+                    scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
+                }, 1000);
+            }
         }
     }
 
-    if (window.location.hash === e) {
-        $('.tab-2').click();
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 300);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 300);
-        }
-    }
-
-    if (window.location.hash === f) {
-        $('.tab-3').click();
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 300);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 300);
-        }
-    }
-
-    if (window.location.hash === g) {
-        $('.tab-4').click();
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 300);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 300);
-        }
-    }
-
-    if (window.location.hash === h) {
-        $('.tab-5').click();
-        if (window.matchMedia('(min-width: 1700px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 1000);
-        } else if (window.matchMedia('(max-width: 1699px)').matches) {
-            $('html,body').animate({
-                scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-            }, 1000);
-        }
-    }
 
     $('.accordion-item__trigger').click(function() {
         $(this).next('.accordion-item__content').slideToggle(700);
