@@ -5,6 +5,55 @@ let $replaceBtn = ['<input name="button" value="подключиться" class=
 let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv">Легкий старт / 50 Мбит/c + ТВ</option><option value="quick-start-tv">Быстрый старт / 100 Мбит/с + ТВ</option><option value="afterburner-tv">Форсаж / 200 Мбит/с + ТВ</option><option value="rocket-tv">Ракета / 300 Мбит/с + ТВ</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start-tv-movie">Легкий старт / 50 Мбит/c + ТВ + Кино</option><option value="quick-start-tv-movie">Быстрый старт / 100 Мбит/с + ТВ + Кино</option><option value="afterburner-tv-movie">Форсаж / 200 Мбит/с + ТВ + Кино</option><option value="rocket-tv-movie">Ракета / 300 Мбит/с + ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="tv">Кабельное ТВ</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie"> Онлайн-ТВ + Кино</option></select>', '<select class="form__select" name="tariff" id="tariff-select"><option value="easy-start">Легкий старт / 50 Мбит/с</option><option value="quick-start">Быстрый старт / 100 Мбит/с</option><option value="afterburner">Форсаж / 200 Мбит/с</option><option value="rocket">Ракета / 300 Мбит/с</option></select>', ' <select class="form__select" name="tariff" id="tariff-select"><option value="cabel-tv">Кабельное телевидение</option><option value="online-tv">Онлайн-ТВ</option><option value="online-tv-movie">Онлайн-ТВ + Кино</option></select>'];
 
 $(document).ready(function() {
+
+    function carouselTariffs() {
+        $("#tariffs").owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: false,
+            mouseDrag: true,
+            touchDrag: true,
+            dots: false,
+            autoplay: false,
+            center: false,
+            stagePadding: 50
+        });
+    }
+    // const carouselTabs = $(".tariffs__content");
+
+
+
+    $(window).resize(function() {
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            $('header').removeClass('header_main');
+            $('header').addClass('header_static');
+            $('.tariffs__content').removeClass('animate__animated animate__slideInRight');
+            $("#tariffs").addClass('owl-carousel');
+            carouselTariffs();
+
+        }
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            $("#tariffs").trigger('destroy.owl.carousel');
+            $("#tariffs").removeClass('owl-carousel');
+            $('header').removeClass('header_static');
+            $('header').removeClass('header_main');
+        }
+    });
+
+    if (window.matchMedia('(max-width: 991px)').matches) {
+        $("#tariffs").addClass('owl-carousel');
+        carouselTariffs();
+        $('header').removeClass('header_main');
+        $('header').addClass('header_static');
+        $('.tariffs__content').removeClass('animate__animated animate__slideInRight');
+    }
+    if (window.matchMedia('(min-width: 992px)').matches) {
+        $("#tariffs").trigger('destroy.owl.carousel');
+        $('header').removeClass('header_static');
+        $('header').addClass('header_main');
+    }
+
+
     let animClass = 'animate__animated animate__slideInLeft animate__slow';
 
     let tariff = [$('.tariff-1-1'), $('.tariff-1-2'), $('.tariff-1-3'), $('.tariff-1-4'), $('.tariff-2-1'), $('.tariff-2-2'), $('.tariff-2-3'), $('.tariff-2-4'), $('.tariff-3-1'), $('.tariff-3-2'), $('.tariff-3-3'), $('.tariff-3-4')];
@@ -14,6 +63,7 @@ $(document).ready(function() {
     let vector = [$('.vector-1-1'), $('.vector-1-2'), $('.vector-1-3'), $('.vector-1-4'), $('.vector-2-1'), $('.vector-2-2'), $('.vector-2-3'), $('.vector-2-4'), $('.vector-3-1'), $('.vector-3-2'), $('.vector-3-3'), $('.vector-3-4')];
 
     $(window).scroll(function() {
+
         let scroll = $(window).scrollTop() + $(window).height();
         let offset = $(tariff[0]).offset().top + $(tariff[0]).height();
         if (this.matchMedia('(min-width: 1700px)').matches) {
@@ -377,10 +427,16 @@ $(document).ready(function() {
 
     // smooth scroll and page up
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 1600) {
+        if ($(this).scrollTop() > 540) {
             $('.pageup').fadeIn();
         } else {
             $('.pageup').fadeOut();
+        }
+
+        if ($(this).scrollTop() > 70) {
+            $('.header_main').css('box-shadow', '0 5px 10px rgba(0, 0, 0, 0.15)');
+        } else {
+            $('.header_main').css('box-shadow', 'none');
         }
     });
 
@@ -466,7 +522,7 @@ $(document).ready(function() {
 
     $('.tariff-1-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -477,7 +533,7 @@ $(document).ready(function() {
 
     $('.tariff-1-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -489,7 +545,7 @@ $(document).ready(function() {
 
     $('.tariff-1-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -501,7 +557,7 @@ $(document).ready(function() {
 
     $('.tariff-1-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[4]);
         $('#btn-confirm').replaceWith($replaceBtn[4]);
         $('#tariff-select').replaceWith($replaceSelect[3]);
@@ -515,7 +571,7 @@ $(document).ready(function() {
 
     $('.tariff-2-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -526,7 +582,7 @@ $(document).ready(function() {
 
     $('.tariff-2-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -538,7 +594,7 @@ $(document).ready(function() {
 
     $('.tariff-2-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -550,7 +606,7 @@ $(document).ready(function() {
 
     $('.tariff-2-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[0]);
         $('#btn-confirm').replaceWith($replaceBtn[0]);
         $('#tariff-select').replaceWith($replaceSelect[0]);
@@ -564,7 +620,7 @@ $(document).ready(function() {
 
     $('.tariff-3-1').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -575,7 +631,7 @@ $(document).ready(function() {
 
     $('.tariff-3-2').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -587,7 +643,7 @@ $(document).ready(function() {
 
     $('.tariff-3-3').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -599,7 +655,7 @@ $(document).ready(function() {
 
     $('.tariff-3-4').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('visible');
         $('.connect__banner').replaceWith($replaceBanner[1]);
         $('#btn-confirm').replaceWith($replaceBtn[1]);
         $('#tariff-select').replaceWith($replaceSelect[1]);
@@ -629,7 +685,7 @@ $(document).ready(function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeIn('slow');
         $('.connect__banner').replaceWith($replaceBanner[3]);
         $('#btn-confirm').replaceWith($replaceBtn[3]);
-        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff').addClass('hidden');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').addClass('hidden');
         $('.form-confirm__cost').text('17 500 р. (6 месяцев)');
         return false;
     });
@@ -639,38 +695,89 @@ $(document).ready(function() {
     $('.modal-internet__close').on('click', function() {
         $('.modal-internet__wrapper, #tariff-modal').fadeOut('fast');
         $('#tariff-select').prop('selectedIndex', 0);
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').removeClass('visible');
-        $('.one, .two, .three, .four, .five, .six, .seven, .eight').removeClass('hidden');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').removeClass('visible');
+        $('.form-check__item-pay-period, .form-check__item_four, .form-check__item_five, .form-check__item_six, .form__tariff, .form-check__item-equipment').removeClass('hidden');
         $('.form__checkboxes input:checkbox').prop('checked', false);
         resetCost();
     });
 
-
-
     $('.tariffs-tab').click(function(e) {
         e.preventDefault();
-        $('.tariffs-tab').removeClass('tariffs-tab_active');
-        $('.tariffs__content').removeClass('tariffs__content_active');
-        $('.tariffs__content').removeClass('animate__animated animate__slideInRight');
-        $(this).addClass('.tariffs-tab_active');
-        $($(this).attr('href')).addClass('tariffs__content_active');
-        $('.tariffs__content').addClass('animate__animated animate__slideInRight');
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            $('.tariffs-tab').removeClass('tariffs-tab_active');
+            $('.tariffs__content').removeClass('tariffs__content_active');
+            $('.tariffs__content').removeClass('animate__animated animate__slideInRight');
+            $(this).addClass('.tariffs-tab_active');
+            $($(this).attr('href')).addClass('tariffs__content_active');
+            $('.tariffs__content').addClass('animate__animated animate__slideInRight');
+        }
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            $('.tariffs-tab').removeClass('tariffs-tab_active');
+            $('.tariffs__content').removeClass('tariffs__content_active');
+            $(this).addClass('.tariffs-tab_active');
+            $($(this).attr('href')).addClass('tariffs__content_active');
+        }
     });
 
     $('.tariffs-tab:first').click();
 
+
+
+    let blocks = ['.t-1-1 ', '.t-1-2 ', '.t-1-3 ', '.t-1-4 ', '.t-2-1 ', '.t-2-2 ', '.t-2-3 ', '.t-2-4 ', '.t-3-1 ', '.t-3-2 ', '.t-3-3 ', '.t-3-4 ', '.t-4-1 ', '.t-5-1 '];
+
+
+    for (let i = 0; i < blocks.length; i++) {
+        let block = blocks[i];
+        $(block + '.more-details').click(function() {
+            $(block + '.tariffs-item__title').addClass('tariffs-item__title_details');
+            $(block + '.tariffs-item__name').addClass('tariffs-item__name_details');
+            $(block + '.tariffs-item-descr__wrapper').addClass('tariffs-item-descr__wrapper_details');
+            $(block + '.tariffs-item__wrapper').addClass('tariffs-item__wrapper_details');
+            $(block + '.more-details__close').css('display', 'block');
+            $(block + '.more-details').css('display', 'none');
+        });
+    }
+
+    for (let i = 0; i < blocks.length; i++) {
+        let block = blocks[i];
+        $(block + '.more-details__close').click(function() {
+            $(block + '.tariffs-item__wrapper').removeClass('tariffs-item__wrapper_details');
+            $(block + '.tariffs-item__title').removeClass('tariffs-item__title_details');
+            $(block + '.tariffs-item__name').removeClass('tariffs-item__name_details');
+            $(block + '.tariffs-item-descr__wrapper').removeClass('tariffs-item-descr__wrapper_details');
+            $(block + '.more-details__close').css('display', 'none');
+            $(block + '.more-details').css('display', 'flex');
+        });
+    }
+
+
     $('a[href="#tariffs"], a[href="#contacts"], a[href="#address-wrapper"]').click(function() {
         let target = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top - $('#up').innerHeight()
-        }, 1000);
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - $('#up').innerHeight()
+            }, 1000);
+        }
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+        }
+
     });
 
     $('a[href="#tab-1"], a[href="#tab-2"], a[href="#tab-3"], a[href="#tab-3"], a[href="#tab-4"], a[href="#tab-5"]').click(function() {
         let target = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight()
-        }, 1000);
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight()
+            }, 1000);
+        }
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - $('#tariffs').innerHeight()
+            }, 1000);
+        }
     });
 
 
@@ -755,134 +862,31 @@ $(document).ready(function() {
 
 
     $(window).scroll(function() {
-        let element = $('.advantages__wrapper');
-        let scroll = $(window).scrollTop() + $(window).height();
-        let offset = element.offset().top + element.height();
-        if (scroll > offset) {
-            $(element).addClass('animate__animated animate__fadeInUp animate__slow');
+        if (window.matchMedia('(min-width: 991px)').matches) {
+            let element = $('.advantages__wrapper');
+            let scroll = $(window).scrollTop() + $(window).height();
+            let offset = element.offset().top + element.height();
+            if (scroll > offset) {
+                $(element).addClass('animate__animated animate__fadeInUp animate__slow');
+            }
         }
     });
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.menu-mobile'),
+        menuItem = document.querySelectorAll('.menu-mobile__item'),
+        hamburger = document.querySelector('.hamburger');
 
-window.onscroll = function scrollFunction() {
-    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-        document.getElementById("up").style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.15)";
-    } else {
-        document.getElementById("up").style.boxShadow = "none";
-    }
-};
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu-mobile_active');
+    });
 
-
-
-// if (window.location.hash) {
-
-//     let a = "#tariffs";
-//     let b = "#contacts";
-//     let c = "#address-wrapper";
-
-
-//     if (window.location.hash === a) {
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-//             }, 1000);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-//             }, 1000);
-//         }
-//     }
-//     if (window.location.hash === b) {
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-//             }, 1000);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-//             }, 1000);
-//         }
-//     }
-//     if (window.location.hash === c) {
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-//             }, 1000);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() + 'px'
-//             }, 1000);
-//         }
-//     }
-
-//     let d = "#tab-1";
-//     let e = "#tab-2";
-//     let f = "#tab-3";
-//     let g = "#tab-4";
-//     let h = "#tab-5";
-
-//     if (window.location.hash === d) {
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 1000);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 1000);
-//         }
-//     }
-
-//     if (window.location.hash === e) {
-//         $('.tab-2').click();
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 300);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 300);
-//         }
-//     }
-
-//     if (window.location.hash === f) {
-//         $('.tab-3').click();
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 300);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 300);
-//         }
-//     }
-
-//     if (window.location.hash === g) {
-//         $('.tab-4').click();
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 300);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 300);
-//         }
-//     }
-
-//     if (window.location.hash === h) {
-//         $('.tab-5').click();
-//         if (window.matchMedia('(min-width: 1700px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 1000);
-//         } else if (window.matchMedia('(max-width: 1699px)').matches) {
-//             $('html,body').animate({
-//                 scrollTop: $(window.location.hash).offset().top - $('#up').innerHeight() - $('#tariffs').innerHeight() + 'px'
-//             }, 1000);
-//         }
-//     }
-// }
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('menu-mobile_active');
+        });
+    });
+});
