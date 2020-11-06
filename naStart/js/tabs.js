@@ -7,6 +7,14 @@ let $replaceSelect = ['<select class="form__select" name="tariff" id="tariff-sel
 $(document).ready(function() {
 
     function carouselTariffs() {
+
+        let y = 3;
+        if (window.matchMedia('(max-width: 767px)').matches) {
+            y = 2;
+        }
+        if (window.matchMedia('(max-width: 575px)').matches) {
+            y = 1;
+        }
         $("#tariffs").owlCarousel({
             loop: false,
             margin: 10,
@@ -16,7 +24,9 @@ $(document).ready(function() {
             dots: false,
             autoplay: false,
             center: false,
-            stagePadding: 50
+            stagePadding: 50,
+            items: y
+
         });
     }
     // const carouselTabs = $(".tariffs__content");
