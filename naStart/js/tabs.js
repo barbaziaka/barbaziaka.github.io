@@ -739,12 +739,13 @@ $(document).ready(function() {
     for (let i = 0; i < blocks.length; i++) {
         let block = blocks[i];
         $(block + '.more-details').click(function() {
-            $(block + '.tariffs-item__title').addClass('tariffs-item__title_details');
-            $(block + '.tariffs-item__name').addClass('tariffs-item__name_details');
             $(block + '.tariffs-item-descr__wrapper').addClass('tariffs-item-descr__wrapper_details');
             $(block + '.tariffs-item__wrapper').addClass('tariffs-item__wrapper_details');
             $(block + '.more-details__close').css('display', 'block');
             $(block + '.more-details').css('display', 'none');
+            $(block + '.tariffs-item__cost').css('display', 'none');
+            $(block + '.tariffs-item__name').css('display', 'none');
+            $(block + '.tariffs-item__title').css({ 'width': '0', 'height': '0', 'padding': '0' });
         });
     }
 
@@ -752,11 +753,12 @@ $(document).ready(function() {
         let block = blocks[i];
         $(block + '.more-details__close').click(function() {
             $(block + '.tariffs-item__wrapper').removeClass('tariffs-item__wrapper_details');
-            $(block + '.tariffs-item__title').removeClass('tariffs-item__title_details');
-            $(block + '.tariffs-item__name').removeClass('tariffs-item__name_details');
             $(block + '.tariffs-item-descr__wrapper').removeClass('tariffs-item-descr__wrapper_details');
             $(block + '.more-details__close').css('display', 'none');
             $(block + '.more-details').css('display', 'flex');
+            $(block + '.tariffs-item__cost').css('display', 'block');
+            $(block + '.tariffs-item__name').css('display', 'block');
+            $(block + '.tariffs-item__title').css({ 'width': '360px', 'height': '170px', 'padding-top': '60px' });
         });
     }
 

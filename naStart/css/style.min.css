@@ -2647,8 +2647,7 @@ label {
         width: 100%
     }
     .tariffs-item__cost_cctv {
-        margin-top: 10px;
-        font-size: 20px;
+        font-size: 24px;
         margin-left: 0
     }
     .tariffs-item_bcg_cctv {
@@ -2670,8 +2669,11 @@ label {
     }
     .tariffs-item-connect__wrapper_cctv {
         padding-top: 0;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: start
+    }
+    .tariffs-item-connect__wrapper_cctv button {
+        margin-top: 20px
     }
     .tariffs-item__title_cctv {
         width: 35%;
@@ -2903,7 +2905,7 @@ label {
         margin-bottom: 40px
     }
     .tariffs-item__cost_cctv {
-        margin-bottom: 0
+        margin-bottom: 20px
     }
     .tariffs-item__wrapper {
         flex-direction: column;
@@ -2923,22 +2925,14 @@ label {
         display: flex;
         justify-content: space-between
     }
-    .tariffs-item__title_details {
-        padding-top: 28px
-    }
     .tariffs-item__title_down {
         padding-top: 30px
     }
     .tariffs-item__title_cctv {
-        width: 100%;
-        padding-top: 30px
-    }
-    .tariffs-item__name_details {
-        display: block;
-        font-size: 15px
+        width: 100%
     }
     .tariffs-item__block {
-        height: 300px;
+        height: 230px;
         padding-top: 0
     }
     .tariffs-item-descr__title:last-child {
@@ -2966,14 +2960,13 @@ label {
         display: none
     }
     .tariffs-item-descr__wrapper_details {
-        transform: translateY(-15%);
-        padding-top: 10px;
         display: flex;
-        flex-wrap: wrap;
-        width: 80%
+        width: 100%;
+        padding-top: 0;
+        height: auto;
+        margin-top: 30px
     }
     .tariffs-item-descr__wrapper_cctv {
-        padding-top: 30px;
         width: 100%
     }
     .tariffs-item-descr__icon {
@@ -2985,7 +2978,6 @@ label {
         font-size: 12px
     }
     .more-details {
-        margin-top: 10px;
         width: 175px;
         display: flex;
         justify-content: space-between;
@@ -3047,9 +3039,9 @@ label {
         max-width: 100%
     }
     .header-wrapper {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center
+        align-items: flex-start;
+        max-width: 80%;
+        flex-direction: column
     }
     .phone-mobile {
         margin: 0
@@ -3059,7 +3051,7 @@ label {
         padding-top: 0
     }
     .promo-content__wrapper {
-        width: 100%
+        width: 90%
     }
     .promo-content__header {
         font-size: 25px
@@ -3074,18 +3066,38 @@ label {
     .tariffs-tab-top {
         width: 100%
     }
+    .tariffs-item__name {
+        font-size: 19px
+    }
+    .tariffs-item-connect__wrapper {
+        align-self: center
+    }
+    .tariffs-item__block {
+        height: 280px
+    }
     .tariffs-item__wrapper {
         width: 100%;
-        padding: 0 15px
+        padding: 0 20px
     }
-    .tariffs-item__name {
-        font-size: 14px
-    }
-    .tariffs-item__title_details {
-        padding-top: 30px
+    .tariffs-item__title {
+        height: 170px;
+        flex-direction: column
     }
     .tariffs-item-descr {
         font-size: 13px
+    }
+    .tariffs-item-descr__title {
+        width: 160px
+    }
+    .tariffs-item-descr__title:first-child {
+        align-self: flex-start
+    }
+    .tariffs-item-descr__title:nth-child(2) {
+        align-self: flex-start
+    }
+    .tariffs-item-descr__title:last-child {
+        position: absolute;
+        bottom: 30%
     }
     .tariffs-item-descr__title_cctv {
         margin: 0 auto;
@@ -3096,13 +3108,17 @@ label {
         font-size: 13px
     }
     .tariffs-item-descr__wrapper_details {
-        width: 90%;
-        height: auto
+        margin: 0 auto;
+        height: 230px;
+        margin-top: 30px;
+        width: 90%
     }
     .tariffs-item-descr__wrapper_cctv {
         width: 100%;
         padding: 0;
-        margin-top: 30px
+        flex-direction: column;
+        margin-top: 30px;
+        height: 140px
     }
     .tariffs-item-descr__text {
         height: 60px;
