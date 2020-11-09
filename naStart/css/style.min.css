@@ -1333,26 +1333,6 @@ label {
     width: 230px
 }
 
-.back {
-    display: flex;
-    align-self: start
-}
-
-.back__link {
-    display: flex;
-    justify-content: space-between;
-    width: 62px;
-    height: 16px;
-    text-decoration: none;
-    color: #000;
-    font-size: 12px;
-    line-height: 14px
-}
-
-.back__image {
-    width: 24px
-}
-
 .pageup {
     display: none;
     position: fixed;
@@ -2549,7 +2529,7 @@ label {
         width: 100%;
         height: 100vh;
         background-color: #d70040;
-        transition: .6s all
+        transition: .8s all
     }
     .menu-mobile_active {
         left: 0
@@ -2788,6 +2768,9 @@ label {
     .modal-internet {
         background: #e4e4e6
     }
+    .modal-internet__close {
+        right: -4%
+    }
     .form__wrapper_connect {
         height: auto;
         flex-direction: column;
@@ -2900,9 +2883,11 @@ label {
         padding-top: 12px;
         width: 100%
     }
+    .tariffs-item__name {
+        margin-bottom: 0
+    }
     .tariffs-item__cost {
-        margin: 0;
-        margin-bottom: 40px
+        margin: 0
     }
     .tariffs-item__cost_cctv {
         margin-bottom: 20px
@@ -2914,7 +2899,8 @@ label {
     }
     .tariffs-item-connect__wrapper {
         flex-direction: column-reverse;
-        width: 90px
+        width: 90px;
+        margin-bottom: 20px
     }
     .tariffs-item-connect__wrapper_cctv {
         width: 100%;
@@ -3031,6 +3017,12 @@ label {
     }
     .footer__wrapper {
         height: auto
+    }
+    .modal-internet {
+        background: #e4e4e6
+    }
+    .modal-internet__close {
+        right: -5%
     }
 }
 
@@ -3152,11 +3144,31 @@ label {
     .pscb-payform-customer-account__wrapper {
         flex-direction: column
     }
+    .form-confirm__item {
+        padding-left: 10%
+    }
+    .form-confirm__wrapper {
+        margin: 30px 0;
+        flex-direction: column-reverse
+    }
+    .form-confirm__cost,
+    .form-confirm__discount {
+        margin: 0
+    }
+    .form-confirm__cost {
+        margin-bottom: 20px
+    }
     .form__wrapper {
+        position: relative;
         width: 220px
     }
     .form__content {
+        height: 220px;
         width: 250px
+    }
+    .form__content:last-child {
+        position: absolute;
+        top: 20px
     }
     .form__mail,
     .form__name {
@@ -3166,6 +3178,14 @@ label {
         margin-top: 10px;
         width: 200px
     }
+    .form__checkboxes {
+        flex-direction: column;
+        margin-top: 100px;
+        height: 180px
+    }
+    .form-check__text {
+        margin-left: 15%
+    }
     .connect__banner {
         flex-direction: column
     }
@@ -3174,6 +3194,14 @@ label {
     }
     .about-content__item {
         height: 140px
+    }
+    .modal-internet {
+        overflow: auto
+    }
+    .modal-internet__close {
+        top: 5%;
+        right: 5%;
+        color: #000
     }
 }
 
