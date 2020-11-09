@@ -3019,6 +3019,7 @@ label {
         height: auto
     }
     .modal-internet {
+        overflow: auto;
         background: #e4e4e6
     }
     .modal-internet__close {
@@ -3030,10 +3031,17 @@ label {
     .container {
         max-width: 100%
     }
+    .container_modal {
+        width: 100%
+    }
     .header-wrapper {
         align-items: flex-start;
         max-width: 80%;
         flex-direction: column
+    }
+    .header-connect {
+        padding-top: 0;
+        height: 60px
     }
     .phone-mobile {
         margin: 0
@@ -3153,7 +3161,8 @@ label {
     }
     .form-confirm__cost,
     .form-confirm__discount {
-        margin: 0
+        margin: 0;
+        font-size: 25px
     }
     .form-confirm__cost {
         margin-bottom: 20px
@@ -3181,16 +3190,46 @@ label {
     .form__checkboxes {
         flex-direction: column;
         margin-top: 100px;
-        height: 180px
+        max-height: 180px
     }
     .form-check__text {
         margin-left: 15%
     }
-    .connect__banner {
-        flex-direction: column
+    .form-check__item-pay-period {
+        margin-bottom: 10px
+    }
+    .connect__wrapper {
+        margin-top: 30px
     }
     .connect__icons {
-        margin-top: 30px
+        width: 20px;
+        margin-right: 60px
+    }
+    .connect__icons_internet-tv-movie {
+        width: 70px;
+        margin-right: 0
+    }
+    .connect__icons_internet-tv {
+        width: 50px;
+        margin-right: 20px
+    }
+    .connect__icons img {
+        width: 19px;
+        height: 15px
+    }
+    .connect__banner {
+        width: 100%
+    }
+    .connect__banner_internet-tv,
+    .connect__banner_internet-tv-movie {
+        width: 100%
+    }
+    .connect__descr {
+        font-size: 12px;
+        width: 160px;
+        height: 20px;
+        line-height: 160%;
+        padding: 0
     }
     .about-content__item {
         height: 140px
@@ -3199,9 +3238,13 @@ label {
         overflow: auto
     }
     .modal-internet__close {
-        top: 5%;
+        top: 2%;
         right: 5%;
         color: #000
+    }
+    .modal-tariff__wrapper {
+        margin: 0 auto;
+        margin-top: 10px
     }
 }
 
